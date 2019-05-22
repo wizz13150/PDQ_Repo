@@ -9,5 +9,7 @@ This Repo is the root of PDQ Deploy's Repository
 
 For the moment, i'll add .xml files one by one.
 Sorry if you want to add everything at once, will see later.
+& some sentences have been translated into French.
 
 I hope this will serve others.
+For Free Version ):
