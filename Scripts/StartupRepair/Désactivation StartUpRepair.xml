@@ -1,0 +1,98 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<AdminArsenal.Export Code="PDQDeploy" Name="PDQ Deploy" Version="17.2.0.0" MinimumVersion="15.0">
+  <Package>
+    <CurrentLibraryPackageVersionId value="null" />
+    <PackageDefinition name="Definition">
+      <Conditions type="list">
+        <PackageStepCondition>
+          <Architecture>Both</Architecture>
+          <Version>All</Version>
+          <TypeName>OperatingSystem</TypeName>
+        </PackageStepCondition>
+        <PackageStepCondition>
+          <IsUserLoggedOn>AlwaysRun</IsUserLoggedOn>
+          <TypeName>LoggedOnUser</TypeName>
+        </PackageStepCondition>
+        <PackageStepCondition>
+          <ConditionMode>None</ConditionMode>
+          <InventoryCollectionId value="null" />
+          <InventoryCollectionName></InventoryCollectionName>
+          <TypeName>Collection</TypeName>
+        </PackageStepCondition>
+      </Conditions>
+      <CopyMode>Default</CopyMode>
+      <DelayedApprovalTimeSpan>7.00:00:00</DelayedApprovalTimeSpan>
+      <DownloadApprovalMode>Manual</DownloadApprovalMode>
+      <InventoryScanProfileId value="null" />
+      <IsDownloadApprovalModeInherited value="true" />
+      <ScanAfterDeployment value="null" />
+      <Steps type="list">
+        <InstallStep>
+          <CustomCommandLine></CustomCommandLine>
+          <FileName>$(Repository)\Scripts\StartupRepair\StartupRepair.cmd</FileName>
+          <Files></Files>
+          <IncludeDirectory value="false" />
+          <LeaveInstallFile value="false" />
+          <MsiOperation>Install</MsiOperation>
+          <MsiQuiet value="true" />
+          <MsiRestart>Never</MsiRestart>
+          <Parameters></Parameters>
+          <SuccessCodes>0,1641,3010,2359302</SuccessCodes>
+          <RunAs value="null" />
+          <Conditions type="list">
+            <PackageStepCondition>
+              <Architecture>Both</Architecture>
+              <Version>All</Version>
+              <TypeName>OperatingSystem</TypeName>
+            </PackageStepCondition>
+            <PackageStepCondition>
+              <IsUserLoggedOn>AlwaysRun</IsUserLoggedOn>
+              <TypeName>LoggedOnUser</TypeName>
+            </PackageStepCondition>
+            <PackageStepCondition>
+              <ConditionMode>None</ConditionMode>
+              <InventoryCollectionId value="null" />
+              <InventoryCollectionName></InventoryCollectionName>
+              <TypeName>Collection</TypeName>
+            </PackageStepCondition>
+          </Conditions>
+          <ErrorMode>StopDeploymentFail</ErrorMode>
+          <Title>Startup Repair Disable</Title>
+          <TypeName>Install</TypeName>
+          <IsEnabled value="true" />
+          <IsPostStep value="false" />
+          <IsPreStep value="false" />
+        </InstallStep>
+      </Steps>
+      <Timeout value="60" />
+      <UseCustomTimeout value="false" />
+      <RunAs value="null" />
+    </PackageDefinition>
+    <Description>This Script will disable Startup Repair from running as a result of a power failure or any other error. I my Experience this can cause many issues such as loss of trust between the domain and the computer. This uses the Bcdedit command to set the boot up proccess to ignore any errors.
+
+Please Rate if this is helpful and also comment if you have suggestions to improve this Script
+
+Below are the Commands used in this batch file
+
+bcdedit /set {default} recoveryenabled No 
+bcdedit /set {default} bootstatuspolicy ignoreallfailures
+
+
+
+Source :
+https://gallery.technet.microsoft.com/scriptcenter/Desable-Startup-Repair-7f2279e7</Description>
+    <NewLibraryPackageVersionId value="null" />
+    <OriginalId value="null" />
+    <Version></Version>
+    <IsAutoDownload value="false" />
+    <FolderId value="54" />
+    <LibraryPackageVersionId value="null" />
+    <Name>Désactivation StartUpRepair</Name>
+    <Path>CHA Softwares\Scripts\Désactivation StartUpRepair</Path>
+    <PackageDisplaySettings name="DisplaySettings">
+      <DisplayType>Normal</DisplayType>
+      <IconKey>Icon-Package</IconKey>
+      <SortOrder value="17" />
+    </PackageDisplaySettings>
+  </Package>
+</AdminArsenal.Export>
