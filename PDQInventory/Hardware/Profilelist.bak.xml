@@ -1,0 +1,50 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<AdminArsenal.Export Code="PDQInventory" Name="PDQ Inventory" Version="17.1.0.0" MinimumVersion="4.0">
+  <Collection>
+    <ReportDefinition name="Definition">
+      <RootFilter name="Filter">
+        <Comparison>All</Comparison>
+        <Filters type="list">
+          <ValueFilter>
+            <Table>Registry</Table>
+            <Column>PathName</Column>
+            <Comparison>Contains</Comparison>
+            <Value>SOFTWARE\Microsoft\Windows NT\CurrentVersion\ProfileList\</Value>
+          </ValueFilter>
+        </Filters>
+      </RootFilter>
+      <ReportDefinitionTypeName>BasicReportDefinition</ReportDefinitionTypeName>
+      <Columns type="list">
+        <Column>
+          <Column>ComputerId</Column>
+          <Summary></Summary>
+          <Table>Computer</Table>
+          <Title></Title>
+        </Column>
+      </Columns>
+    </ReportDefinition>
+    <IsDrilldown value="true" />
+    <ImportedPath></ImportedPath>
+    <TypeName>DynamicCollection</TypeName>
+    <Created>2018-10-09T09:37:58.0000000+02:00</Created>
+    <Description></Description>
+    <Error>&lt;Error&gt;
+  &lt;Message&gt;Enterprise Mode is required to use the table 'Registry' in a filter&lt;/Message&gt;
+  &lt;Type&gt;AdminArsenal.Reports.Engine.Basic.InvalidFilterInsufficientLicenseException&lt;/Type&gt;
+  &lt;StackTrace&gt;   à AdminArsenal.Reports.Engine.Basic.ValueFilter.Apply(HashSet`1 keys, Dictionary`2 keyCache, Dictionary`2 queryCache)
+   à AdminArsenal.Reports.Engine.Basic.GroupFilter.Apply(HashSet`1 keys, Dictionary`2 keyCache, Dictionary`2 queryCache)
+   à AdminArsenal.Reports.Engine.Basic.BasicReportDefinition.ReportDefinitionTypeManager.Run(BasicReportDefinition report, BasicReportDefinitionRunContext context)
+   à AdminArsenal.PDQInventory.Collections.DynamicCollection.UpdateComputerMembership(ComputerId[] computerIds)
+   à AdminArsenal.PDQInventory.Collections.Collection.UpdateMembership(CollectionId collectionId, Collection collection, ComputerId[] computerIds)&lt;/StackTrace&gt;
+  &lt;Data Name="Collection"&gt;CHA\Paramétrages\Profilelist.bak&lt;/Data&gt;
+&lt;/Error&gt;</Error>
+    <Id value="1952" />
+    <IsEnabled value="true" />
+    <Modified>2019-04-19T14:05:16.0000000+02:00</Modified>
+    <Name>Profilelist.bak</Name>
+    <ParentId value="1768" />
+    <Path>CHA\Paramétrages\Profilelist.bak</Path>
+    <Type>DynamicCollection</Type>
+    <Children type="list" />
+  </Collection>
+</AdminArsenal.Export>

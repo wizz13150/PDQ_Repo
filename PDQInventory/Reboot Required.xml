@@ -1,0 +1,117 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<AdminArsenal.Export Code="PDQInventory" Name="PDQ Inventory" Version="17.1.0.0" MinimumVersion="4.0">
+  <Collection>
+    <ReportDefinition name="Definition">
+      <RootFilter name="Filter">
+        <Comparison>All</Comparison>
+        <Filters type="list">
+          <ValueFilter>
+            <Table>Computer</Table>
+            <Column>NeedsReboot</Column>
+            <Comparison>IsTrue</Comparison>
+          </ValueFilter>
+        </Filters>
+      </RootFilter>
+      <ReportDefinitionTypeName>BasicReportDefinition</ReportDefinitionTypeName>
+      <Columns type="list">
+        <Column>
+          <Column>ComputerId</Column>
+          <Summary></Summary>
+          <Table>Computer</Table>
+          <Title></Title>
+        </Column>
+      </Columns>
+    </ReportDefinition>
+    <IsDrilldown value="false" />
+    <ImportedPath></ImportedPath>
+    <TypeName>DynamicCollection</TypeName>
+    <Created>2018-09-19T11:36:00.0000000+02:00</Created>
+    <Description>Computers that need to be rebooted to finish an application install or patch</Description>
+    <Error></Error>
+    <Id value="1632" />
+    <IsEnabled value="true" />
+    <Modified>2018-09-21T09:44:15.0000000+02:00</Modified>
+    <Name>Reboot Required</Name>
+    <ParentId value="1574" />
+    <Path>CHA\Reboot Required</Path>
+    <Type>DynamicCollection</Type>
+    <Children type="list">
+      <Collection>
+        <ReportDefinition name="Definition">
+          <RootFilter name="Filter">
+            <Comparison>All</Comparison>
+            <Filters type="list">
+              <ValueFilter>
+                <Table>Computer</Table>
+                <Column>OSName</Column>
+                <Comparison>Contains</Comparison>
+                <Value>Server</Value>
+              </ValueFilter>
+            </Filters>
+          </RootFilter>
+          <ReportDefinitionTypeName>BasicReportDefinition</ReportDefinitionTypeName>
+          <Columns type="list">
+            <Column>
+              <Column>ComputerId</Column>
+              <Summary></Summary>
+              <Table>Computer</Table>
+              <Title></Title>
+            </Column>
+          </Columns>
+        </ReportDefinition>
+        <IsDrilldown value="true" />
+        <ImportedPath></ImportedPath>
+        <TypeName>DynamicCollection</TypeName>
+        <Created>2018-09-19T11:36:00.0000000+02:00</Created>
+        <Description>Server that need to be rebooted to finish an application install or patch</Description>
+        <Error></Error>
+        <Id value="1633" />
+        <IsEnabled value="true" />
+        <Modified>2018-09-21T09:44:24.0000000+02:00</Modified>
+        <Name>Servers</Name>
+        <ParentId value="1632" />
+        <Path>CHA\Reboot Required\Servers</Path>
+        <Type>DynamicCollection</Type>
+        <Children type="list" />
+      </Collection>
+      <Collection>
+        <ReportDefinition name="Definition">
+          <RootFilter name="Filter">
+            <Comparison>All</Comparison>
+            <Filters type="list">
+              <ValueFilter>
+                <Table>Computer</Table>
+                <Column>OSName</Column>
+                <Comparison>!Contains</Comparison>
+                <Value>Server</Value>
+              </ValueFilter>
+            </Filters>
+          </RootFilter>
+          <ReportDefinitionTypeName>BasicReportDefinition</ReportDefinitionTypeName>
+          <Columns type="list">
+            <Column>
+              <Column>ComputerId</Column>
+              <Summary></Summary>
+              <Table>Computer</Table>
+              <Title></Title>
+            </Column>
+          </Columns>
+        </ReportDefinition>
+        <IsDrilldown value="true" />
+        <ImportedPath></ImportedPath>
+        <TypeName>DynamicCollection</TypeName>
+        <Created>2018-09-19T11:36:00.0000000+02:00</Created>
+        <Description>Workstations that need to be rebooted to finish an application install or patch</Description>
+        <Error></Error>
+        <Id value="1634" />
+        <IsEnabled value="true" />
+        <Modified>2018-09-19T11:36:00.0000000+02:00</Modified>
+        <Name>Workstations</Name>
+        <ParentId value="1632" />
+        <Path>CHA\Reboot Required\Workstations</Path>
+        <Type>DynamicCollection</Type>
+        <Children type="list" />
+      </Collection>
+    </Children>
+  </Collection>
+</AdminArsenal.Export>

@@ -1,0 +1,1630 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<AdminArsenal.Export Code="PDQInventory" Name="PDQ Inventory" Version="17.1.0.0" MinimumVersion="13.1">
+  <Collection>
+    <ReportDefinition name="Definition">
+      <RootFilter name="Filter">
+        <Comparison>All</Comparison>
+        <Filters type="list">
+          <ValueFilter>
+            <Table>Computer</Table>
+            <Column>OSName</Column>
+            <Comparison>!Contains</Comparison>
+            <Value>Server</Value>
+          </ValueFilter>
+          <ValueFilter>
+            <Table>Computer</Table>
+            <Column>OSName</Column>
+            <Comparison>Contains</Comparison>
+            <Value>Windows</Value>
+          </ValueFilter>
+        </Filters>
+      </RootFilter>
+      <ReportDefinitionTypeName>BasicReportDefinition</ReportDefinitionTypeName>
+      <Columns type="list">
+        <Column>
+          <Column>ComputerId</Column>
+          <Summary></Summary>
+          <Table>Computer</Table>
+          <Title></Title>
+        </Column>
+      </Columns>
+    </ReportDefinition>
+    <IsDrilldown value="true" />
+    <ImportedPath></ImportedPath>
+    <TypeName>DynamicCollection</TypeName>
+    <Created>2013-10-29T16:23:45.0000000+01:00</Created>
+    <Description></Description>
+    <Error></Error>
+    <Id value="1593" />
+    <IsEnabled value="true" />
+    <Modified>2018-09-21T11:24:06.0000000+02:00</Modified>
+    <Name>Workstations</Name>
+    <ParentId value="1574" />
+    <Path>CHA\Workstations</Path>
+    <Type>DynamicCollection</Type>
+    <Children type="list">
+      <Collection>
+        <ReportDefinition name="Definition">
+          <RootFilter name="Filter">
+            <Comparison>All</Comparison>
+            <Filters type="list">
+              <ValueFilter>
+                <Table>Computer</Table>
+                <Column>OSName</Column>
+                <Comparison>Contains</Comparison>
+                <Value>Vista</Value>
+              </ValueFilter>
+            </Filters>
+          </RootFilter>
+          <ReportDefinitionTypeName>BasicReportDefinition</ReportDefinitionTypeName>
+          <Columns type="list">
+            <Column>
+              <Column>ComputerId</Column>
+              <Summary></Summary>
+              <Table>Computer</Table>
+              <Title></Title>
+            </Column>
+          </Columns>
+        </ReportDefinition>
+        <IsDrilldown value="true" />
+        <ImportedPath></ImportedPath>
+        <TypeName>DynamicCollection</TypeName>
+        <Created>2013-10-29T16:23:45.0000000+01:00</Created>
+        <Description></Description>
+        <Error></Error>
+        <Id value="1594" />
+        <IsEnabled value="true" />
+        <Modified>2013-10-29T16:23:45.0000000+01:00</Modified>
+        <Name>Windows Vista</Name>
+        <ParentId value="1593" />
+        <Path>CHA\Workstations\Windows Vista</Path>
+        <Type>DynamicCollection</Type>
+        <Children type="list">
+          <Collection>
+            <ReportDefinition name="Definition">
+              <RootFilter name="Filter">
+                <Comparison>All</Comparison>
+                <Filters type="list">
+                  <ValueFilter>
+                    <Table>Computer</Table>
+                    <Column>OSArchitecture</Column>
+                    <Comparison>Is</Comparison>
+                    <Value>64</Value>
+                  </ValueFilter>
+                  <ValueFilter>
+                    <Table>Computer</Table>
+                    <Column>OS</Column>
+                    <Comparison>Equals</Comparison>
+                    <Value>Vista</Value>
+                  </ValueFilter>
+                </Filters>
+              </RootFilter>
+              <ReportDefinitionTypeName>BasicReportDefinition</ReportDefinitionTypeName>
+              <Columns type="list">
+                <Column>
+                  <Column>ComputerId</Column>
+                  <Summary></Summary>
+                  <Table>Computer</Table>
+                  <Title></Title>
+                </Column>
+              </Columns>
+            </ReportDefinition>
+            <IsDrilldown value="true" />
+            <ImportedPath></ImportedPath>
+            <TypeName>DynamicCollection</TypeName>
+            <Created>2013-10-29T16:23:45.0000000+01:00</Created>
+            <Description></Description>
+            <Error></Error>
+            <Id value="1595" />
+            <IsEnabled value="true" />
+            <Modified>2018-09-21T11:26:09.0000000+02:00</Modified>
+            <Name>Windows Vista (64-bit)</Name>
+            <ParentId value="1594" />
+            <Path>CHA\Workstations\Windows Vista\Windows Vista (64-bit)</Path>
+            <Type>DynamicCollection</Type>
+            <Children type="list" />
+          </Collection>
+          <Collection>
+            <ReportDefinition name="Definition">
+              <RootFilter name="Filter">
+                <Comparison>All</Comparison>
+                <Filters type="list">
+                  <ValueFilter>
+                    <Table>Computer</Table>
+                    <Column>OSArchitecture</Column>
+                    <Comparison>Is</Comparison>
+                    <Value>32</Value>
+                  </ValueFilter>
+                  <ValueFilter>
+                    <Table>Computer</Table>
+                    <Column>OS</Column>
+                    <Comparison>Equals</Comparison>
+                    <Value>Vista</Value>
+                  </ValueFilter>
+                </Filters>
+              </RootFilter>
+              <ReportDefinitionTypeName>BasicReportDefinition</ReportDefinitionTypeName>
+              <Columns type="list">
+                <Column>
+                  <Column>ComputerId</Column>
+                  <Summary></Summary>
+                  <Table>Computer</Table>
+                  <Title></Title>
+                </Column>
+              </Columns>
+            </ReportDefinition>
+            <IsDrilldown value="true" />
+            <ImportedPath></ImportedPath>
+            <TypeName>DynamicCollection</TypeName>
+            <Created>2013-10-29T16:23:45.0000000+01:00</Created>
+            <Description></Description>
+            <Error></Error>
+            <Id value="1596" />
+            <IsEnabled value="true" />
+            <Modified>2018-09-21T11:26:06.0000000+02:00</Modified>
+            <Name>Windows Vista (32-bit)</Name>
+            <ParentId value="1594" />
+            <Path>CHA\Workstations\Windows Vista\Windows Vista (32-bit)</Path>
+            <Type>DynamicCollection</Type>
+            <Children type="list" />
+          </Collection>
+        </Children>
+      </Collection>
+      <Collection>
+        <ReportDefinition name="Definition">
+          <RootFilter name="Filter">
+            <Comparison>All</Comparison>
+            <Filters type="list">
+              <ValueFilter>
+                <Table>Computer</Table>
+                <Column>OSName</Column>
+                <Comparison>Contains</Comparison>
+                <Value>Windows 7</Value>
+              </ValueFilter>
+            </Filters>
+          </RootFilter>
+          <ReportDefinitionTypeName>BasicReportDefinition</ReportDefinitionTypeName>
+          <Columns type="list">
+            <Column>
+              <Column>ComputerId</Column>
+              <Summary></Summary>
+              <Table>Computer</Table>
+              <Title></Title>
+            </Column>
+          </Columns>
+        </ReportDefinition>
+        <IsDrilldown value="true" />
+        <ImportedPath></ImportedPath>
+        <TypeName>DynamicCollection</TypeName>
+        <Created>2013-10-29T16:23:45.0000000+01:00</Created>
+        <Description></Description>
+        <Error></Error>
+        <Id value="1597" />
+        <IsEnabled value="true" />
+        <Modified>2018-09-21T11:25:27.0000000+02:00</Modified>
+        <Name>Windows 7</Name>
+        <ParentId value="1593" />
+        <Path>CHA\Workstations\Windows 7</Path>
+        <Type>DynamicCollection</Type>
+        <Children type="list">
+          <Collection>
+            <ReportDefinition name="Definition">
+              <RootFilter name="Filter">
+                <Comparison>All</Comparison>
+                <Filters type="list">
+                  <ValueFilter>
+                    <Table>Computer</Table>
+                    <Column>OSArchitecture</Column>
+                    <Comparison>Is</Comparison>
+                    <Value>64</Value>
+                  </ValueFilter>
+                  <ValueFilter>
+                    <Table>Computer</Table>
+                    <Column>OS</Column>
+                    <Comparison>Equals</Comparison>
+                    <Value>7</Value>
+                  </ValueFilter>
+                </Filters>
+              </RootFilter>
+              <ReportDefinitionTypeName>BasicReportDefinition</ReportDefinitionTypeName>
+              <Columns type="list">
+                <Column>
+                  <Column>ComputerId</Column>
+                  <Summary></Summary>
+                  <Table>Computer</Table>
+                  <Title></Title>
+                </Column>
+              </Columns>
+            </ReportDefinition>
+            <IsDrilldown value="true" />
+            <ImportedPath></ImportedPath>
+            <TypeName>DynamicCollection</TypeName>
+            <Created>2013-10-29T16:23:45.0000000+01:00</Created>
+            <Description></Description>
+            <Error></Error>
+            <Id value="1598" />
+            <IsEnabled value="true" />
+            <Modified>2018-09-21T11:25:34.0000000+02:00</Modified>
+            <Name>Windows 7 (64-bit)</Name>
+            <ParentId value="1597" />
+            <Path>CHA\Workstations\Windows 7\Windows 7 (64-bit)</Path>
+            <Type>DynamicCollection</Type>
+            <Children type="list" />
+          </Collection>
+          <Collection>
+            <ReportDefinition name="Definition">
+              <RootFilter name="Filter">
+                <Comparison>All</Comparison>
+                <Filters type="list">
+                  <ValueFilter>
+                    <Table>Computer</Table>
+                    <Column>OSArchitecture</Column>
+                    <Comparison>Is</Comparison>
+                    <Value>32</Value>
+                  </ValueFilter>
+                  <ValueFilter>
+                    <Table>Computer</Table>
+                    <Column>OS</Column>
+                    <Comparison>Equals</Comparison>
+                    <Value>7</Value>
+                  </ValueFilter>
+                </Filters>
+              </RootFilter>
+              <ReportDefinitionTypeName>BasicReportDefinition</ReportDefinitionTypeName>
+              <Columns type="list">
+                <Column>
+                  <Column>ComputerId</Column>
+                  <Summary></Summary>
+                  <Table>Computer</Table>
+                  <Title></Title>
+                </Column>
+              </Columns>
+            </ReportDefinition>
+            <IsDrilldown value="true" />
+            <ImportedPath></ImportedPath>
+            <TypeName>DynamicCollection</TypeName>
+            <Created>2013-10-29T16:23:45.0000000+01:00</Created>
+            <Description></Description>
+            <Error></Error>
+            <Id value="1599" />
+            <IsEnabled value="true" />
+            <Modified>2018-09-21T11:25:31.0000000+02:00</Modified>
+            <Name>Windows 7 (32-bit)</Name>
+            <ParentId value="1597" />
+            <Path>CHA\Workstations\Windows 7\Windows 7 (32-bit)</Path>
+            <Type>DynamicCollection</Type>
+            <Children type="list" />
+          </Collection>
+          <Collection>
+            <ReportDefinition name="Definition">
+              <RootFilter name="Filter">
+                <Comparison>All</Comparison>
+                <Filters type="list">
+                  <ValueFilter>
+                    <Table>Computer</Table>
+                    <Column>OSName</Column>
+                    <Comparison>Equals</Comparison>
+                    <Value>Microsoft Windows 7 Professionnel</Value>
+                  </ValueFilter>
+                </Filters>
+              </RootFilter>
+              <ReportDefinitionTypeName>BasicReportDefinition</ReportDefinitionTypeName>
+              <Columns type="list">
+                <Column>
+                  <Column>ComputerId</Column>
+                  <Summary></Summary>
+                  <Table>Computer</Table>
+                  <Title></Title>
+                </Column>
+              </Columns>
+            </ReportDefinition>
+            <IsDrilldown value="true" />
+            <ImportedPath></ImportedPath>
+            <TypeName>DynamicCollection</TypeName>
+            <Created>2018-09-24T11:06:39.0000000+02:00</Created>
+            <Description></Description>
+            <Error></Error>
+            <Id value="1600" />
+            <IsEnabled value="true" />
+            <Modified>2018-09-24T11:06:39.0000000+02:00</Modified>
+            <Name>Microsoft Windows 7 Professionnel</Name>
+            <ParentId value="1597" />
+            <Path>CHA\Workstations\Windows 7\Microsoft Windows 7 Professionnel</Path>
+            <Type>DynamicCollection</Type>
+            <Children type="list" />
+          </Collection>
+          <Collection>
+            <ReportDefinition name="Definition">
+              <RootFilter name="Filter">
+                <Comparison>All</Comparison>
+                <Filters type="list">
+                  <ValueFilter>
+                    <Table>Computer</Table>
+                    <Column>OSName</Column>
+                    <Comparison>Equals</Comparison>
+                    <Value>Microsoft Windows 7 Entreprise</Value>
+                  </ValueFilter>
+                </Filters>
+              </RootFilter>
+              <ReportDefinitionTypeName>BasicReportDefinition</ReportDefinitionTypeName>
+              <Columns type="list">
+                <Column>
+                  <Column>ComputerId</Column>
+                  <Summary></Summary>
+                  <Table>Computer</Table>
+                  <Title></Title>
+                </Column>
+              </Columns>
+            </ReportDefinition>
+            <IsDrilldown value="true" />
+            <ImportedPath></ImportedPath>
+            <TypeName>DynamicCollection</TypeName>
+            <Created>2018-09-24T11:07:13.0000000+02:00</Created>
+            <Description></Description>
+            <Error></Error>
+            <Id value="1601" />
+            <IsEnabled value="true" />
+            <Modified>2018-09-24T11:07:26.0000000+02:00</Modified>
+            <Name>Microsoft Windows 7 Entreprise</Name>
+            <ParentId value="1597" />
+            <Path>CHA\Workstations\Windows 7\Microsoft Windows 7 Entreprise</Path>
+            <Type>DynamicCollection</Type>
+            <Children type="list" />
+          </Collection>
+        </Children>
+      </Collection>
+      <Collection>
+        <ReportDefinition name="Definition">
+          <RootFilter name="Filter">
+            <Comparison>All</Comparison>
+            <Filters type="list">
+              <ValueFilter>
+                <Table>Computer</Table>
+                <Column>OS</Column>
+                <Comparison>Equals</Comparison>
+                <Value>8</Value>
+              </ValueFilter>
+            </Filters>
+          </RootFilter>
+          <ReportDefinitionTypeName>BasicReportDefinition</ReportDefinitionTypeName>
+          <Columns type="list">
+            <Column>
+              <Column>ComputerId</Column>
+              <Summary></Summary>
+              <Table>Computer</Table>
+              <Title></Title>
+            </Column>
+          </Columns>
+        </ReportDefinition>
+        <IsDrilldown value="true" />
+        <ImportedPath></ImportedPath>
+        <TypeName>DynamicCollection</TypeName>
+        <Created>2013-10-29T16:23:45.0000000+01:00</Created>
+        <Description></Description>
+        <Error></Error>
+        <Id value="1602" />
+        <IsEnabled value="true" />
+        <Modified>2013-10-29T16:23:45.0000000+01:00</Modified>
+        <Name>Windows 8</Name>
+        <ParentId value="1593" />
+        <Path>CHA\Workstations\Windows 8</Path>
+        <Type>DynamicCollection</Type>
+        <Children type="list">
+          <Collection>
+            <ReportDefinition name="Definition">
+              <RootFilter name="Filter">
+                <Comparison>All</Comparison>
+                <Filters type="list">
+                  <ValueFilter>
+                    <Table>Computer</Table>
+                    <Column>OSArchitecture</Column>
+                    <Comparison>Is</Comparison>
+                    <Value>64</Value>
+                  </ValueFilter>
+                  <ValueFilter>
+                    <Table>Computer</Table>
+                    <Column>OS</Column>
+                    <Comparison>Equals</Comparison>
+                    <Value>8</Value>
+                  </ValueFilter>
+                </Filters>
+              </RootFilter>
+              <ReportDefinitionTypeName>BasicReportDefinition</ReportDefinitionTypeName>
+              <Columns type="list">
+                <Column>
+                  <Column>ComputerId</Column>
+                  <Summary></Summary>
+                  <Table>Computer</Table>
+                  <Title></Title>
+                </Column>
+              </Columns>
+            </ReportDefinition>
+            <IsDrilldown value="true" />
+            <ImportedPath></ImportedPath>
+            <TypeName>DynamicCollection</TypeName>
+            <Created>2013-10-29T16:23:45.0000000+01:00</Created>
+            <Description></Description>
+            <Error></Error>
+            <Id value="1603" />
+            <IsEnabled value="true" />
+            <Modified>2018-09-21T11:25:45.0000000+02:00</Modified>
+            <Name>Windows 8 (64-bit)</Name>
+            <ParentId value="1602" />
+            <Path>CHA\Workstations\Windows 8\Windows 8 (64-bit)</Path>
+            <Type>DynamicCollection</Type>
+            <Children type="list" />
+          </Collection>
+          <Collection>
+            <ReportDefinition name="Definition">
+              <RootFilter name="Filter">
+                <Comparison>All</Comparison>
+                <Filters type="list">
+                  <ValueFilter>
+                    <Table>Computer</Table>
+                    <Column>OSArchitecture</Column>
+                    <Comparison>Is</Comparison>
+                    <Value>32</Value>
+                  </ValueFilter>
+                  <ValueFilter>
+                    <Table>Computer</Table>
+                    <Column>OS</Column>
+                    <Comparison>Equals</Comparison>
+                    <Value>8</Value>
+                  </ValueFilter>
+                </Filters>
+              </RootFilter>
+              <ReportDefinitionTypeName>BasicReportDefinition</ReportDefinitionTypeName>
+              <Columns type="list">
+                <Column>
+                  <Column>ComputerId</Column>
+                  <Summary></Summary>
+                  <Table>Computer</Table>
+                  <Title></Title>
+                </Column>
+              </Columns>
+            </ReportDefinition>
+            <IsDrilldown value="true" />
+            <ImportedPath></ImportedPath>
+            <TypeName>DynamicCollection</TypeName>
+            <Created>2013-10-29T16:23:45.0000000+01:00</Created>
+            <Description></Description>
+            <Error></Error>
+            <Id value="1604" />
+            <IsEnabled value="true" />
+            <Modified>2018-09-21T11:25:42.0000000+02:00</Modified>
+            <Name>Windows 8 (32-bit)</Name>
+            <ParentId value="1602" />
+            <Path>CHA\Workstations\Windows 8\Windows 8 (32-bit)</Path>
+            <Type>DynamicCollection</Type>
+            <Children type="list" />
+          </Collection>
+        </Children>
+      </Collection>
+      <Collection>
+        <ReportDefinition name="Definition">
+          <RootFilter name="Filter">
+            <Comparison>All</Comparison>
+            <Filters type="list">
+              <ValueFilter>
+                <Table>Computer</Table>
+                <Column>OSName</Column>
+                <Comparison>Contains</Comparison>
+                <Value>Windows 8.1</Value>
+              </ValueFilter>
+            </Filters>
+          </RootFilter>
+          <ReportDefinitionTypeName>BasicReportDefinition</ReportDefinitionTypeName>
+          <Columns type="list">
+            <Column>
+              <Column>ComputerId</Column>
+              <Summary></Summary>
+              <Table>Computer</Table>
+              <Title></Title>
+            </Column>
+          </Columns>
+        </ReportDefinition>
+        <IsDrilldown value="true" />
+        <ImportedPath></ImportedPath>
+        <TypeName>DynamicCollection</TypeName>
+        <Created>2013-10-29T16:23:45.0000000+01:00</Created>
+        <Description></Description>
+        <Error></Error>
+        <Id value="1605" />
+        <IsEnabled value="true" />
+        <Modified>2013-10-29T16:23:45.0000000+01:00</Modified>
+        <Name>Windows 8.1</Name>
+        <ParentId value="1593" />
+        <Path>CHA\Workstations\Windows 8.1</Path>
+        <Type>DynamicCollection</Type>
+        <Children type="list">
+          <Collection>
+            <ReportDefinition name="Definition">
+              <RootFilter name="Filter">
+                <Comparison>All</Comparison>
+                <Filters type="list">
+                  <ValueFilter>
+                    <Table>Computer</Table>
+                    <Column>OSArchitecture</Column>
+                    <Comparison>Is</Comparison>
+                    <Value>64</Value>
+                  </ValueFilter>
+                  <ValueFilter>
+                    <Table>Computer</Table>
+                    <Column>OS</Column>
+                    <Comparison>Equals</Comparison>
+                    <Value>8.1</Value>
+                  </ValueFilter>
+                </Filters>
+              </RootFilter>
+              <ReportDefinitionTypeName>BasicReportDefinition</ReportDefinitionTypeName>
+              <Columns type="list">
+                <Column>
+                  <Column>ComputerId</Column>
+                  <Summary></Summary>
+                  <Table>Computer</Table>
+                  <Title></Title>
+                </Column>
+              </Columns>
+            </ReportDefinition>
+            <IsDrilldown value="true" />
+            <ImportedPath></ImportedPath>
+            <TypeName>DynamicCollection</TypeName>
+            <Created>2013-10-29T16:23:45.0000000+01:00</Created>
+            <Description></Description>
+            <Error></Error>
+            <Id value="1606" />
+            <IsEnabled value="true" />
+            <Modified>2018-09-21T11:25:59.0000000+02:00</Modified>
+            <Name>Windows 8.1 (64-bit)</Name>
+            <ParentId value="1605" />
+            <Path>CHA\Workstations\Windows 8.1\Windows 8.1 (64-bit)</Path>
+            <Type>DynamicCollection</Type>
+            <Children type="list" />
+          </Collection>
+          <Collection>
+            <ReportDefinition name="Definition">
+              <RootFilter name="Filter">
+                <Comparison>All</Comparison>
+                <Filters type="list">
+                  <ValueFilter>
+                    <Table>Computer</Table>
+                    <Column>OSArchitecture</Column>
+                    <Comparison>Is</Comparison>
+                    <Value>32</Value>
+                  </ValueFilter>
+                  <ValueFilter>
+                    <Table>Computer</Table>
+                    <Column>OS</Column>
+                    <Comparison>Equals</Comparison>
+                    <Value>8.1</Value>
+                  </ValueFilter>
+                </Filters>
+              </RootFilter>
+              <ReportDefinitionTypeName>BasicReportDefinition</ReportDefinitionTypeName>
+              <Columns type="list">
+                <Column>
+                  <Column>ComputerId</Column>
+                  <Summary></Summary>
+                  <Table>Computer</Table>
+                  <Title></Title>
+                </Column>
+              </Columns>
+            </ReportDefinition>
+            <IsDrilldown value="true" />
+            <ImportedPath></ImportedPath>
+            <TypeName>DynamicCollection</TypeName>
+            <Created>2013-10-29T16:23:45.0000000+01:00</Created>
+            <Description></Description>
+            <Error></Error>
+            <Id value="1607" />
+            <IsEnabled value="true" />
+            <Modified>2018-09-21T11:25:56.0000000+02:00</Modified>
+            <Name>Windows 8.1 (32-bit)</Name>
+            <ParentId value="1605" />
+            <Path>CHA\Workstations\Windows 8.1\Windows 8.1 (32-bit)</Path>
+            <Type>DynamicCollection</Type>
+            <Children type="list" />
+          </Collection>
+        </Children>
+      </Collection>
+      <Collection>
+        <ReportDefinition name="Definition">
+          <RootFilter name="Filter">
+            <Comparison>All</Comparison>
+            <Filters type="list">
+              <ValueFilter>
+                <Table>Computer</Table>
+                <Column>OS</Column>
+                <Comparison>Equals</Comparison>
+                <Value>10</Value>
+              </ValueFilter>
+            </Filters>
+          </RootFilter>
+          <ReportDefinitionTypeName>BasicReportDefinition</ReportDefinitionTypeName>
+          <Columns type="list">
+            <Column>
+              <Column>ComputerId</Column>
+              <Summary></Summary>
+              <Table>Computer</Table>
+              <Title></Title>
+            </Column>
+          </Columns>
+        </ReportDefinition>
+        <IsDrilldown value="true" />
+        <ImportedPath></ImportedPath>
+        <TypeName>DynamicCollection</TypeName>
+        <Created>2013-10-29T16:23:45.0000000+01:00</Created>
+        <Description></Description>
+        <Error></Error>
+        <Id value="1608" />
+        <IsEnabled value="true" />
+        <Modified>2018-09-21T11:25:15.0000000+02:00</Modified>
+        <Name>Windows 10</Name>
+        <ParentId value="1593" />
+        <Path>CHA\Workstations\Windows 10</Path>
+        <Type>DynamicCollection</Type>
+        <Children type="list">
+          <Collection>
+            <ReportDefinition name="Definition">
+              <RootFilter name="Filter">
+                <Comparison>All</Comparison>
+                <Filters type="list">
+                  <ValueFilter>
+                    <Table>Computer</Table>
+                    <Column>OSArchitecture</Column>
+                    <Comparison>Is</Comparison>
+                    <Value>64</Value>
+                  </ValueFilter>
+                  <ValueFilter>
+                    <Table>Computer</Table>
+                    <Column>OS</Column>
+                    <Comparison>Equals</Comparison>
+                    <Value>10</Value>
+                  </ValueFilter>
+                </Filters>
+              </RootFilter>
+              <ReportDefinitionTypeName>BasicReportDefinition</ReportDefinitionTypeName>
+              <Columns type="list">
+                <Column>
+                  <Column>ComputerId</Column>
+                  <Summary></Summary>
+                  <Table>Computer</Table>
+                  <Title></Title>
+                </Column>
+              </Columns>
+            </ReportDefinition>
+            <IsDrilldown value="true" />
+            <ImportedPath></ImportedPath>
+            <TypeName>DynamicCollection</TypeName>
+            <Created>2013-10-29T16:23:45.0000000+01:00</Created>
+            <Description></Description>
+            <Error></Error>
+            <Id value="1609" />
+            <IsEnabled value="true" />
+            <Modified>2018-09-21T11:25:22.0000000+02:00</Modified>
+            <Name>Windows 10 (64-bit)</Name>
+            <ParentId value="1608" />
+            <Path>CHA\Workstations\Windows 10\Windows 10 (64-bit)</Path>
+            <Type>DynamicCollection</Type>
+            <Children type="list" />
+          </Collection>
+          <Collection>
+            <ReportDefinition name="Definition">
+              <RootFilter name="Filter">
+                <Comparison>All</Comparison>
+                <Filters type="list">
+                  <ValueFilter>
+                    <Table>Computer</Table>
+                    <Column>OSArchitecture</Column>
+                    <Comparison>Is</Comparison>
+                    <Value>32</Value>
+                  </ValueFilter>
+                  <ValueFilter>
+                    <Table>Computer</Table>
+                    <Column>OS</Column>
+                    <Comparison>Equals</Comparison>
+                    <Value>10</Value>
+                  </ValueFilter>
+                </Filters>
+              </RootFilter>
+              <ReportDefinitionTypeName>BasicReportDefinition</ReportDefinitionTypeName>
+              <Columns type="list">
+                <Column>
+                  <Column>ComputerId</Column>
+                  <Summary></Summary>
+                  <Table>Computer</Table>
+                  <Title></Title>
+                </Column>
+              </Columns>
+            </ReportDefinition>
+            <IsDrilldown value="true" />
+            <ImportedPath></ImportedPath>
+            <TypeName>DynamicCollection</TypeName>
+            <Created>2013-10-29T16:23:45.0000000+01:00</Created>
+            <Description></Description>
+            <Error></Error>
+            <Id value="1610" />
+            <IsEnabled value="true" />
+            <Modified>2018-09-21T11:25:19.0000000+02:00</Modified>
+            <Name>Windows 10 (32-bit)</Name>
+            <ParentId value="1608" />
+            <Path>CHA\Workstations\Windows 10\Windows 10 (32-bit)</Path>
+            <Type>DynamicCollection</Type>
+            <Children type="list" />
+          </Collection>
+        </Children>
+      </Collection>
+      <Collection>
+        <ReportDefinition name="Definition">
+          <RootFilter name="Filter">
+            <Comparison>All</Comparison>
+            <Filters type="list">
+              <ValueFilter>
+                <Table>Computer</Table>
+                <Column>OSName</Column>
+                <Comparison>Contains</Comparison>
+                <Value>Windows XP</Value>
+              </ValueFilter>
+            </Filters>
+          </RootFilter>
+          <ReportDefinitionTypeName>BasicReportDefinition</ReportDefinitionTypeName>
+          <Columns type="list">
+            <Column>
+              <Column>ComputerId</Column>
+              <Summary></Summary>
+              <Table>Computer</Table>
+              <Title></Title>
+            </Column>
+          </Columns>
+        </ReportDefinition>
+        <IsDrilldown value="true" />
+        <ImportedPath></ImportedPath>
+        <TypeName>DynamicCollection</TypeName>
+        <Created>2018-09-19T12:13:15.0000000+02:00</Created>
+        <Description></Description>
+        <Error></Error>
+        <Id value="1611" />
+        <IsEnabled value="true" />
+        <Modified>2018-09-21T11:26:14.0000000+02:00</Modified>
+        <Name>Windows XP</Name>
+        <ParentId value="1593" />
+        <Path>CHA\Workstations\Windows XP</Path>
+        <Type>DynamicCollection</Type>
+        <Children type="list">
+          <Collection>
+            <ReportDefinition name="Definition">
+              <RootFilter name="Filter">
+                <Comparison>All</Comparison>
+                <Filters type="list">
+                  <ValueFilter>
+                    <Table>Computer</Table>
+                    <Column>OSArchitecture</Column>
+                    <Comparison>Is</Comparison>
+                    <Value>32</Value>
+                  </ValueFilter>
+                  <ValueFilter>
+                    <Table>Computer</Table>
+                    <Column>OSName</Column>
+                    <Comparison>Equals</Comparison>
+                    <Value>XP</Value>
+                  </ValueFilter>
+                </Filters>
+              </RootFilter>
+              <ReportDefinitionTypeName>BasicReportDefinition</ReportDefinitionTypeName>
+              <Columns type="list">
+                <Column>
+                  <Column>ComputerId</Column>
+                  <Summary></Summary>
+                  <Table>Computer</Table>
+                  <Title></Title>
+                </Column>
+              </Columns>
+            </ReportDefinition>
+            <IsDrilldown value="true" />
+            <ImportedPath></ImportedPath>
+            <TypeName>DynamicCollection</TypeName>
+            <Created>2018-09-19T12:14:17.0000000+02:00</Created>
+            <Description></Description>
+            <Error></Error>
+            <Id value="1612" />
+            <IsEnabled value="true" />
+            <Modified>2018-09-21T11:26:17.0000000+02:00</Modified>
+            <Name>Windows XP (32-bit)</Name>
+            <ParentId value="1611" />
+            <Path>CHA\Workstations\Windows XP\Windows XP (32-bit)</Path>
+            <Type>DynamicCollection</Type>
+            <Children type="list" />
+          </Collection>
+          <Collection>
+            <ReportDefinition name="Definition">
+              <RootFilter name="Filter">
+                <Comparison>All</Comparison>
+                <Filters type="list">
+                  <ValueFilter>
+                    <Table>Computer</Table>
+                    <Column>OSArchitecture</Column>
+                    <Comparison>Is</Comparison>
+                    <Value>64</Value>
+                  </ValueFilter>
+                  <ValueFilter>
+                    <Table>Computer</Table>
+                    <Column>OSName</Column>
+                    <Comparison>Equals</Comparison>
+                    <Value>XP</Value>
+                  </ValueFilter>
+                </Filters>
+              </RootFilter>
+              <ReportDefinitionTypeName>BasicReportDefinition</ReportDefinitionTypeName>
+              <Columns type="list">
+                <Column>
+                  <Column>ComputerId</Column>
+                  <Summary></Summary>
+                  <Table>Computer</Table>
+                  <Title></Title>
+                </Column>
+              </Columns>
+            </ReportDefinition>
+            <IsDrilldown value="true" />
+            <ImportedPath></ImportedPath>
+            <TypeName>DynamicCollection</TypeName>
+            <Created>2018-09-19T12:15:10.0000000+02:00</Created>
+            <Description></Description>
+            <Error></Error>
+            <Id value="1613" />
+            <IsEnabled value="true" />
+            <Modified>2018-09-21T11:26:19.0000000+02:00</Modified>
+            <Name>Windows XP (64-bit)</Name>
+            <ParentId value="1611" />
+            <Path>CHA\Workstations\Windows XP\Windows XP (64-bit)</Path>
+            <Type>DynamicCollection</Type>
+            <Children type="list" />
+          </Collection>
+        </Children>
+      </Collection>
+      <Collection>
+        <ReportDefinition name="Definition">
+          <RootFilter name="Filter">
+            <Comparison>All</Comparison>
+            <Filters type="list">
+              <ValueFilter>
+                <Table>Computer</Table>
+                <Column>Manufacturer</Column>
+                <Comparison>Contains</Comparison>
+                <Value>Lenovo</Value>
+              </ValueFilter>
+            </Filters>
+          </RootFilter>
+          <ReportDefinitionTypeName>BasicReportDefinition</ReportDefinitionTypeName>
+          <Columns type="list">
+            <Column>
+              <Column>ComputerId</Column>
+              <Summary></Summary>
+              <Table>Computer</Table>
+              <Title></Title>
+            </Column>
+          </Columns>
+        </ReportDefinition>
+        <IsDrilldown value="true" />
+        <ImportedPath></ImportedPath>
+        <TypeName>DynamicCollection</TypeName>
+        <Created>2018-09-19T12:26:04.0000000+02:00</Created>
+        <Description></Description>
+        <Error></Error>
+        <Id value="1614" />
+        <IsEnabled value="true" />
+        <Modified>2018-09-21T11:24:17.0000000+02:00</Modified>
+        <Name>Lenovo</Name>
+        <ParentId value="1593" />
+        <Path>CHA\Workstations\Lenovo</Path>
+        <Type>DynamicCollection</Type>
+        <Children type="list">
+          <Collection>
+            <ReportDefinition name="Definition">
+              <RootFilter name="Filter">
+                <Comparison>Any</Comparison>
+                <Filters type="list">
+                  <ValueFilter>
+                    <Table>Computer</Table>
+                    <Column>SystemFamily</Column>
+                    <Comparison>Regex</Comparison>
+                    <Value>M700|M710|M710Q</Value>
+                  </ValueFilter>
+                  <ValueFilter>
+                    <Table>Computer</Table>
+                    <Column>SystemVersion</Column>
+                    <Comparison>Regex</Comparison>
+                    <Value>M700|M710|M710Q</Value>
+                  </ValueFilter>
+                  <ValueFilter>
+                    <Table>CPU</Table>
+                    <Column>Name</Column>
+                    <Comparison>Regex</Comparison>
+                    <Value>Intel Core i5</Value>
+                  </ValueFilter>
+                </Filters>
+              </RootFilter>
+              <ReportDefinitionTypeName>BasicReportDefinition</ReportDefinitionTypeName>
+              <Columns type="list">
+                <Column>
+                  <Column>ComputerId</Column>
+                  <Summary></Summary>
+                  <Table>Computer</Table>
+                  <Title></Title>
+                </Column>
+              </Columns>
+            </ReportDefinition>
+            <IsDrilldown value="true" />
+            <ImportedPath></ImportedPath>
+            <TypeName>DynamicCollection</TypeName>
+            <Created>2017-12-01T18:13:43.0000000+01:00</Created>
+            <Description></Description>
+            <Error></Error>
+            <Id value="1615" />
+            <IsEnabled value="true" />
+            <Modified>2019-02-07T12:56:53.0000000+01:00</Modified>
+            <Name>Ordinateurs Thinkcenter M7**</Name>
+            <ParentId value="1614" />
+            <Path>CHA\Workstations\Lenovo\Ordinateurs Thinkcenter M7**</Path>
+            <Type>DynamicCollection</Type>
+            <Children type="list">
+              <Collection>
+                <ReportDefinition name="Definition">
+                  <RootFilter name="Filter">
+                    <Comparison>Any</Comparison>
+                    <Filters type="list">
+                      <ValueFilter>
+                        <Table>Computer</Table>
+                        <Column>SystemFamily</Column>
+                        <Comparison>Contains</Comparison>
+                        <Value>M700</Value>
+                      </ValueFilter>
+                      <ValueFilter>
+                        <Table>Computer</Table>
+                        <Column>SystemVersion</Column>
+                        <Comparison>Contains</Comparison>
+                        <Value>M700</Value>
+                      </ValueFilter>
+                    </Filters>
+                  </RootFilter>
+                  <ReportDefinitionTypeName>BasicReportDefinition</ReportDefinitionTypeName>
+                  <Columns type="list">
+                    <Column>
+                      <Column>ComputerId</Column>
+                      <Summary></Summary>
+                      <Table>Computer</Table>
+                      <Title></Title>
+                    </Column>
+                  </Columns>
+                </ReportDefinition>
+                <IsDrilldown value="true" />
+                <ImportedPath></ImportedPath>
+                <TypeName>DynamicCollection</TypeName>
+                <Created>2019-02-07T12:48:26.0000000+01:00</Created>
+                <Description></Description>
+                <Error></Error>
+                <Id value="2397" />
+                <IsEnabled value="true" />
+                <Modified>2019-02-07T12:48:26.0000000+01:00</Modified>
+                <Name>M700</Name>
+                <ParentId value="1615" />
+                <Path>CHA\Workstations\Lenovo\Ordinateurs Thinkcenter M7**\M700</Path>
+                <Type>DynamicCollection</Type>
+                <Children type="list" />
+              </Collection>
+              <Collection>
+                <ReportDefinition name="Definition">
+                  <RootFilter name="Filter">
+                    <Comparison>Any</Comparison>
+                    <Filters type="list">
+                      <ValueFilter>
+                        <Table>Computer</Table>
+                        <Column>SystemFamily</Column>
+                        <Comparison>Contains</Comparison>
+                        <Value>M710Q</Value>
+                      </ValueFilter>
+                      <ValueFilter>
+                        <Table>Computer</Table>
+                        <Column>SystemVersion</Column>
+                        <Comparison>Contains</Comparison>
+                        <Value>M710Q</Value>
+                      </ValueFilter>
+                    </Filters>
+                  </RootFilter>
+                  <ReportDefinitionTypeName>BasicReportDefinition</ReportDefinitionTypeName>
+                  <Columns type="list">
+                    <Column>
+                      <Column>ComputerId</Column>
+                      <Summary></Summary>
+                      <Table>Computer</Table>
+                      <Title></Title>
+                    </Column>
+                  </Columns>
+                </ReportDefinition>
+                <IsDrilldown value="true" />
+                <ImportedPath></ImportedPath>
+                <TypeName>DynamicCollection</TypeName>
+                <Created>2019-02-07T12:50:15.0000000+01:00</Created>
+                <Description></Description>
+                <Error></Error>
+                <Id value="2399" />
+                <IsEnabled value="true" />
+                <Modified>2019-02-07T12:50:37.0000000+01:00</Modified>
+                <Name>M710Q</Name>
+                <ParentId value="1615" />
+                <Path>CHA\Workstations\Lenovo\Ordinateurs Thinkcenter M7**\M710Q</Path>
+                <Type>DynamicCollection</Type>
+                <Children type="list" />
+              </Collection>
+            </Children>
+          </Collection>
+          <Collection>
+            <ReportDefinition name="Definition">
+              <RootFilter name="Filter">
+                <Comparison>All</Comparison>
+                <Filters type="list">
+                  <ValueFilter>
+                    <Table>Computer</Table>
+                    <Column>OSName</Column>
+                    <Comparison>!Contains</Comparison>
+                    <Value>Server</Value>
+                  </ValueFilter>
+                  <GroupFilter>
+                    <Comparison>Any</Comparison>
+                    <Filters type="list">
+                      <ValueFilter>
+                        <Table>Computer</Table>
+                        <Column>SystemFamily</Column>
+                        <Comparison>Contains</Comparison>
+                        <Value>ThinkStation</Value>
+                      </ValueFilter>
+                      <ValueFilter>
+                        <Table>Computer</Table>
+                        <Column>SystemVersion</Column>
+                        <Comparison>Contains</Comparison>
+                        <Value>ThinkStation</Value>
+                      </ValueFilter>
+                    </Filters>
+                  </GroupFilter>
+                </Filters>
+              </RootFilter>
+              <ReportDefinitionTypeName>BasicReportDefinition</ReportDefinitionTypeName>
+              <Columns type="list">
+                <Column>
+                  <Column>ComputerId</Column>
+                  <Summary></Summary>
+                  <Table>Computer</Table>
+                  <Title></Title>
+                </Column>
+              </Columns>
+            </ReportDefinition>
+            <IsDrilldown value="true" />
+            <ImportedPath></ImportedPath>
+            <TypeName>DynamicCollection</TypeName>
+            <Created>2018-09-19T12:42:04.0000000+02:00</Created>
+            <Description></Description>
+            <Error></Error>
+            <Id value="1616" />
+            <IsEnabled value="true" />
+            <Modified>2018-09-21T11:24:29.0000000+02:00</Modified>
+            <Name>Ordinateurs ThinkStation C** &amp; P***</Name>
+            <ParentId value="1614" />
+            <Path>CHA\Workstations\Lenovo\Ordinateurs ThinkStation C** &amp; P***</Path>
+            <Type>DynamicCollection</Type>
+            <Children type="list" />
+          </Collection>
+          <Collection>
+            <ReportDefinition name="Definition">
+              <RootFilter name="Filter">
+                <Comparison>Any</Comparison>
+                <Filters type="list">
+                  <ValueFilter>
+                    <Table>Computer</Table>
+                    <Column>SystemFamily</Column>
+                    <Comparison>Regex</Comparison>
+                    <Value>M72|M72e|M73</Value>
+                  </ValueFilter>
+                  <ValueFilter>
+                    <Table>Computer</Table>
+                    <Column>SystemVersion</Column>
+                    <Comparison>Regex</Comparison>
+                    <Value>M72|M72e|M73</Value>
+                  </ValueFilter>
+                </Filters>
+              </RootFilter>
+              <ReportDefinitionTypeName>BasicReportDefinition</ReportDefinitionTypeName>
+              <Columns type="list">
+                <Column>
+                  <Column>ComputerId</Column>
+                  <Summary></Summary>
+                  <Table>Computer</Table>
+                  <Title></Title>
+                </Column>
+              </Columns>
+            </ReportDefinition>
+            <IsDrilldown value="true" />
+            <ImportedPath></ImportedPath>
+            <TypeName>DynamicCollection</TypeName>
+            <Created>2019-02-07T12:43:19.0000000+01:00</Created>
+            <Description>M72, M72e, M73</Description>
+            <Error></Error>
+            <Id value="2396" />
+            <IsEnabled value="true" />
+            <Modified>2019-02-07T12:56:10.0000000+01:00</Modified>
+            <Name>Ordinateurs Thinkcenter M7*</Name>
+            <ParentId value="1614" />
+            <Path>CHA\Workstations\Lenovo\Ordinateurs Thinkcenter M7*</Path>
+            <Type>DynamicCollection</Type>
+            <Children type="list">
+              <Collection>
+                <ReportDefinition name="Definition">
+                  <RootFilter name="Filter">
+                    <Comparison>Any</Comparison>
+                    <Filters type="list">
+                      <ValueFilter>
+                        <Table>Computer</Table>
+                        <Column>SystemFamily</Column>
+                        <Comparison>Contains</Comparison>
+                        <Value>ThinkCentre M73</Value>
+                      </ValueFilter>
+                      <ValueFilter>
+                        <Table>Computer</Table>
+                        <Column>SystemVersion</Column>
+                        <Comparison>Contains</Comparison>
+                        <Value>ThinkCentre M73</Value>
+                      </ValueFilter>
+                    </Filters>
+                  </RootFilter>
+                  <ReportDefinitionTypeName>BasicReportDefinition</ReportDefinitionTypeName>
+                  <Columns type="list">
+                    <Column>
+                      <Column>ComputerId</Column>
+                      <Summary></Summary>
+                      <Table>Computer</Table>
+                      <Title></Title>
+                    </Column>
+                  </Columns>
+                </ReportDefinition>
+                <IsDrilldown value="true" />
+                <ImportedPath></ImportedPath>
+                <TypeName>DynamicCollection</TypeName>
+                <Created>2019-02-07T12:57:10.0000000+01:00</Created>
+                <Description></Description>
+                <Error></Error>
+                <Id value="2400" />
+                <IsEnabled value="true" />
+                <Modified>2019-02-07T12:57:10.0000000+01:00</Modified>
+                <Name>M73</Name>
+                <ParentId value="2396" />
+                <Path>CHA\Workstations\Lenovo\Ordinateurs Thinkcenter M7*\M73</Path>
+                <Type>DynamicCollection</Type>
+                <Children type="list" />
+              </Collection>
+              <Collection>
+                <ReportDefinition name="Definition">
+                  <RootFilter name="Filter">
+                    <Comparison>Any</Comparison>
+                    <Filters type="list">
+                      <ValueFilter>
+                        <Table>Computer</Table>
+                        <Column>SystemFamily</Column>
+                        <Comparison>Contains</Comparison>
+                        <Value>ThinkCentre M72</Value>
+                      </ValueFilter>
+                      <ValueFilter>
+                        <Table>Computer</Table>
+                        <Column>SystemVersion</Column>
+                        <Comparison>Contains</Comparison>
+                        <Value>ThinkCentre M72</Value>
+                      </ValueFilter>
+                    </Filters>
+                  </RootFilter>
+                  <ReportDefinitionTypeName>BasicReportDefinition</ReportDefinitionTypeName>
+                  <Columns type="list">
+                    <Column>
+                      <Column>ComputerId</Column>
+                      <Summary></Summary>
+                      <Table>Computer</Table>
+                      <Title></Title>
+                    </Column>
+                  </Columns>
+                </ReportDefinition>
+                <IsDrilldown value="true" />
+                <ImportedPath></ImportedPath>
+                <TypeName>DynamicCollection</TypeName>
+                <Created>2019-02-07T12:57:56.0000000+01:00</Created>
+                <Description></Description>
+                <Error></Error>
+                <Id value="2401" />
+                <IsEnabled value="true" />
+                <Modified>2019-02-07T12:58:10.0000000+01:00</Modified>
+                <Name>M72</Name>
+                <ParentId value="2396" />
+                <Path>CHA\Workstations\Lenovo\Ordinateurs Thinkcenter M7*\M72</Path>
+                <Type>DynamicCollection</Type>
+                <Children type="list" />
+              </Collection>
+            </Children>
+          </Collection>
+        </Children>
+      </Collection>
+      <Collection>
+        <ReportDefinition name="Definition">
+          <RootFilter name="Filter">
+            <Comparison>All</Comparison>
+            <Filters type="list">
+              <ValueFilter>
+                <Table>Computer</Table>
+                <Column>Manufacturer</Column>
+                <Comparison>Contains</Comparison>
+                <Value>Dell Inc.</Value>
+              </ValueFilter>
+            </Filters>
+          </RootFilter>
+          <ReportDefinitionTypeName>BasicReportDefinition</ReportDefinitionTypeName>
+          <Columns type="list">
+            <Column>
+              <Column>ComputerId</Column>
+              <Summary></Summary>
+              <Table>Computer</Table>
+              <Title></Title>
+            </Column>
+          </Columns>
+        </ReportDefinition>
+        <IsDrilldown value="true" />
+        <ImportedPath></ImportedPath>
+        <TypeName>DynamicCollection</TypeName>
+        <Created>2018-09-19T12:46:47.0000000+02:00</Created>
+        <Description></Description>
+        <Error></Error>
+        <Id value="1617" />
+        <IsEnabled value="true" />
+        <Modified>2018-09-21T11:24:36.0000000+02:00</Modified>
+        <Name>Dell Inc.</Name>
+        <ParentId value="1593" />
+        <Path>CHA\Workstations\Dell Inc.</Path>
+        <Type>DynamicCollection</Type>
+        <Children type="list">
+          <Collection>
+            <ReportDefinition name="Definition">
+              <RootFilter name="Filter">
+                <Comparison>All</Comparison>
+                <Filters type="list">
+                  <ValueFilter>
+                    <Table>Computer</Table>
+                    <Column>Model</Column>
+                    <Comparison>Contains</Comparison>
+                    <Value>OptiPlex 360</Value>
+                  </ValueFilter>
+                </Filters>
+              </RootFilter>
+              <ReportDefinitionTypeName>BasicReportDefinition</ReportDefinitionTypeName>
+              <Columns type="list">
+                <Column>
+                  <Column>ComputerId</Column>
+                  <Summary></Summary>
+                  <Table>Computer</Table>
+                  <Title></Title>
+                </Column>
+              </Columns>
+            </ReportDefinition>
+            <IsDrilldown value="true" />
+            <ImportedPath></ImportedPath>
+            <TypeName>DynamicCollection</TypeName>
+            <Created>2018-09-19T12:05:12.0000000+02:00</Created>
+            <Description></Description>
+            <Error></Error>
+            <Id value="1618" />
+            <IsEnabled value="true" />
+            <Modified>2018-09-21T11:24:53.0000000+02:00</Modified>
+            <Name>OptiPlex 360</Name>
+            <ParentId value="1617" />
+            <Path>CHA\Workstations\Dell Inc.\OptiPlex 360</Path>
+            <Type>DynamicCollection</Type>
+            <Children type="list" />
+          </Collection>
+          <Collection>
+            <ReportDefinition name="Definition">
+              <RootFilter name="Filter">
+                <Comparison>All</Comparison>
+                <Filters type="list">
+                  <ValueFilter>
+                    <Table>Computer</Table>
+                    <Column>Model</Column>
+                    <Comparison>Contains</Comparison>
+                    <Value>Optiplex 380</Value>
+                  </ValueFilter>
+                </Filters>
+              </RootFilter>
+              <ReportDefinitionTypeName>BasicReportDefinition</ReportDefinitionTypeName>
+              <Columns type="list">
+                <Column>
+                  <Column>ComputerId</Column>
+                  <Summary></Summary>
+                  <Table>Computer</Table>
+                  <Title></Title>
+                </Column>
+              </Columns>
+            </ReportDefinition>
+            <IsDrilldown value="true" />
+            <ImportedPath></ImportedPath>
+            <TypeName>DynamicCollection</TypeName>
+            <Created>2018-09-19T12:05:54.0000000+02:00</Created>
+            <Description></Description>
+            <Error></Error>
+            <Id value="1619" />
+            <IsEnabled value="true" />
+            <Modified>2018-09-21T11:24:48.0000000+02:00</Modified>
+            <Name>Optiplex 380</Name>
+            <ParentId value="1617" />
+            <Path>CHA\Workstations\Dell Inc.\Optiplex 380</Path>
+            <Type>DynamicCollection</Type>
+            <Children type="list" />
+          </Collection>
+          <Collection>
+            <ReportDefinition name="Definition">
+              <RootFilter name="Filter">
+                <Comparison>All</Comparison>
+                <Filters type="list">
+                  <ValueFilter>
+                    <Table>Computer</Table>
+                    <Column>Model</Column>
+                    <Comparison>Contains</Comparison>
+                    <Value>OptiPlex 390</Value>
+                  </ValueFilter>
+                </Filters>
+              </RootFilter>
+              <ReportDefinitionTypeName>BasicReportDefinition</ReportDefinitionTypeName>
+              <Columns type="list">
+                <Column>
+                  <Column>ComputerId</Column>
+                  <Summary></Summary>
+                  <Table>Computer</Table>
+                  <Title></Title>
+                </Column>
+              </Columns>
+            </ReportDefinition>
+            <IsDrilldown value="true" />
+            <ImportedPath></ImportedPath>
+            <TypeName>DynamicCollection</TypeName>
+            <Created>2018-09-19T12:18:17.0000000+02:00</Created>
+            <Description></Description>
+            <Error></Error>
+            <Id value="1620" />
+            <IsEnabled value="true" />
+            <Modified>2018-09-21T11:24:40.0000000+02:00</Modified>
+            <Name>OptiPlex 390</Name>
+            <ParentId value="1617" />
+            <Path>CHA\Workstations\Dell Inc.\OptiPlex 390</Path>
+            <Type>DynamicCollection</Type>
+            <Children type="list" />
+          </Collection>
+        </Children>
+      </Collection>
+      <Collection>
+        <ReportDefinition name="Definition">
+          <RootFilter name="Filter">
+            <Comparison>Any</Comparison>
+            <Filters type="list">
+              <ValueFilter>
+                <Table>Computer</Table>
+                <Column>Manufacturer</Column>
+                <Comparison>Regex</Comparison>
+                <Value>HP</Value>
+              </ValueFilter>
+              <ValueFilter>
+                <Table>Computer</Table>
+                <Column>Manufacturer</Column>
+                <Comparison>Regex</Comparison>
+                <Value>Hewlett-Packard</Value>
+              </ValueFilter>
+            </Filters>
+          </RootFilter>
+          <ReportDefinitionTypeName>BasicReportDefinition</ReportDefinitionTypeName>
+          <Columns type="list">
+            <Column>
+              <Column>ComputerId</Column>
+              <Summary></Summary>
+              <Table>Computer</Table>
+              <Title></Title>
+            </Column>
+          </Columns>
+        </ReportDefinition>
+        <IsDrilldown value="true" />
+        <ImportedPath></ImportedPath>
+        <TypeName>DynamicCollection</TypeName>
+        <Created>2018-09-19T12:47:44.0000000+02:00</Created>
+        <Description></Description>
+        <Error></Error>
+        <Id value="1621" />
+        <IsEnabled value="true" />
+        <Modified>2018-09-21T11:25:01.0000000+02:00</Modified>
+        <Name>HP</Name>
+        <ParentId value="1593" />
+        <Path>CHA\Workstations\HP</Path>
+        <Type>DynamicCollection</Type>
+        <Children type="list" />
+      </Collection>
+      <Collection>
+        <ReportDefinition name="Definition">
+          <RootFilter name="Filter">
+            <Comparison>All</Comparison>
+            <Filters type="list">
+              <ValueFilter>
+                <Table>Computer</Table>
+                <Column>Manufacturer</Column>
+                <Comparison>Contains</Comparison>
+                <Value>TOSHIBA</Value>
+              </ValueFilter>
+            </Filters>
+          </RootFilter>
+          <ReportDefinitionTypeName>BasicReportDefinition</ReportDefinitionTypeName>
+          <Columns type="list">
+            <Column>
+              <Column>ComputerId</Column>
+              <Summary></Summary>
+              <Table>Computer</Table>
+              <Title></Title>
+            </Column>
+          </Columns>
+        </ReportDefinition>
+        <IsDrilldown value="true" />
+        <ImportedPath></ImportedPath>
+        <TypeName>DynamicCollection</TypeName>
+        <Created>2018-09-20T08:29:12.0000000+02:00</Created>
+        <Description></Description>
+        <Error></Error>
+        <Id value="1622" />
+        <IsEnabled value="true" />
+        <Modified>2018-09-21T11:25:11.0000000+02:00</Modified>
+        <Name>Toshiba</Name>
+        <ParentId value="1593" />
+        <Path>CHA\Workstations\Toshiba</Path>
+        <Type>DynamicCollection</Type>
+        <Children type="list" />
+      </Collection>
+      <Collection>
+        <ImportedPath></ImportedPath>
+        <TypeName>StaticCollection</TypeName>
+        <Created>2018-10-02T12:12:32.0000000+02:00</Created>
+        <Description></Description>
+        <Error></Error>
+        <Id value="1913" />
+        <IsEnabled value="true" />
+        <Modified>2018-10-02T12:12:32.0000000+02:00</Modified>
+        <Name>Postes Cadres</Name>
+        <ParentId value="1593" />
+        <Path>CHA\Workstations\Postes Cadres</Path>
+        <Type>StaticCollection</Type>
+        <Computers type="list">
+          <item>7-0135.adcha.local</item>
+          <item>7-0157.adcha.local</item>
+          <item>7-0195.adcha.local</item>
+          <item>7-0226.adcha.local</item>
+          <item>7-0245.adcha.local</item>
+          <item>7-0400.adcha.local</item>
+          <item>7-0442.adcha.local</item>
+          <item>7-0462.adcha.local</item>
+          <item>7-0524.adcha.local</item>
+          <item>7-0528.adcha.local</item>
+          <item>7-0D6N1.adcha.local</item>
+          <item>7-1039.adcha.local</item>
+          <item>7-1065.adcha.local</item>
+          <item>7-1074.adcha.local</item>
+          <item>7-1094.adcha.local</item>
+          <item>7-1138.adcha.local</item>
+          <item>7-1140.adcha.local</item>
+          <item>7-1147.adcha.local</item>
+          <item>7-1149.adcha.local</item>
+          <item>7-1153.adcha.local</item>
+          <item>7-1164.adcha.local</item>
+          <item>7-1177.adcha.local</item>
+          <item>7-1178.adcha.local</item>
+          <item>7-1179.adcha.local</item>
+          <item>7-1183.adcha.local</item>
+          <item>7-1192.adcha.local</item>
+          <item>7-1194.adcha.local</item>
+          <item>7-1196.adcha.local</item>
+          <item>7-1199.adcha.local</item>
+          <item>7-1205.adcha.local</item>
+          <item>7-1241.adcha.local</item>
+          <item>7-1247.adcha.local</item>
+          <item>7-1252.adcha.local</item>
+          <item>7-1276.adcha.local</item>
+          <item>7-1295.adcha.local</item>
+          <item>7-1297.adcha.local</item>
+          <item>7-1323.adcha.local</item>
+          <item>7-1325.adcha.local</item>
+          <item>7-1361.adcha.local</item>
+          <item>7-1374.adcha.local</item>
+          <item>7-1387.adcha.local</item>
+          <item>7-1407.adcha.local</item>
+          <item>7-1417.adcha.local</item>
+          <item>7-1459.adcha.local</item>
+          <item>7-1462.adcha.local</item>
+          <item>7-1477.adcha.local</item>
+          <item>7-1478.adcha.local</item>
+          <item>7-1519.adcha.local</item>
+          <item>7-1521.adcha.local</item>
+          <item>7-1522.adcha.local</item>
+          <item>7-1537.adcha.local</item>
+          <item>7-1545.adcha.local</item>
+          <item>7-1551.adcha.local</item>
+          <item>7-1570.adcha.local</item>
+          <item>7-1605.adcha.local</item>
+          <item>7-1S6W7.adcha.local</item>
+          <item>7-2M7RT.adcha.local</item>
+          <item>7-2MBN1.adcha.local</item>
+          <item>7-4X197.adcha.local</item>
+          <item>7-54614.adcha.local</item>
+          <item>7-86403.adcha.local</item>
+          <item>7-9W197.adcha.local</item>
+          <item>7-G8493.adcha.local</item>
+          <item>7-G8663.adcha.local</item>
+          <item>7-R6808.adcha.local</item>
+          <item>7-R6819.adcha.local</item>
+          <item>7-R6832.adcha.local</item>
+          <item>7-R6868.adcha.local</item>
+          <item>7-R6873.adcha.local</item>
+          <item>7-R6878.adcha.local</item>
+          <item>7-R6890.adcha.local</item>
+          <item>7-R7013.adcha.local</item>
+          <item>7-R7062.adcha.local</item>
+          <item>7-R7069.adcha.local</item>
+          <item>7-R7156.adcha.local</item>
+          <item>7-R7186.adcha.local</item>
+          <item>7-R8165.adcha.local</item>
+          <item>7-R8197.adcha.local</item>
+          <item>DT-2D397.adcha.local</item>
+          <item>DT-2MD44.adcha.local</item>
+          <item>DT-7L197.adcha.local</item>
+          <item>DT-E5275.adcha.local</item>
+          <item>DT-F6660.adcha.local</item>
+          <item>DT-G8205.adcha.local</item>
+          <item>DT-G8257.adcha.local</item>
+          <item>DT-G8281.adcha.local</item>
+          <item>DT-G8296.adcha.local</item>
+          <item>DT-G8471.adcha.local</item>
+          <item>DT-G8520.adcha.local</item>
+          <item>DT-G8604.adcha.local</item>
+          <item>DT-HL197.adcha.local</item>
+          <item>DT-W2729.adcha.local</item>
+          <item>DT-W2742.adcha.local</item>
+          <item>DT-W2776.adcha.local</item>
+          <item>DT-W2836.adcha.local</item>
+          <item>DT-W3178.adcha.local</item>
+          <item>DT-Z7375.adcha.local</item>
+          <item>DT-Z7428.adcha.local</item>
+          <item>DT-Z7432.adcha.local</item>
+          <item>DT-Z7662.adcha.local</item>
+          <item>DT-Z7715.adcha.local</item>
+          <item>DT-Z7726.adcha.local</item>
+          <item>PS-1099.adcha.local</item>
+          <item>PS-4853.adcha.local</item>
+          <item>XP-0978.adcha.local</item>
+          <item>XP-2121.adcha.local</item>
+        </Computers>
+        <Children type="list">
+          <Collection>
+            <ImportedPath></ImportedPath>
+            <TypeName>StaticCollection</TypeName>
+            <Created>2018-10-02T12:11:57.0000000+02:00</Created>
+            <Description></Description>
+            <Error></Error>
+            <Id value="1912" />
+            <IsEnabled value="true" />
+            <Modified>2018-10-02T12:15:39.0000000+02:00</Modified>
+            <Name>Poste Cadres à changer</Name>
+            <ParentId value="1913" />
+            <Path>CHA\Workstations\Postes Cadres\Poste Cadres à changer</Path>
+            <Type>StaticCollection</Type>
+            <Computers type="list">
+              <item>XP-0978.adcha.local</item>
+              <item>XP-2121.adcha.local</item>
+            </Computers>
+            <Children type="list" />
+          </Collection>
+        </Children>
+      </Collection>
+    </Children>
+  </Collection>
+</AdminArsenal.Export>

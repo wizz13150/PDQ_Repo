@@ -1,0 +1,160 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<AdminArsenal.Export Code="PDQInventory" Name="PDQ Inventory" Version="17.1.0.0" MinimumVersion="4.0">
+  <Collection>
+    <ReportDefinition name="Definition">
+      <RootFilter name="Filter">
+        <Comparison>All</Comparison>
+        <Filters type="list">
+          <ValueFilter>
+            <Table>NetworkAdapter</Table>
+            <TableTitle>Network Adapter</TableTitle>
+            <Column>ConnectionSpeed</Column>
+            <Comparison>GreaterThan</Comparison>
+            <Value>0</Value>
+          </ValueFilter>
+        </Filters>
+      </RootFilter>
+      <ReportDefinitionTypeName>BasicReportDefinition</ReportDefinitionTypeName>
+      <Columns type="list">
+        <Column>
+          <Column>ComputerId</Column>
+          <Summary></Summary>
+          <Table>Computer</Table>
+          <Title></Title>
+        </Column>
+      </Columns>
+    </ReportDefinition>
+    <IsDrilldown value="true" />
+    <ImportedPath></ImportedPath>
+    <TypeName>DynamicCollection</TypeName>
+    <Created>2018-10-09T08:42:46.0000000+02:00</Created>
+    <Description></Description>
+    <Error></Error>
+    <Id value="1935" />
+    <IsEnabled value="true" />
+    <Modified>2018-10-16T08:59:14.0000000+02:00</Modified>
+    <Name>Vitesses LAN</Name>
+    <ParentId value="1768" />
+    <Path>CHA\Paramétrages\Vitesses LAN</Path>
+    <Type>DynamicCollection</Type>
+    <Children type="list">
+      <Collection>
+        <ReportDefinition name="Definition">
+          <RootFilter name="Filter">
+            <Comparison>All</Comparison>
+            <Filters type="list">
+              <ValueFilter>
+                <Table>NetworkAdapter</Table>
+                <TableTitle>Network Adapter</TableTitle>
+                <Column>ConnectionSpeed</Column>
+                <Comparison>Equals</Comparison>
+                <Value>10</Value>
+              </ValueFilter>
+            </Filters>
+          </RootFilter>
+          <ReportDefinitionTypeName>BasicReportDefinition</ReportDefinitionTypeName>
+          <Columns type="list">
+            <Column>
+              <Column>ComputerId</Column>
+              <Summary></Summary>
+              <Table>Computer</Table>
+              <Title></Title>
+            </Column>
+          </Columns>
+        </ReportDefinition>
+        <IsDrilldown value="true" />
+        <ImportedPath></ImportedPath>
+        <TypeName>DynamicCollection</TypeName>
+        <Created>2018-10-09T08:41:29.0000000+02:00</Created>
+        <Description></Description>
+        <Error></Error>
+        <Id value="1934" />
+        <IsEnabled value="true" />
+        <Modified>2018-10-09T08:43:09.0000000+02:00</Modified>
+        <Name>Postes à 10Mbps</Name>
+        <ParentId value="1935" />
+        <Path>CHA\Paramétrages\Vitesses LAN\Postes à 10Mbps</Path>
+        <Type>DynamicCollection</Type>
+        <Children type="list" />
+      </Collection>
+      <Collection>
+        <ReportDefinition name="Definition">
+          <RootFilter name="Filter">
+            <Comparison>All</Comparison>
+            <Filters type="list">
+              <ValueFilter>
+                <Table>NetworkAdapter</Table>
+                <TableTitle>Network Adapter</TableTitle>
+                <Column>ConnectionSpeed</Column>
+                <Comparison>Equals</Comparison>
+                <Value>100</Value>
+              </ValueFilter>
+            </Filters>
+          </RootFilter>
+          <ReportDefinitionTypeName>BasicReportDefinition</ReportDefinitionTypeName>
+          <Columns type="list">
+            <Column>
+              <Column>ComputerId</Column>
+              <Summary></Summary>
+              <Table>Computer</Table>
+              <Title></Title>
+            </Column>
+          </Columns>
+        </ReportDefinition>
+        <IsDrilldown value="true" />
+        <ImportedPath></ImportedPath>
+        <TypeName>DynamicCollection</TypeName>
+        <Created>2018-10-09T08:43:12.0000000+02:00</Created>
+        <Description></Description>
+        <Error></Error>
+        <Id value="1936" />
+        <IsEnabled value="true" />
+        <Modified>2018-10-09T08:43:30.0000000+02:00</Modified>
+        <Name>Postes à 100Mbps</Name>
+        <ParentId value="1935" />
+        <Path>CHA\Paramétrages\Vitesses LAN\Postes à 100Mbps</Path>
+        <Type>DynamicCollection</Type>
+        <Children type="list" />
+      </Collection>
+      <Collection>
+        <ReportDefinition name="Definition">
+          <RootFilter name="Filter">
+            <Comparison>All</Comparison>
+            <Filters type="list">
+              <ValueFilter>
+                <Table>NetworkAdapter</Table>
+                <TableTitle>Network Adapter</TableTitle>
+                <Column>ConnectionSpeed</Column>
+                <Comparison>Equals</Comparison>
+                <Value>1000</Value>
+              </ValueFilter>
+            </Filters>
+          </RootFilter>
+          <ReportDefinitionTypeName>BasicReportDefinition</ReportDefinitionTypeName>
+          <Columns type="list">
+            <Column>
+              <Column>ComputerId</Column>
+              <Summary></Summary>
+              <Table>Computer</Table>
+              <Title></Title>
+            </Column>
+          </Columns>
+        </ReportDefinition>
+        <IsDrilldown value="true" />
+        <ImportedPath></ImportedPath>
+        <TypeName>DynamicCollection</TypeName>
+        <Created>2018-10-09T08:43:37.0000000+02:00</Created>
+        <Description></Description>
+        <Error></Error>
+        <Id value="1937" />
+        <IsEnabled value="true" />
+        <Modified>2018-10-09T08:43:53.0000000+02:00</Modified>
+        <Name>Postes à 1Gbps</Name>
+        <ParentId value="1935" />
+        <Path>CHA\Paramétrages\Vitesses LAN\Postes à 1Gbps</Path>
+        <Type>DynamicCollection</Type>
+        <Children type="list" />
+      </Collection>
+    </Children>
+  </Collection>
+</AdminArsenal.Export>

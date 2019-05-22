@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<AdminArsenal.Export Code="PDQInventory" Name="PDQ Inventory" Version="17.1.0.0" MinimumVersion="4.0">
+  <Collection>
+    <ReportDefinition name="Definition">
+      <RootFilter name="Filter">
+        <Comparison>All</Comparison>
+        <Filters type="list">
+          <ValueFilter>
+            <Table>HardwareDevice</Table>
+            <TableTitle>Hardware Device</TableTitle>
+            <Column>ClassName</Column>
+            <Comparison>StartsWith</Comparison>
+            <Value>Appareils mobiles</Value>
+          </ValueFilter>
+        </Filters>
+      </RootFilter>
+      <ReportDefinitionTypeName>BasicReportDefinition</ReportDefinitionTypeName>
+      <Columns type="list">
+        <Column>
+          <Column>ComputerId</Column>
+          <Summary></Summary>
+          <Table>Computer</Table>
+          <Title></Title>
+        </Column>
+      </Columns>
+    </ReportDefinition>
+    <IsDrilldown value="false" />
+    <ImportedPath></ImportedPath>
+    <TypeName>DynamicCollection</TypeName>
+    <Created>2018-09-21T14:30:08.0000000+02:00</Created>
+    <Description></Description>
+    <Error></Error>
+    <Id value="1785" />
+    <IsEnabled value="true" />
+    <Modified>2018-09-21T14:30:08.0000000+02:00</Modified>
+    <Name>Appareils mobiles connectés</Name>
+    <ParentId value="1777" />
+    <Path>CHA\Hardware\Appareils mobiles connectés</Path>
+    <Type>DynamicCollection</Type>
+    <Children type="list" />
+  </Collection>
+</AdminArsenal.Export>

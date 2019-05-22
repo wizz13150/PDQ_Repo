@@ -1,0 +1,71 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<AdminArsenal.Export Code="PDQInventory" Name="PDQ Inventory" Version="17.1.0.0" MinimumVersion="4.0">
+  <Collection>
+    <ReportDefinition name="Definition">
+      <RootFilter name="Filter">
+        <Comparison>Any</Comparison>
+        <Filters type="list">
+          <GroupFilter>
+            <Comparison>All</Comparison>
+            <Filters type="list">
+              <ValueFilter>
+                <Table>LocalUser</Table>
+                <TableTitle>Local User</TableTitle>
+                <Column>UserName</Column>
+                <Comparison>Contains</Comparison>
+                <Value>Administrateur</Value>
+              </ValueFilter>
+              <ValueFilter>
+                <Table>LocalUser</Table>
+                <TableTitle>Local User</TableTitle>
+                <Column>IsDisabled</Column>
+                <Comparison>IsTrue</Comparison>
+              </ValueFilter>
+            </Filters>
+          </GroupFilter>
+          <GroupFilter>
+            <Comparison>All</Comparison>
+            <Filters type="list">
+              <ValueFilter>
+                <Table>LocalUser</Table>
+                <TableTitle>Local User</TableTitle>
+                <Column>UserName</Column>
+                <Comparison>Contains</Comparison>
+                <Value>Administrator</Value>
+              </ValueFilter>
+              <ValueFilter>
+                <Table>LocalUser</Table>
+                <TableTitle>Local User</TableTitle>
+                <Column>IsDisabled</Column>
+                <Comparison>IsTrue</Comparison>
+              </ValueFilter>
+            </Filters>
+          </GroupFilter>
+        </Filters>
+      </RootFilter>
+      <ReportDefinitionTypeName>BasicReportDefinition</ReportDefinitionTypeName>
+      <Columns type="list">
+        <Column>
+          <Column>ComputerId</Column>
+          <Summary></Summary>
+          <Table>Computer</Table>
+          <Title></Title>
+        </Column>
+      </Columns>
+    </ReportDefinition>
+    <IsDrilldown value="true" />
+    <ImportedPath></ImportedPath>
+    <TypeName>DynamicCollection</TypeName>
+    <Created>2018-09-21T11:28:18.0000000+02:00</Created>
+    <Description></Description>
+    <Error></Error>
+    <Id value="1773" />
+    <IsEnabled value="true" />
+    <Modified>2018-09-21T11:28:18.0000000+02:00</Modified>
+    <Name>Admin Local Désactivé</Name>
+    <ParentId value="1768" />
+    <Path>CHA\Paramétrages\Admin Local Désactivé</Path>
+    <Type>DynamicCollection</Type>
+    <Children type="list" />
+  </Collection>
+</AdminArsenal.Export>

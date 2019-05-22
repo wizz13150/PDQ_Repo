@@ -1,0 +1,325 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<AdminArsenal.Export Code="PDQInventory" Name="PDQ Inventory" Version="17.1.0.0" MinimumVersion="4.0">
+  <Collection>
+    <ReportDefinition name="Definition">
+      <RootFilter name="Filter">
+        <Comparison>All</Comparison>
+        <Filters type="list">
+          <ValueFilter>
+            <Table>HardwareDevice</Table>
+            <TableTitle>Hardware Device</TableTitle>
+            <Column>ClassName</Column>
+            <Comparison>Contains</Comparison>
+            <Value>Cartes graphiques</Value>
+          </ValueFilter>
+          <ValueFilter>
+            <Table>HardwareDevice</Table>
+            <TableTitle>Hardware Device</TableTitle>
+            <Column>Name</Column>
+            <Comparison>Contains</Comparison>
+            <Value>NVIDIA</Value>
+          </ValueFilter>
+        </Filters>
+      </RootFilter>
+      <ReportDefinitionTypeName>BasicReportDefinition</ReportDefinitionTypeName>
+      <Columns type="list">
+        <Column>
+          <Column>ComputerId</Column>
+          <Summary></Summary>
+          <Table>Computer</Table>
+          <Title></Title>
+        </Column>
+      </Columns>
+    </ReportDefinition>
+    <IsDrilldown value="true" />
+    <ImportedPath></ImportedPath>
+    <TypeName>DynamicCollection</TypeName>
+    <Created>2018-09-26T11:19:47.0000000+02:00</Created>
+    <Description></Description>
+    <Error></Error>
+    <Id value="1865" />
+    <IsEnabled value="true" />
+    <Modified>2018-09-26T11:19:47.0000000+02:00</Modified>
+    <Name>Cartes graphiques Nvidia</Name>
+    <ParentId value="1777" />
+    <Path>CHA\Hardware\Cartes graphiques Nvidia</Path>
+    <Type>DynamicCollection</Type>
+    <Children type="list">
+      <Collection>
+        <ReportDefinition name="Definition">
+          <RootFilter name="Filter">
+            <Comparison>All</Comparison>
+            <Filters type="list">
+              <ValueFilter>
+                <Table>HardwareDevice</Table>
+                <TableTitle>Hardware Device</TableTitle>
+                <Column>Name</Column>
+                <Comparison>Contains</Comparison>
+                <Value>NVIDIA GeForce</Value>
+              </ValueFilter>
+            </Filters>
+          </RootFilter>
+          <ReportDefinitionTypeName>BasicReportDefinition</ReportDefinitionTypeName>
+          <Columns type="list">
+            <Column>
+              <Column>ComputerId</Column>
+              <Summary></Summary>
+              <Table>Computer</Table>
+              <Title></Title>
+            </Column>
+          </Columns>
+        </ReportDefinition>
+        <IsDrilldown value="true" />
+        <ImportedPath></ImportedPath>
+        <TypeName>DynamicCollection</TypeName>
+        <Created>2018-09-26T11:21:21.0000000+02:00</Created>
+        <Description></Description>
+        <Error></Error>
+        <Id value="1866" />
+        <IsEnabled value="true" />
+        <Modified>2018-09-26T11:22:54.0000000+02:00</Modified>
+        <Name>NVIDIA GeForce</Name>
+        <ParentId value="1865" />
+        <Path>CHA\Hardware\Cartes graphiques Nvidia\NVIDIA GeForce</Path>
+        <Type>DynamicCollection</Type>
+        <Children type="list">
+          <Collection>
+            <ReportDefinition name="Definition">
+              <RootFilter name="Filter">
+                <Comparison>All</Comparison>
+                <Filters type="list">
+                  <ValueFilter>
+                    <Table>HardwareDevice</Table>
+                    <TableTitle>Hardware Device</TableTitle>
+                    <Column>Name</Column>
+                    <Comparison>Contains</Comparison>
+                    <Value>NVIDIA Geforce 210</Value>
+                  </ValueFilter>
+                </Filters>
+              </RootFilter>
+              <ReportDefinitionTypeName>BasicReportDefinition</ReportDefinitionTypeName>
+              <Columns type="list">
+                <Column>
+                  <Column>ComputerId</Column>
+                  <Summary></Summary>
+                  <Table>Computer</Table>
+                  <Title></Title>
+                </Column>
+              </Columns>
+            </ReportDefinition>
+            <IsDrilldown value="true" />
+            <ImportedPath></ImportedPath>
+            <TypeName>DynamicCollection</TypeName>
+            <Created>2018-09-26T11:24:23.0000000+02:00</Created>
+            <Description></Description>
+            <Error></Error>
+            <Id value="1868" />
+            <IsEnabled value="true" />
+            <Modified>2018-09-26T11:24:23.0000000+02:00</Modified>
+            <Name>NVIDIA Geforce 210</Name>
+            <ParentId value="1866" />
+            <Path>CHA\Hardware\Cartes graphiques Nvidia\NVIDIA GeForce\NVIDIA Geforce 210</Path>
+            <Type>DynamicCollection</Type>
+            <Children type="list" />
+          </Collection>
+          <Collection>
+            <ReportDefinition name="Definition">
+              <RootFilter name="Filter">
+                <Comparison>All</Comparison>
+                <Filters type="list">
+                  <ValueFilter>
+                    <Table>HardwareDevice</Table>
+                    <TableTitle>Hardware Device</TableTitle>
+                    <Column>Name</Column>
+                    <Comparison>Contains</Comparison>
+                    <Value>NVIDIA GeForce GTX 750 Ti</Value>
+                  </ValueFilter>
+                </Filters>
+              </RootFilter>
+              <ReportDefinitionTypeName>BasicReportDefinition</ReportDefinitionTypeName>
+              <Columns type="list">
+                <Column>
+                  <Column>ComputerId</Column>
+                  <Summary></Summary>
+                  <Table>Computer</Table>
+                  <Title></Title>
+                </Column>
+              </Columns>
+            </ReportDefinition>
+            <IsDrilldown value="true" />
+            <ImportedPath></ImportedPath>
+            <TypeName>DynamicCollection</TypeName>
+            <Created>2018-09-26T11:25:42.0000000+02:00</Created>
+            <Description></Description>
+            <Error></Error>
+            <Id value="1869" />
+            <IsEnabled value="true" />
+            <Modified>2018-09-26T11:25:42.0000000+02:00</Modified>
+            <Name>NVIDIA GeForce GTX 750 Ti</Name>
+            <ParentId value="1866" />
+            <Path>CHA\Hardware\Cartes graphiques Nvidia\NVIDIA GeForce\NVIDIA GeForce GTX 750 Ti</Path>
+            <Type>DynamicCollection</Type>
+            <Children type="list" />
+          </Collection>
+        </Children>
+      </Collection>
+      <Collection>
+        <ReportDefinition name="Definition">
+          <RootFilter name="Filter">
+            <Comparison>All</Comparison>
+            <Filters type="list">
+              <ValueFilter>
+                <Table>HardwareDevice</Table>
+                <TableTitle>Hardware Device</TableTitle>
+                <Column>Name</Column>
+                <Comparison>Contains</Comparison>
+                <Value>NVIDIA Quadro</Value>
+              </ValueFilter>
+            </Filters>
+          </RootFilter>
+          <ReportDefinitionTypeName>BasicReportDefinition</ReportDefinitionTypeName>
+          <Columns type="list">
+            <Column>
+              <Column>ComputerId</Column>
+              <Summary></Summary>
+              <Table>Computer</Table>
+              <Title></Title>
+            </Column>
+          </Columns>
+        </ReportDefinition>
+        <IsDrilldown value="true" />
+        <ImportedPath></ImportedPath>
+        <TypeName>DynamicCollection</TypeName>
+        <Created>2018-09-26T11:22:58.0000000+02:00</Created>
+        <Description></Description>
+        <Error></Error>
+        <Id value="1867" />
+        <IsEnabled value="true" />
+        <Modified>2018-09-26T11:23:32.0000000+02:00</Modified>
+        <Name>NVIDIA Quadro</Name>
+        <ParentId value="1865" />
+        <Path>CHA\Hardware\Cartes graphiques Nvidia\NVIDIA Quadro</Path>
+        <Type>DynamicCollection</Type>
+        <Children type="list">
+          <Collection>
+            <ReportDefinition name="Definition">
+              <RootFilter name="Filter">
+                <Comparison>All</Comparison>
+                <Filters type="list">
+                  <ValueFilter>
+                    <Table>HardwareDevice</Table>
+                    <TableTitle>Hardware Device</TableTitle>
+                    <Column>Name</Column>
+                    <Comparison>StartsWith</Comparison>
+                    <Value>NVIDIA Quadro K4200</Value>
+                  </ValueFilter>
+                </Filters>
+              </RootFilter>
+              <ReportDefinitionTypeName>BasicReportDefinition</ReportDefinitionTypeName>
+              <Columns type="list">
+                <Column>
+                  <Column>ComputerId</Column>
+                  <Summary></Summary>
+                  <Table>Computer</Table>
+                  <Title></Title>
+                </Column>
+              </Columns>
+            </ReportDefinition>
+            <IsDrilldown value="true" />
+            <ImportedPath></ImportedPath>
+            <TypeName>DynamicCollection</TypeName>
+            <Created>2018-09-26T11:26:10.0000000+02:00</Created>
+            <Description></Description>
+            <Error></Error>
+            <Id value="1870" />
+            <IsEnabled value="true" />
+            <Modified>2018-09-26T11:28:07.0000000+02:00</Modified>
+            <Name>NVIDIA Quadro K4200</Name>
+            <ParentId value="1867" />
+            <Path>CHA\Hardware\Cartes graphiques Nvidia\NVIDIA Quadro\NVIDIA Quadro K4200</Path>
+            <Type>DynamicCollection</Type>
+            <Children type="list" />
+          </Collection>
+          <Collection>
+            <ReportDefinition name="Definition">
+              <RootFilter name="Filter">
+                <Comparison>All</Comparison>
+                <Filters type="list">
+                  <ValueFilter>
+                    <Table>HardwareDevice</Table>
+                    <TableTitle>Hardware Device</TableTitle>
+                    <Column>Name</Column>
+                    <Comparison>StartsWith</Comparison>
+                    <Value>NVIDIA Quadro K620</Value>
+                  </ValueFilter>
+                </Filters>
+              </RootFilter>
+              <ReportDefinitionTypeName>BasicReportDefinition</ReportDefinitionTypeName>
+              <Columns type="list">
+                <Column>
+                  <Column>ComputerId</Column>
+                  <Summary></Summary>
+                  <Table>Computer</Table>
+                  <Title></Title>
+                </Column>
+              </Columns>
+            </ReportDefinition>
+            <IsDrilldown value="true" />
+            <ImportedPath></ImportedPath>
+            <TypeName>DynamicCollection</TypeName>
+            <Created>2018-09-26T11:27:10.0000000+02:00</Created>
+            <Description></Description>
+            <Error></Error>
+            <Id value="1871" />
+            <IsEnabled value="true" />
+            <Modified>2018-09-26T11:27:19.0000000+02:00</Modified>
+            <Name>NVIDIA Quadro K620</Name>
+            <ParentId value="1867" />
+            <Path>CHA\Hardware\Cartes graphiques Nvidia\NVIDIA Quadro\NVIDIA Quadro K620</Path>
+            <Type>DynamicCollection</Type>
+            <Children type="list" />
+          </Collection>
+          <Collection>
+            <ReportDefinition name="Definition">
+              <RootFilter name="Filter">
+                <Comparison>All</Comparison>
+                <Filters type="list">
+                  <ValueFilter>
+                    <Table>HardwareDevice</Table>
+                    <TableTitle>Hardware Device</TableTitle>
+                    <Column>Name</Column>
+                    <Comparison>StartsWith</Comparison>
+                    <Value>NVIDIA Quadro M1000M</Value>
+                  </ValueFilter>
+                </Filters>
+              </RootFilter>
+              <ReportDefinitionTypeName>BasicReportDefinition</ReportDefinitionTypeName>
+              <Columns type="list">
+                <Column>
+                  <Column>ComputerId</Column>
+                  <Summary></Summary>
+                  <Table>Computer</Table>
+                  <Title></Title>
+                </Column>
+              </Columns>
+            </ReportDefinition>
+            <IsDrilldown value="true" />
+            <ImportedPath></ImportedPath>
+            <TypeName>DynamicCollection</TypeName>
+            <Created>2018-09-26T11:28:14.0000000+02:00</Created>
+            <Description></Description>
+            <Error></Error>
+            <Id value="1872" />
+            <IsEnabled value="true" />
+            <Modified>2018-09-26T11:35:52.0000000+02:00</Modified>
+            <Name>NVIDIA Quadro M1000M</Name>
+            <ParentId value="1867" />
+            <Path>CHA\Hardware\Cartes graphiques Nvidia\NVIDIA Quadro\NVIDIA Quadro M1000M</Path>
+            <Type>DynamicCollection</Type>
+            <Children type="list" />
+          </Collection>
+        </Children>
+      </Collection>
+    </Children>
+  </Collection>
+</AdminArsenal.Export>

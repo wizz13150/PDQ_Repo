@@ -1,0 +1,326 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<AdminArsenal.Export Code="PDQInventory" Name="PDQ Inventory" Version="17.1.0.0" MinimumVersion="4.0">
+  <Collection>
+    <ReportDefinition name="Definition">
+      <RootFilter name="Filter">
+        <Comparison>All</Comparison>
+        <Filters type="list">
+          <ValueFilter>
+            <Table>Computer</Table>
+            <Column>OSName</Column>
+            <Comparison>Contains</Comparison>
+            <Value>Windows</Value>
+          </ValueFilter>
+          <ValueFilter>
+            <Table>Computer</Table>
+            <Column>OSName</Column>
+            <Comparison>!Contains</Comparison>
+            <Value>Server</Value>
+          </ValueFilter>
+          <ValueFilter>
+            <Table>Computer</Table>
+            <Column>ADPath</Column>
+            <Comparison>!StartsWith</Comparison>
+            <Value>Servers</Value>
+          </ValueFilter>
+        </Filters>
+      </RootFilter>
+      <ReportDefinitionTypeName>BasicReportDefinition</ReportDefinitionTypeName>
+      <Columns type="list">
+        <Column>
+          <Column>ComputerId</Column>
+          <Summary></Summary>
+          <Table>Computer</Table>
+          <Title></Title>
+        </Column>
+      </Columns>
+    </ReportDefinition>
+    <IsDrilldown value="false" />
+    <ImportedPath></ImportedPath>
+    <TypeName>DynamicCollection</TypeName>
+    <Created>2018-09-19T11:36:00.0000000+02:00</Created>
+    <Description></Description>
+    <Error></Error>
+    <Id value="1576" />
+    <IsEnabled value="true" />
+    <Modified>2018-09-21T09:45:07.0000000+02:00</Modified>
+    <Name>Reboot Timeline</Name>
+    <ParentId value="1574" />
+    <Path>CHA\Reboot Timeline</Path>
+    <Type>DynamicCollection</Type>
+    <Children type="list">
+      <Collection>
+        <ReportDefinition name="Definition">
+          <RootFilter name="Filter">
+            <Comparison>All</Comparison>
+            <Filters type="list">
+              <ValueFilter>
+                <Table>Computer</Table>
+                <Column>BootTime</Column>
+                <Comparison>After</Comparison>
+                <Value>30 days ago</Value>
+              </ValueFilter>
+            </Filters>
+          </RootFilter>
+          <ReportDefinitionTypeName>BasicReportDefinition</ReportDefinitionTypeName>
+          <Columns type="list">
+            <Column>
+              <Column>ComputerId</Column>
+              <Summary></Summary>
+              <Table>Computer</Table>
+              <Title></Title>
+            </Column>
+          </Columns>
+        </ReportDefinition>
+        <IsDrilldown value="true" />
+        <ImportedPath></ImportedPath>
+        <TypeName>DynamicCollection</TypeName>
+        <Created>2018-09-19T11:36:00.0000000+02:00</Created>
+        <Description></Description>
+        <Error></Error>
+        <Id value="1577" />
+        <IsEnabled value="true" />
+        <Modified>2018-09-21T09:46:53.0000000+02:00</Modified>
+        <Name>Rebooted moins de 30 jours</Name>
+        <ParentId value="1576" />
+        <Path>CHA\Reboot Timeline\Rebooted moins de 30 jours</Path>
+        <Type>DynamicCollection</Type>
+        <Children type="list" />
+      </Collection>
+      <Collection>
+        <ReportDefinition name="Definition">
+          <RootFilter name="Filter">
+            <Comparison>All</Comparison>
+            <Filters type="list">
+              <ValueFilter>
+                <Table>Computer</Table>
+                <Column>BootTime</Column>
+                <Comparison>Before</Comparison>
+                <Value>30 days ago</Value>
+              </ValueFilter>
+              <ValueFilter>
+                <Table>Computer</Table>
+                <Column>BootTime</Column>
+                <Comparison>After</Comparison>
+                <Value>60 days ago</Value>
+              </ValueFilter>
+            </Filters>
+          </RootFilter>
+          <ReportDefinitionTypeName>BasicReportDefinition</ReportDefinitionTypeName>
+          <Columns type="list">
+            <Column>
+              <Column>ComputerId</Column>
+              <Summary></Summary>
+              <Table>Computer</Table>
+              <Title></Title>
+            </Column>
+          </Columns>
+        </ReportDefinition>
+        <IsDrilldown value="true" />
+        <ImportedPath></ImportedPath>
+        <TypeName>DynamicCollection</TypeName>
+        <Created>2018-09-19T11:36:00.0000000+02:00</Created>
+        <Description></Description>
+        <Error></Error>
+        <Id value="1578" />
+        <IsEnabled value="true" />
+        <Modified>2018-09-21T09:47:04.0000000+02:00</Modified>
+        <Name>Rebooted entre 30 et 60 jours</Name>
+        <ParentId value="1576" />
+        <Path>CHA\Reboot Timeline\Rebooted entre 30 et 60 jours</Path>
+        <Type>DynamicCollection</Type>
+        <Children type="list" />
+      </Collection>
+      <Collection>
+        <ReportDefinition name="Definition">
+          <RootFilter name="Filter">
+            <Comparison>All</Comparison>
+            <Filters type="list">
+              <ValueFilter>
+                <Table>Computer</Table>
+                <Column>BootTime</Column>
+                <Comparison>Before</Comparison>
+                <Value>60 days ago</Value>
+              </ValueFilter>
+            </Filters>
+          </RootFilter>
+          <ReportDefinitionTypeName>BasicReportDefinition</ReportDefinitionTypeName>
+          <Columns type="list">
+            <Column>
+              <Column>ComputerId</Column>
+              <Summary></Summary>
+              <Table>Computer</Table>
+              <Title></Title>
+            </Column>
+          </Columns>
+        </ReportDefinition>
+        <IsDrilldown value="true" />
+        <ImportedPath></ImportedPath>
+        <TypeName>DynamicCollection</TypeName>
+        <Created>2018-09-21T08:43:25.0000000+02:00</Created>
+        <Description></Description>
+        <Error></Error>
+        <Id value="1579" />
+        <IsEnabled value="true" />
+        <Modified>2018-09-21T09:47:14.0000000+02:00</Modified>
+        <Name>Rebooted plus de 60 jours</Name>
+        <ParentId value="1576" />
+        <Path>CHA\Reboot Timeline\Rebooted plus de 60 jours</Path>
+        <Type>DynamicCollection</Type>
+        <Children type="list" />
+      </Collection>
+      <Collection>
+        <ReportDefinition name="Definition">
+          <RootFilter name="Filter">
+            <Comparison>All</Comparison>
+            <Filters type="list">
+              <ValueFilter>
+                <Table>Computer</Table>
+                <Column>BootTime</Column>
+                <Comparison>Before</Comparison>
+                <Value>90 days ago</Value>
+              </ValueFilter>
+            </Filters>
+          </RootFilter>
+          <ReportDefinitionTypeName>BasicReportDefinition</ReportDefinitionTypeName>
+          <Columns type="list">
+            <Column>
+              <Column>ComputerId</Column>
+              <Summary></Summary>
+              <Table>Computer</Table>
+              <Title></Title>
+            </Column>
+          </Columns>
+        </ReportDefinition>
+        <IsDrilldown value="true" />
+        <ImportedPath></ImportedPath>
+        <TypeName>DynamicCollection</TypeName>
+        <Created>2018-09-21T08:44:50.0000000+02:00</Created>
+        <Description></Description>
+        <Error></Error>
+        <Id value="1580" />
+        <IsEnabled value="true" />
+        <Modified>2018-09-21T09:47:22.0000000+02:00</Modified>
+        <Name>Rebooted plus de 90 jours</Name>
+        <ParentId value="1576" />
+        <Path>CHA\Reboot Timeline\Rebooted plus de 90 jours</Path>
+        <Type>DynamicCollection</Type>
+        <Children type="list" />
+      </Collection>
+      <Collection>
+        <ReportDefinition name="Definition">
+          <RootFilter name="Filter">
+            <Comparison>All</Comparison>
+            <Filters type="list">
+              <ValueFilter>
+                <Table>Computer</Table>
+                <Column>BootTime</Column>
+                <Comparison>Before</Comparison>
+                <Value>120 days ago</Value>
+              </ValueFilter>
+            </Filters>
+          </RootFilter>
+          <ReportDefinitionTypeName>BasicReportDefinition</ReportDefinitionTypeName>
+          <Columns type="list">
+            <Column>
+              <Column>ComputerId</Column>
+              <Summary></Summary>
+              <Table>Computer</Table>
+              <Title></Title>
+            </Column>
+          </Columns>
+        </ReportDefinition>
+        <IsDrilldown value="true" />
+        <ImportedPath></ImportedPath>
+        <TypeName>DynamicCollection</TypeName>
+        <Created>2018-09-21T08:45:07.0000000+02:00</Created>
+        <Description></Description>
+        <Error></Error>
+        <Id value="1581" />
+        <IsEnabled value="true" />
+        <Modified>2018-09-21T09:47:26.0000000+02:00</Modified>
+        <Name>Rebooted plus de 120 jours</Name>
+        <ParentId value="1576" />
+        <Path>CHA\Reboot Timeline\Rebooted plus de 120 jours</Path>
+        <Type>DynamicCollection</Type>
+        <Children type="list" />
+      </Collection>
+      <Collection>
+        <ReportDefinition name="Definition">
+          <RootFilter name="Filter">
+            <Comparison>All</Comparison>
+            <Filters type="list">
+              <ValueFilter>
+                <Table>Computer</Table>
+                <Column>BootTime</Column>
+                <Comparison>After</Comparison>
+                <Value>7 days ago</Value>
+              </ValueFilter>
+            </Filters>
+          </RootFilter>
+          <ReportDefinitionTypeName>BasicReportDefinition</ReportDefinitionTypeName>
+          <Columns type="list">
+            <Column>
+              <Column>ComputerId</Column>
+              <Summary></Summary>
+              <Table>Computer</Table>
+              <Title></Title>
+            </Column>
+          </Columns>
+        </ReportDefinition>
+        <IsDrilldown value="true" />
+        <ImportedPath></ImportedPath>
+        <TypeName>DynamicCollection</TypeName>
+        <Created>2018-09-21T08:45:57.0000000+02:00</Created>
+        <Description></Description>
+        <Error></Error>
+        <Id value="1582" />
+        <IsEnabled value="true" />
+        <Modified>2018-09-21T09:46:29.0000000+02:00</Modified>
+        <Name>Rebooted moins de 7 jours</Name>
+        <ParentId value="1576" />
+        <Path>CHA\Reboot Timeline\Rebooted moins de 7 jours</Path>
+        <Type>DynamicCollection</Type>
+        <Children type="list" />
+      </Collection>
+      <Collection>
+        <ReportDefinition name="Definition">
+          <RootFilter name="Filter">
+            <Comparison>All</Comparison>
+            <Filters type="list">
+              <ValueFilter>
+                <Table>Computer</Table>
+                <Column>BootTime</Column>
+                <Comparison>Before</Comparison>
+                <Value>200 days ago</Value>
+              </ValueFilter>
+            </Filters>
+          </RootFilter>
+          <ReportDefinitionTypeName>BasicReportDefinition</ReportDefinitionTypeName>
+          <Columns type="list">
+            <Column>
+              <Column>ComputerId</Column>
+              <Summary></Summary>
+              <Table>Computer</Table>
+              <Title></Title>
+            </Column>
+          </Columns>
+        </ReportDefinition>
+        <IsDrilldown value="true" />
+        <ImportedPath></ImportedPath>
+        <TypeName>DynamicCollection</TypeName>
+        <Created>2018-09-21T08:46:45.0000000+02:00</Created>
+        <Description></Description>
+        <Error></Error>
+        <Id value="1583" />
+        <IsEnabled value="true" />
+        <Modified>2018-09-21T09:47:34.0000000+02:00</Modified>
+        <Name>Rebooted plus de 200 jours</Name>
+        <ParentId value="1576" />
+        <Path>CHA\Reboot Timeline\Rebooted plus de 200 jours</Path>
+        <Type>DynamicCollection</Type>
+        <Children type="list" />
+      </Collection>
+    </Children>
+  </Collection>
+</AdminArsenal.Export>

@@ -1,0 +1,531 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<AdminArsenal.Export Code="PDQInventory" Name="PDQ Inventory" Version="17.1.0.0" MinimumVersion="4.0">
+  <Collection>
+    <ReportDefinition name="Definition">
+      <RootFilter name="Filter">
+        <Comparison>Any</Comparison>
+        <Filters type="list">
+          <ValueFilter>
+            <Table>Computer</Table>
+            <Column>OSName</Column>
+            <Comparison>Contains</Comparison>
+            <Value>Server</Value>
+          </ValueFilter>
+          <ValueFilter>
+            <Table>Computer</Table>
+            <Column>ADPath</Column>
+            <Comparison>StartsWith</Comparison>
+            <Value>Servers</Value>
+          </ValueFilter>
+        </Filters>
+      </RootFilter>
+      <ReportDefinitionTypeName>BasicReportDefinition</ReportDefinitionTypeName>
+      <Columns type="list">
+        <Column>
+          <Column>ComputerId</Column>
+          <Summary></Summary>
+          <Table>Computer</Table>
+          <Title></Title>
+        </Column>
+      </Columns>
+    </ReportDefinition>
+    <IsDrilldown value="false" />
+    <ImportedPath></ImportedPath>
+    <TypeName>DynamicCollection</TypeName>
+    <Created>2013-10-29T16:23:41.0000000+01:00</Created>
+    <Description>Systems with Server Operating System</Description>
+    <Error></Error>
+    <Id value="1584" />
+    <IsEnabled value="true" />
+    <Modified>2018-09-21T09:07:18.0000000+02:00</Modified>
+    <Name>Servers</Name>
+    <ParentId value="1574" />
+    <Path>CHA\Servers</Path>
+    <Type>DynamicCollection</Type>
+    <Children type="list">
+      <Collection>
+        <ReportDefinition name="Definition">
+          <RootFilter name="Filter">
+            <Comparison>All</Comparison>
+            <Filters type="list">
+              <ValueFilter>
+                <Table>Computer</Table>
+                <Column>OSName</Column>
+                <Comparison>Contains</Comparison>
+                <Value>2008</Value>
+              </ValueFilter>
+            </Filters>
+          </RootFilter>
+          <ReportDefinitionTypeName>BasicReportDefinition</ReportDefinitionTypeName>
+          <Columns type="list">
+            <Column>
+              <Column>ComputerId</Column>
+              <Summary></Summary>
+              <Table>Computer</Table>
+              <Title></Title>
+            </Column>
+          </Columns>
+        </ReportDefinition>
+        <IsDrilldown value="false" />
+        <ImportedPath></ImportedPath>
+        <TypeName>DynamicCollection</TypeName>
+        <Created>2013-10-29T16:23:41.0000000+01:00</Created>
+        <Description></Description>
+        <Error></Error>
+        <Id value="1585" />
+        <IsEnabled value="true" />
+        <Modified>2018-09-21T08:55:01.0000000+02:00</Modified>
+        <Name>Windows Server 2008</Name>
+        <ParentId value="1584" />
+        <Path>CHA\Servers\Windows Server 2008</Path>
+        <Type>DynamicCollection</Type>
+        <Children type="list">
+          <Collection>
+            <ReportDefinition name="Definition">
+              <RootFilter name="Filter">
+                <Comparison>All</Comparison>
+                <Filters type="list">
+                  <ValueFilter>
+                    <Table>Computer</Table>
+                    <Column>OSArchitecture</Column>
+                    <Comparison>Is</Comparison>
+                    <Value>64</Value>
+                  </ValueFilter>
+                  <ValueFilter>
+                    <Table>Computer</Table>
+                    <Column>OS</Column>
+                    <Comparison>Equals</Comparison>
+                    <Value>2008</Value>
+                  </ValueFilter>
+                </Filters>
+              </RootFilter>
+              <ReportDefinitionTypeName>BasicReportDefinition</ReportDefinitionTypeName>
+              <Columns type="list">
+                <Column>
+                  <Column>ComputerId</Column>
+                  <Summary></Summary>
+                  <Table>Computer</Table>
+                  <Title></Title>
+                </Column>
+              </Columns>
+            </ReportDefinition>
+            <IsDrilldown value="false" />
+            <ImportedPath></ImportedPath>
+            <TypeName>DynamicCollection</TypeName>
+            <Created>2013-10-29T16:23:41.0000000+01:00</Created>
+            <Description></Description>
+            <Error></Error>
+            <Id value="1586" />
+            <IsEnabled value="true" />
+            <Modified>2013-10-29T16:23:41.0000000+01:00</Modified>
+            <Name>Windows Server 2008 (64-bit)</Name>
+            <ParentId value="1585" />
+            <Path>CHA\Servers\Windows Server 2008\Windows Server 2008 (64-bit)</Path>
+            <Type>DynamicCollection</Type>
+            <Children type="list" />
+          </Collection>
+          <Collection>
+            <ReportDefinition name="Definition">
+              <RootFilter name="Filter">
+                <Comparison>All</Comparison>
+                <Filters type="list">
+                  <ValueFilter>
+                    <Table>Computer</Table>
+                    <Column>OSArchitecture</Column>
+                    <Comparison>Is</Comparison>
+                    <Value>32</Value>
+                  </ValueFilter>
+                  <ValueFilter>
+                    <Table>Computer</Table>
+                    <Column>OS</Column>
+                    <Comparison>Equals</Comparison>
+                    <Value>2008</Value>
+                  </ValueFilter>
+                </Filters>
+              </RootFilter>
+              <ReportDefinitionTypeName>BasicReportDefinition</ReportDefinitionTypeName>
+              <Columns type="list">
+                <Column>
+                  <Column>ComputerId</Column>
+                  <Summary></Summary>
+                  <Table>Computer</Table>
+                  <Title></Title>
+                </Column>
+              </Columns>
+            </ReportDefinition>
+            <IsDrilldown value="false" />
+            <ImportedPath></ImportedPath>
+            <TypeName>DynamicCollection</TypeName>
+            <Created>2013-10-29T16:23:41.0000000+01:00</Created>
+            <Description></Description>
+            <Error></Error>
+            <Id value="1587" />
+            <IsEnabled value="true" />
+            <Modified>2013-10-29T16:23:41.0000000+01:00</Modified>
+            <Name>Windows Server 2008 (32-bit)</Name>
+            <ParentId value="1585" />
+            <Path>CHA\Servers\Windows Server 2008\Windows Server 2008 (32-bit)</Path>
+            <Type>DynamicCollection</Type>
+            <Children type="list" />
+          </Collection>
+          <Collection>
+            <ReportDefinition name="Definition">
+              <RootFilter name="Filter">
+                <Comparison>All</Comparison>
+                <Filters type="list">
+                  <ValueFilter>
+                    <Table>Computer</Table>
+                    <Column>OSName</Column>
+                    <Comparison>Contains</Comparison>
+                    <Value>2008 R2</Value>
+                  </ValueFilter>
+                </Filters>
+              </RootFilter>
+              <ReportDefinitionTypeName>BasicReportDefinition</ReportDefinitionTypeName>
+              <Columns type="list">
+                <Column>
+                  <Column>ComputerId</Column>
+                  <Summary></Summary>
+                  <Table>Computer</Table>
+                  <Title></Title>
+                </Column>
+              </Columns>
+            </ReportDefinition>
+            <IsDrilldown value="true" />
+            <ImportedPath></ImportedPath>
+            <TypeName>DynamicCollection</TypeName>
+            <Created>2013-10-29T16:23:41.0000000+01:00</Created>
+            <Description>Systems running Server 2008 R2</Description>
+            <Error></Error>
+            <Id value="1588" />
+            <IsEnabled value="true" />
+            <Modified>2013-10-29T16:23:41.0000000+01:00</Modified>
+            <Name>Windows Server 2008 R2</Name>
+            <ParentId value="1585" />
+            <Path>CHA\Servers\Windows Server 2008\Windows Server 2008 R2</Path>
+            <Type>DynamicCollection</Type>
+            <Children type="list" />
+          </Collection>
+        </Children>
+      </Collection>
+      <Collection>
+        <ReportDefinition name="Definition">
+          <RootFilter name="Filter">
+            <Comparison>All</Comparison>
+            <Filters type="list">
+              <ValueFilter>
+                <Table>Computer</Table>
+                <Column>OSName</Column>
+                <Comparison>Contains</Comparison>
+                <Value>2012</Value>
+              </ValueFilter>
+            </Filters>
+          </RootFilter>
+          <ReportDefinitionTypeName>BasicReportDefinition</ReportDefinitionTypeName>
+          <Columns type="list">
+            <Column>
+              <Column>ComputerId</Column>
+              <Summary></Summary>
+              <Table>Computer</Table>
+              <Title></Title>
+            </Column>
+          </Columns>
+        </ReportDefinition>
+        <IsDrilldown value="false" />
+        <ImportedPath></ImportedPath>
+        <TypeName>DynamicCollection</TypeName>
+        <Created>2013-10-29T16:23:41.0000000+01:00</Created>
+        <Description>Systems running Server 2012 and 2012 R2</Description>
+        <Error></Error>
+        <Id value="1589" />
+        <IsEnabled value="true" />
+        <Modified>2013-10-29T16:25:44.0000000+01:00</Modified>
+        <Name>Windows Server 2012</Name>
+        <ParentId value="1584" />
+        <Path>CHA\Servers\Windows Server 2012</Path>
+        <Type>DynamicCollection</Type>
+        <Children type="list">
+          <Collection>
+            <ReportDefinition name="Definition">
+              <RootFilter name="Filter">
+                <Comparison>All</Comparison>
+                <Filters type="list">
+                  <ValueFilter>
+                    <Table>Computer</Table>
+                    <Column>OS</Column>
+                    <Comparison>Equals</Comparison>
+                    <Value>2012</Value>
+                  </ValueFilter>
+                </Filters>
+              </RootFilter>
+              <ReportDefinitionTypeName>BasicReportDefinition</ReportDefinitionTypeName>
+              <Columns type="list">
+                <Column>
+                  <Column>ComputerId</Column>
+                  <Summary></Summary>
+                  <Table>Computer</Table>
+                  <Title></Title>
+                </Column>
+              </Columns>
+            </ReportDefinition>
+            <IsDrilldown value="false" />
+            <ImportedPath></ImportedPath>
+            <TypeName>DynamicCollection</TypeName>
+            <Created>2013-10-29T16:23:41.0000000+01:00</Created>
+            <Description>Systems running Server 2012</Description>
+            <Error></Error>
+            <Id value="1590" />
+            <IsEnabled value="true" />
+            <Modified>2013-10-29T16:26:07.0000000+01:00</Modified>
+            <Name>Windows Server 2012</Name>
+            <ParentId value="1589" />
+            <Path>CHA\Servers\Windows Server 2012\Windows Server 2012</Path>
+            <Type>DynamicCollection</Type>
+            <Children type="list" />
+          </Collection>
+          <Collection>
+            <ReportDefinition name="Definition">
+              <RootFilter name="Filter">
+                <Comparison>All</Comparison>
+                <Filters type="list">
+                  <ValueFilter>
+                    <Table>Computer</Table>
+                    <Column>OS</Column>
+                    <Comparison>Equals</Comparison>
+                    <Value>2012 R2</Value>
+                  </ValueFilter>
+                </Filters>
+              </RootFilter>
+              <ReportDefinitionTypeName>BasicReportDefinition</ReportDefinitionTypeName>
+              <Columns type="list">
+                <Column>
+                  <Column>ComputerId</Column>
+                  <Summary></Summary>
+                  <Table>Computer</Table>
+                  <Title></Title>
+                </Column>
+              </Columns>
+            </ReportDefinition>
+            <IsDrilldown value="false" />
+            <ImportedPath></ImportedPath>
+            <TypeName>DynamicCollection</TypeName>
+            <Created>2013-10-29T16:23:41.0000000+01:00</Created>
+            <Description>Systems running Server 2012 R2</Description>
+            <Error></Error>
+            <Id value="1591" />
+            <IsEnabled value="true" />
+            <Modified>2013-10-29T16:26:29.0000000+01:00</Modified>
+            <Name>Windows Server 2012 R2</Name>
+            <ParentId value="1589" />
+            <Path>CHA\Servers\Windows Server 2012\Windows Server 2012 R2</Path>
+            <Type>DynamicCollection</Type>
+            <Children type="list" />
+          </Collection>
+        </Children>
+      </Collection>
+      <Collection>
+        <ReportDefinition name="Definition">
+          <RootFilter name="Filter">
+            <Comparison>All</Comparison>
+            <Filters type="list">
+              <ValueFilter>
+                <Table>Computer</Table>
+                <Column>OS</Column>
+                <Comparison>Equals</Comparison>
+                <Value>2016</Value>
+              </ValueFilter>
+            </Filters>
+          </RootFilter>
+          <ReportDefinitionTypeName>BasicReportDefinition</ReportDefinitionTypeName>
+          <Columns type="list">
+            <Column>
+              <Column>ComputerId</Column>
+              <Summary></Summary>
+              <Table>Computer</Table>
+              <Title></Title>
+            </Column>
+          </Columns>
+        </ReportDefinition>
+        <IsDrilldown value="false" />
+        <ImportedPath></ImportedPath>
+        <TypeName>DynamicCollection</TypeName>
+        <Created>2013-10-29T16:23:41.0000000+01:00</Created>
+        <Description>Systems running Server 2016</Description>
+        <Error></Error>
+        <Id value="1592" />
+        <IsEnabled value="true" />
+        <Modified>2013-10-29T16:25:44.0000000+01:00</Modified>
+        <Name>Windows Server 2016</Name>
+        <ParentId value="1584" />
+        <Path>CHA\Servers\Windows Server 2016</Path>
+        <Type>DynamicCollection</Type>
+        <Children type="list" />
+      </Collection>
+      <Collection>
+        <ReportDefinition name="Definition">
+          <RootFilter name="Filter">
+            <Comparison>All</Comparison>
+            <Filters type="list">
+              <ValueFilter>
+                <Table>Computer</Table>
+                <Column>OSName</Column>
+                <Comparison>Contains</Comparison>
+                <Value>2003</Value>
+              </ValueFilter>
+            </Filters>
+          </RootFilter>
+          <ReportDefinitionTypeName>BasicReportDefinition</ReportDefinitionTypeName>
+          <Columns type="list">
+            <Column>
+              <Column>ComputerId</Column>
+              <Summary></Summary>
+              <Table>Computer</Table>
+              <Title></Title>
+            </Column>
+          </Columns>
+        </ReportDefinition>
+        <IsDrilldown value="true" />
+        <ImportedPath></ImportedPath>
+        <TypeName>DynamicCollection</TypeName>
+        <Created>2018-10-25T08:57:56.0000000+02:00</Created>
+        <Description></Description>
+        <Error></Error>
+        <Id value="1999" />
+        <IsEnabled value="true" />
+        <Modified>2018-10-25T08:58:10.0000000+02:00</Modified>
+        <Name>Windows Server 2003</Name>
+        <ParentId value="1584" />
+        <Path>CHA\Servers\Windows Server 2003</Path>
+        <Type>DynamicCollection</Type>
+        <Children type="list">
+          <Collection>
+            <ReportDefinition name="Definition">
+              <RootFilter name="Filter">
+                <Comparison>All</Comparison>
+                <Filters type="list">
+                  <ValueFilter>
+                    <Table>Computer</Table>
+                    <Column>OSArchitecture</Column>
+                    <Comparison>Is</Comparison>
+                    <Value>64</Value>
+                  </ValueFilter>
+                  <ValueFilter>
+                    <Table>Computer</Table>
+                    <Column>OS</Column>
+                    <Comparison>Equals</Comparison>
+                    <Value>2008</Value>
+                  </ValueFilter>
+                </Filters>
+              </RootFilter>
+              <ReportDefinitionTypeName>BasicReportDefinition</ReportDefinitionTypeName>
+              <Columns type="list">
+                <Column>
+                  <Column>ComputerId</Column>
+                  <Summary></Summary>
+                  <Table>Computer</Table>
+                  <Title></Title>
+                </Column>
+              </Columns>
+            </ReportDefinition>
+            <IsDrilldown value="false" />
+            <ImportedPath></ImportedPath>
+            <TypeName>DynamicCollection</TypeName>
+            <Created>2018-10-25T08:57:57.0000000+02:00</Created>
+            <Description></Description>
+            <Error></Error>
+            <Id value="2000" />
+            <IsEnabled value="true" />
+            <Modified>2018-10-25T08:57:57.0000000+02:00</Modified>
+            <Name>Windows Server 2008 (64-bit)</Name>
+            <ParentId value="1999" />
+            <Path>CHA\Servers\Windows Server 2003\Windows Server 2008 (64-bit)</Path>
+            <Type>DynamicCollection</Type>
+            <Children type="list" />
+          </Collection>
+          <Collection>
+            <ReportDefinition name="Definition">
+              <RootFilter name="Filter">
+                <Comparison>All</Comparison>
+                <Filters type="list">
+                  <ValueFilter>
+                    <Table>Computer</Table>
+                    <Column>OSArchitecture</Column>
+                    <Comparison>Is</Comparison>
+                    <Value>32</Value>
+                  </ValueFilter>
+                  <ValueFilter>
+                    <Table>Computer</Table>
+                    <Column>OS</Column>
+                    <Comparison>Equals</Comparison>
+                    <Value>2008</Value>
+                  </ValueFilter>
+                </Filters>
+              </RootFilter>
+              <ReportDefinitionTypeName>BasicReportDefinition</ReportDefinitionTypeName>
+              <Columns type="list">
+                <Column>
+                  <Column>ComputerId</Column>
+                  <Summary></Summary>
+                  <Table>Computer</Table>
+                  <Title></Title>
+                </Column>
+              </Columns>
+            </ReportDefinition>
+            <IsDrilldown value="false" />
+            <ImportedPath></ImportedPath>
+            <TypeName>DynamicCollection</TypeName>
+            <Created>2018-10-25T08:57:57.0000000+02:00</Created>
+            <Description></Description>
+            <Error></Error>
+            <Id value="2001" />
+            <IsEnabled value="true" />
+            <Modified>2018-10-25T08:57:57.0000000+02:00</Modified>
+            <Name>Windows Server 2008 (32-bit)</Name>
+            <ParentId value="1999" />
+            <Path>CHA\Servers\Windows Server 2003\Windows Server 2008 (32-bit)</Path>
+            <Type>DynamicCollection</Type>
+            <Children type="list" />
+          </Collection>
+          <Collection>
+            <ReportDefinition name="Definition">
+              <RootFilter name="Filter">
+                <Comparison>All</Comparison>
+                <Filters type="list">
+                  <ValueFilter>
+                    <Table>Computer</Table>
+                    <Column>OSName</Column>
+                    <Comparison>Contains</Comparison>
+                    <Value>2008 R2</Value>
+                  </ValueFilter>
+                </Filters>
+              </RootFilter>
+              <ReportDefinitionTypeName>BasicReportDefinition</ReportDefinitionTypeName>
+              <Columns type="list">
+                <Column>
+                  <Column>ComputerId</Column>
+                  <Summary></Summary>
+                  <Table>Computer</Table>
+                  <Title></Title>
+                </Column>
+              </Columns>
+            </ReportDefinition>
+            <IsDrilldown value="true" />
+            <ImportedPath></ImportedPath>
+            <TypeName>DynamicCollection</TypeName>
+            <Created>2018-10-25T08:57:57.0000000+02:00</Created>
+            <Description>Systems running Server 2008 R2</Description>
+            <Error></Error>
+            <Id value="2002" />
+            <IsEnabled value="true" />
+            <Modified>2018-10-25T08:57:57.0000000+02:00</Modified>
+            <Name>Windows Server 2008 R2</Name>
+            <ParentId value="1999" />
+            <Path>CHA\Servers\Windows Server 2003\Windows Server 2008 R2</Path>
+            <Type>DynamicCollection</Type>
+            <Children type="list" />
+          </Collection>
+        </Children>
+      </Collection>
+    </Children>
+  </Collection>
+</AdminArsenal.Export>

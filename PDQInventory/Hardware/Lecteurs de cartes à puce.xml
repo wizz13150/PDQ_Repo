@@ -1,0 +1,135 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<AdminArsenal.Export Code="PDQInventory" Name="PDQ Inventory" Version="17.1.0.0" MinimumVersion="4.0">
+  <Collection>
+    <ReportDefinition name="Definition">
+      <RootFilter name="Filter">
+        <Comparison>All</Comparison>
+        <Filters type="list">
+          <ValueFilter>
+            <Table>HardwareDevice</Table>
+            <TableTitle>Hardware Device</TableTitle>
+            <Column>ClassName</Column>
+            <Comparison>Contains</Comparison>
+            <Value>Lecteurs de cartes à puce</Value>
+          </ValueFilter>
+        </Filters>
+      </RootFilter>
+      <ReportDefinitionTypeName>BasicReportDefinition</ReportDefinitionTypeName>
+      <Columns type="list">
+        <Column>
+          <Column>ComputerId</Column>
+          <Summary></Summary>
+          <Table>Computer</Table>
+          <Title></Title>
+        </Column>
+      </Columns>
+    </ReportDefinition>
+    <IsDrilldown value="true" />
+    <ImportedPath></ImportedPath>
+    <TypeName>DynamicCollection</TypeName>
+    <Created>2018-09-26T13:43:27.0000000+02:00</Created>
+    <Description></Description>
+    <Error></Error>
+    <Id value="1879" />
+    <IsEnabled value="true" />
+    <Modified>2018-09-27T11:27:17.0000000+02:00</Modified>
+    <Name>Lecteurs de cartes à puce</Name>
+    <ParentId value="1777" />
+    <Path>CHA\Hardware\Lecteurs de cartes à puce</Path>
+    <Type>DynamicCollection</Type>
+    <Children type="list">
+      <Collection>
+        <ReportDefinition name="Definition">
+          <RootFilter name="Filter">
+            <Comparison>All</Comparison>
+            <Filters type="list">
+              <ValueFilter>
+                <Table>HardwareDevice</Table>
+                <TableTitle>Hardware Device</TableTitle>
+                <Column>ClassName</Column>
+                <Comparison>Contains</Comparison>
+                <Value>Lecteurs de cartes à puce</Value>
+              </ValueFilter>
+              <ValueFilter>
+                <Table>HardwareDevice</Table>
+                <TableTitle>Hardware Device</TableTitle>
+                <Column>DriverProvider</Column>
+                <Comparison>Contains</Comparison>
+                <Value>Dell</Value>
+              </ValueFilter>
+            </Filters>
+          </RootFilter>
+          <ReportDefinitionTypeName>BasicReportDefinition</ReportDefinitionTypeName>
+          <Columns type="list">
+            <Column>
+              <Column>ComputerId</Column>
+              <Summary></Summary>
+              <Table>Computer</Table>
+              <Title></Title>
+            </Column>
+          </Columns>
+        </ReportDefinition>
+        <IsDrilldown value="true" />
+        <ImportedPath></ImportedPath>
+        <TypeName>DynamicCollection</TypeName>
+        <Created>2018-09-27T11:27:20.0000000+02:00</Created>
+        <Description></Description>
+        <Error></Error>
+        <Id value="1891" />
+        <IsEnabled value="true" />
+        <Modified>2018-09-27T11:27:48.0000000+02:00</Modified>
+        <Name>Lecteurs de cartes à puce Dell</Name>
+        <ParentId value="1879" />
+        <Path>CHA\Hardware\Lecteurs de cartes à puce\Lecteurs de cartes à puce Dell</Path>
+        <Type>DynamicCollection</Type>
+        <Children type="list" />
+      </Collection>
+      <Collection>
+        <ReportDefinition name="Definition">
+          <RootFilter name="Filter">
+            <Comparison>All</Comparison>
+            <Filters type="list">
+              <ValueFilter>
+                <Table>HardwareDevice</Table>
+                <TableTitle>Hardware Device</TableTitle>
+                <Column>ClassName</Column>
+                <Comparison>Contains</Comparison>
+                <Value>Lecteurs de cartes à puce</Value>
+              </ValueFilter>
+              <ValueFilter>
+                <Table>HardwareDevice</Table>
+                <TableTitle>Hardware Device</TableTitle>
+                <Column>DriverProvider</Column>
+                <Comparison>Contains</Comparison>
+                <Value>Microsoft</Value>
+              </ValueFilter>
+            </Filters>
+          </RootFilter>
+          <ReportDefinitionTypeName>BasicReportDefinition</ReportDefinitionTypeName>
+          <Columns type="list">
+            <Column>
+              <Column>ComputerId</Column>
+              <Summary></Summary>
+              <Table>Computer</Table>
+              <Title></Title>
+            </Column>
+          </Columns>
+        </ReportDefinition>
+        <IsDrilldown value="true" />
+        <ImportedPath></ImportedPath>
+        <TypeName>DynamicCollection</TypeName>
+        <Created>2018-09-27T11:27:51.0000000+02:00</Created>
+        <Description></Description>
+        <Error></Error>
+        <Id value="1892" />
+        <IsEnabled value="true" />
+        <Modified>2018-09-27T11:29:49.0000000+02:00</Modified>
+        <Name>Lecteurs de cartes à puce Cherry (Microsoft)</Name>
+        <ParentId value="1879" />
+        <Path>CHA\Hardware\Lecteurs de cartes à puce\Lecteurs de cartes à puce Cherry (Microsoft)</Path>
+        <Type>DynamicCollection</Type>
+        <Children type="list" />
+      </Collection>
+    </Children>
+  </Collection>
+</AdminArsenal.Export>

@@ -1,0 +1,517 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<AdminArsenal.Export Code="PDQInventory" Name="PDQ Inventory" Version="17.1.0.0" MinimumVersion="4.0">
+  <Collection>
+    <ReportDefinition name="Definition">
+      <RootFilter name="Filter">
+        <Comparison>All</Comparison>
+        <Filters type="list">
+          <ValueFilter>
+            <Table>Printer</Table>
+            <TableTitle>Printers (local)</TableTitle>
+            <Column>Name</Column>
+            <Comparison>Contains</Comparison>
+          </ValueFilter>
+        </Filters>
+      </RootFilter>
+      <ReportDefinitionTypeName>BasicReportDefinition</ReportDefinitionTypeName>
+      <Columns type="list">
+        <Column>
+          <Column>ComputerId</Column>
+          <Summary></Summary>
+          <Table>Computer</Table>
+          <Title></Title>
+        </Column>
+      </Columns>
+    </ReportDefinition>
+    <IsDrilldown value="true" />
+    <ImportedPath></ImportedPath>
+    <TypeName>DynamicCollection</TypeName>
+    <Created>2018-10-15T19:51:39.0000000+02:00</Created>
+    <Description></Description>
+    <Error></Error>
+    <Id value="1982" />
+    <IsEnabled value="true" />
+    <Modified>2018-10-15T19:59:45.0000000+02:00</Modified>
+    <Name>Imprimantes locales</Name>
+    <ParentId value="1777" />
+    <Path>CHA\Hardware\Imprimantes locales</Path>
+    <Type>DynamicCollection</Type>
+    <Children type="list">
+      <Collection>
+        <ReportDefinition name="Definition">
+          <RootFilter name="Filter">
+            <Comparison>All</Comparison>
+            <Filters type="list">
+              <ValueFilter>
+                <Table>Printer</Table>
+                <TableTitle>Printers (local)</TableTitle>
+                <Column>Name</Column>
+                <Comparison>Equals</Comparison>
+                <Value>Fax</Value>
+              </ValueFilter>
+            </Filters>
+          </RootFilter>
+          <ReportDefinitionTypeName>BasicReportDefinition</ReportDefinitionTypeName>
+          <Columns type="list">
+            <Column>
+              <Column>ComputerId</Column>
+              <Summary></Summary>
+              <Table>Computer</Table>
+              <Title></Title>
+            </Column>
+          </Columns>
+        </ReportDefinition>
+        <IsDrilldown value="true" />
+        <ImportedPath></ImportedPath>
+        <TypeName>DynamicCollection</TypeName>
+        <Created>2018-10-15T19:53:56.0000000+02:00</Created>
+        <Description></Description>
+        <Error></Error>
+        <Id value="1983" />
+        <IsEnabled value="true" />
+        <Modified>2018-10-15T19:54:23.0000000+02:00</Modified>
+        <Name>Imprimantes "Fax"</Name>
+        <ParentId value="1982" />
+        <Path>CHA\Hardware\Imprimantes locales\Imprimantes "Fax"</Path>
+        <Type>DynamicCollection</Type>
+        <Children type="list" />
+      </Collection>
+      <Collection>
+        <ReportDefinition name="Definition">
+          <RootFilter name="Filter">
+            <Comparison>All</Comparison>
+            <Filters type="list">
+              <ValueFilter>
+                <Table>Printer</Table>
+                <TableTitle>Printers (local)</TableTitle>
+                <Column>Name</Column>
+                <Comparison>Contains</Comparison>
+                <Value>OneNote</Value>
+              </ValueFilter>
+            </Filters>
+          </RootFilter>
+          <ReportDefinitionTypeName>BasicReportDefinition</ReportDefinitionTypeName>
+          <Columns type="list">
+            <Column>
+              <Column>ComputerId</Column>
+              <Summary></Summary>
+              <Table>Computer</Table>
+              <Title></Title>
+            </Column>
+          </Columns>
+        </ReportDefinition>
+        <IsDrilldown value="true" />
+        <ImportedPath></ImportedPath>
+        <TypeName>DynamicCollection</TypeName>
+        <Created>2018-10-15T19:54:32.0000000+02:00</Created>
+        <Description></Description>
+        <Error></Error>
+        <Id value="1984" />
+        <IsEnabled value="true" />
+        <Modified>2018-10-15T19:54:56.0000000+02:00</Modified>
+        <Name>Imprimantes "Envoyer à OneNote 2010"</Name>
+        <ParentId value="1982" />
+        <Path>CHA\Hardware\Imprimantes locales\Imprimantes "Envoyer à OneNote 2010"</Path>
+        <Type>DynamicCollection</Type>
+        <Children type="list" />
+      </Collection>
+      <Collection>
+        <ReportDefinition name="Definition">
+          <RootFilter name="Filter">
+            <Comparison>All</Comparison>
+            <Filters type="list">
+              <ValueFilter>
+                <Table>Printer</Table>
+                <TableTitle>Printers (local)</TableTitle>
+                <Column>Name</Column>
+                <Comparison>Contains</Comparison>
+                <Value>Sharp</Value>
+              </ValueFilter>
+            </Filters>
+          </RootFilter>
+          <ReportDefinitionTypeName>BasicReportDefinition</ReportDefinitionTypeName>
+          <Columns type="list">
+            <Column>
+              <Column>ComputerId</Column>
+              <Summary></Summary>
+              <Table>Computer</Table>
+              <Title></Title>
+            </Column>
+          </Columns>
+        </ReportDefinition>
+        <IsDrilldown value="true" />
+        <ImportedPath></ImportedPath>
+        <TypeName>DynamicCollection</TypeName>
+        <Created>2018-10-15T19:55:20.0000000+02:00</Created>
+        <Description></Description>
+        <Error></Error>
+        <Id value="1985" />
+        <IsEnabled value="true" />
+        <Modified>2018-10-15T19:55:40.0000000+02:00</Modified>
+        <Name>Imprimantes "Sharp"</Name>
+        <ParentId value="1982" />
+        <Path>CHA\Hardware\Imprimantes locales\Imprimantes "Sharp"</Path>
+        <Type>DynamicCollection</Type>
+        <Children type="list" />
+      </Collection>
+      <Collection>
+        <ReportDefinition name="Definition">
+          <RootFilter name="Filter">
+            <Comparison>All</Comparison>
+            <Filters type="list">
+              <ValueFilter>
+                <Table>Printer</Table>
+                <TableTitle>Printers (local)</TableTitle>
+                <Column>Name</Column>
+                <Comparison>Contains</Comparison>
+                <Value>Samsung</Value>
+              </ValueFilter>
+            </Filters>
+          </RootFilter>
+          <ReportDefinitionTypeName>BasicReportDefinition</ReportDefinitionTypeName>
+          <Columns type="list">
+            <Column>
+              <Column>ComputerId</Column>
+              <Summary></Summary>
+              <Table>Computer</Table>
+              <Title></Title>
+            </Column>
+          </Columns>
+        </ReportDefinition>
+        <IsDrilldown value="true" />
+        <ImportedPath></ImportedPath>
+        <TypeName>DynamicCollection</TypeName>
+        <Created>2018-10-15T19:55:54.0000000+02:00</Created>
+        <Description></Description>
+        <Error></Error>
+        <Id value="1986" />
+        <IsEnabled value="true" />
+        <Modified>2018-10-15T19:56:09.0000000+02:00</Modified>
+        <Name>Imprimantes "Samsung"</Name>
+        <ParentId value="1982" />
+        <Path>CHA\Hardware\Imprimantes locales\Imprimantes "Samsung"</Path>
+        <Type>DynamicCollection</Type>
+        <Children type="list" />
+      </Collection>
+      <Collection>
+        <ReportDefinition name="Definition">
+          <RootFilter name="Filter">
+            <Comparison>Any</Comparison>
+            <Filters type="list">
+              <ValueFilter>
+                <Table>Printer</Table>
+                <TableTitle>Printers (local)</TableTitle>
+                <Column>Name</Column>
+                <Comparison>Contains</Comparison>
+                <Value>MFC</Value>
+              </ValueFilter>
+              <ValueFilter>
+                <Table>Printer</Table>
+                <TableTitle>Printers (local)</TableTitle>
+                <Column>Name</Column>
+                <Comparison>Contains</Comparison>
+                <Value>Brother</Value>
+              </ValueFilter>
+            </Filters>
+          </RootFilter>
+          <ReportDefinitionTypeName>BasicReportDefinition</ReportDefinitionTypeName>
+          <Columns type="list">
+            <Column>
+              <Column>ComputerId</Column>
+              <Summary></Summary>
+              <Table>Computer</Table>
+              <Title></Title>
+            </Column>
+          </Columns>
+        </ReportDefinition>
+        <IsDrilldown value="true" />
+        <ImportedPath></ImportedPath>
+        <TypeName>DynamicCollection</TypeName>
+        <Created>2018-10-15T19:56:16.0000000+02:00</Created>
+        <Description></Description>
+        <Error></Error>
+        <Id value="1987" />
+        <IsEnabled value="true" />
+        <Modified>2018-10-15T19:56:52.0000000+02:00</Modified>
+        <Name>Imprimantes "MFC" ou "Brother"</Name>
+        <ParentId value="1982" />
+        <Path>CHA\Hardware\Imprimantes locales\Imprimantes "MFC" ou "Brother"</Path>
+        <Type>DynamicCollection</Type>
+        <Children type="list" />
+      </Collection>
+      <Collection>
+        <ReportDefinition name="Definition">
+          <RootFilter name="Filter">
+            <Comparison>Any</Comparison>
+            <Filters type="list">
+              <ValueFilter>
+                <Table>Printer</Table>
+                <TableTitle>Printers (local)</TableTitle>
+                <Column>Name</Column>
+                <Comparison>Contains</Comparison>
+                <Value>HP</Value>
+              </ValueFilter>
+            </Filters>
+          </RootFilter>
+          <ReportDefinitionTypeName>BasicReportDefinition</ReportDefinitionTypeName>
+          <Columns type="list">
+            <Column>
+              <Column>ComputerId</Column>
+              <Summary></Summary>
+              <Table>Computer</Table>
+              <Title></Title>
+            </Column>
+          </Columns>
+        </ReportDefinition>
+        <IsDrilldown value="true" />
+        <ImportedPath></ImportedPath>
+        <TypeName>DynamicCollection</TypeName>
+        <Created>2018-10-15T19:57:05.0000000+02:00</Created>
+        <Description></Description>
+        <Error></Error>
+        <Id value="1988" />
+        <IsEnabled value="true" />
+        <Modified>2018-10-15T19:57:25.0000000+02:00</Modified>
+        <Name>Imprimantes "HP"</Name>
+        <ParentId value="1982" />
+        <Path>CHA\Hardware\Imprimantes locales\Imprimantes "HP"</Path>
+        <Type>DynamicCollection</Type>
+        <Children type="list" />
+      </Collection>
+      <Collection>
+        <ReportDefinition name="Definition">
+          <RootFilter name="Filter">
+            <Comparison>Any</Comparison>
+            <Filters type="list">
+              <ValueFilter>
+                <Table>Printer</Table>
+                <TableTitle>Printers (local)</TableTitle>
+                <Column>Name</Column>
+                <Comparison>Contains</Comparison>
+                <Value>Pdf</Value>
+              </ValueFilter>
+            </Filters>
+          </RootFilter>
+          <ReportDefinitionTypeName>BasicReportDefinition</ReportDefinitionTypeName>
+          <Columns type="list">
+            <Column>
+              <Column>ComputerId</Column>
+              <Summary></Summary>
+              <Table>Computer</Table>
+              <Title></Title>
+            </Column>
+          </Columns>
+        </ReportDefinition>
+        <IsDrilldown value="true" />
+        <ImportedPath></ImportedPath>
+        <TypeName>DynamicCollection</TypeName>
+        <Created>2018-10-15T19:57:43.0000000+02:00</Created>
+        <Description></Description>
+        <Error></Error>
+        <Id value="1989" />
+        <IsEnabled value="true" />
+        <Modified>2018-10-15T19:58:01.0000000+02:00</Modified>
+        <Name>Imprimantes "PDF"</Name>
+        <ParentId value="1982" />
+        <Path>CHA\Hardware\Imprimantes locales\Imprimantes "PDF"</Path>
+        <Type>DynamicCollection</Type>
+        <Children type="list" />
+      </Collection>
+      <Collection>
+        <ReportDefinition name="Definition">
+          <RootFilter name="Filter">
+            <Comparison>Any</Comparison>
+            <Filters type="list">
+              <ValueFilter>
+                <Table>Printer</Table>
+                <TableTitle>Printers (local)</TableTitle>
+                <Column>Name</Column>
+                <Comparison>Contains</Comparison>
+                <Value>Ricoh</Value>
+              </ValueFilter>
+            </Filters>
+          </RootFilter>
+          <ReportDefinitionTypeName>BasicReportDefinition</ReportDefinitionTypeName>
+          <Columns type="list">
+            <Column>
+              <Column>ComputerId</Column>
+              <Summary></Summary>
+              <Table>Computer</Table>
+              <Title></Title>
+            </Column>
+          </Columns>
+        </ReportDefinition>
+        <IsDrilldown value="true" />
+        <ImportedPath></ImportedPath>
+        <TypeName>DynamicCollection</TypeName>
+        <Created>2018-10-15T19:58:26.0000000+02:00</Created>
+        <Description></Description>
+        <Error></Error>
+        <Id value="1990" />
+        <IsEnabled value="true" />
+        <Modified>2018-10-15T19:58:49.0000000+02:00</Modified>
+        <Name>Imprimantes "Ricoh"</Name>
+        <ParentId value="1982" />
+        <Path>CHA\Hardware\Imprimantes locales\Imprimantes "Ricoh"</Path>
+        <Type>DynamicCollection</Type>
+        <Children type="list" />
+      </Collection>
+      <Collection>
+        <ReportDefinition name="Definition">
+          <RootFilter name="Filter">
+            <Comparison>Any</Comparison>
+            <Filters type="list">
+              <ValueFilter>
+                <Table>Printer</Table>
+                <TableTitle>Printers (local)</TableTitle>
+                <Column>Name</Column>
+                <Comparison>Contains</Comparison>
+                <Value>Canon</Value>
+              </ValueFilter>
+            </Filters>
+          </RootFilter>
+          <ReportDefinitionTypeName>BasicReportDefinition</ReportDefinitionTypeName>
+          <Columns type="list">
+            <Column>
+              <Column>ComputerId</Column>
+              <Summary></Summary>
+              <Table>Computer</Table>
+              <Title></Title>
+            </Column>
+          </Columns>
+        </ReportDefinition>
+        <IsDrilldown value="true" />
+        <ImportedPath></ImportedPath>
+        <TypeName>DynamicCollection</TypeName>
+        <Created>2018-10-15T19:59:04.0000000+02:00</Created>
+        <Description></Description>
+        <Error></Error>
+        <Id value="1991" />
+        <IsEnabled value="true" />
+        <Modified>2018-10-15T20:01:29.0000000+02:00</Modified>
+        <Name>Imprimantes "Canon"</Name>
+        <ParentId value="1982" />
+        <Path>CHA\Hardware\Imprimantes locales\Imprimantes "Canon"</Path>
+        <Type>DynamicCollection</Type>
+        <Children type="list" />
+      </Collection>
+      <Collection>
+        <ReportDefinition name="Definition">
+          <RootFilter name="Filter">
+            <Comparison>Any</Comparison>
+            <Filters type="list">
+              <ValueFilter>
+                <Table>Printer</Table>
+                <TableTitle>Printers (local)</TableTitle>
+                <Column>Name</Column>
+                <Comparison>Contains</Comparison>
+                <Value>Epson</Value>
+              </ValueFilter>
+            </Filters>
+          </RootFilter>
+          <ReportDefinitionTypeName>BasicReportDefinition</ReportDefinitionTypeName>
+          <Columns type="list">
+            <Column>
+              <Column>ComputerId</Column>
+              <Summary></Summary>
+              <Table>Computer</Table>
+              <Title></Title>
+            </Column>
+          </Columns>
+        </ReportDefinition>
+        <IsDrilldown value="true" />
+        <ImportedPath></ImportedPath>
+        <TypeName>DynamicCollection</TypeName>
+        <Created>2018-10-15T20:00:53.0000000+02:00</Created>
+        <Description></Description>
+        <Error></Error>
+        <Id value="1992" />
+        <IsEnabled value="true" />
+        <Modified>2018-10-15T20:01:07.0000000+02:00</Modified>
+        <Name>Imprimantes "Epson"</Name>
+        <ParentId value="1982" />
+        <Path>CHA\Hardware\Imprimantes locales\Imprimantes "Epson"</Path>
+        <Type>DynamicCollection</Type>
+        <Children type="list" />
+      </Collection>
+      <Collection>
+        <ReportDefinition name="Definition">
+          <RootFilter name="Filter">
+            <Comparison>Any</Comparison>
+            <Filters type="list">
+              <ValueFilter>
+                <Table>Printer</Table>
+                <TableTitle>Printers (local)</TableTitle>
+                <Column>Name</Column>
+                <Comparison>Contains</Comparison>
+                <Value>Lexmark</Value>
+              </ValueFilter>
+            </Filters>
+          </RootFilter>
+          <ReportDefinitionTypeName>BasicReportDefinition</ReportDefinitionTypeName>
+          <Columns type="list">
+            <Column>
+              <Column>ComputerId</Column>
+              <Summary></Summary>
+              <Table>Computer</Table>
+              <Title></Title>
+            </Column>
+          </Columns>
+        </ReportDefinition>
+        <IsDrilldown value="true" />
+        <ImportedPath></ImportedPath>
+        <TypeName>DynamicCollection</TypeName>
+        <Created>2018-10-15T20:01:42.0000000+02:00</Created>
+        <Description></Description>
+        <Error></Error>
+        <Id value="1993" />
+        <IsEnabled value="true" />
+        <Modified>2018-10-15T20:01:57.0000000+02:00</Modified>
+        <Name>Imprimantes "Lexmark"</Name>
+        <ParentId value="1982" />
+        <Path>CHA\Hardware\Imprimantes locales\Imprimantes "Lexmark"</Path>
+        <Type>DynamicCollection</Type>
+        <Children type="list" />
+      </Collection>
+      <Collection>
+        <ReportDefinition name="Definition">
+          <RootFilter name="Filter">
+            <Comparison>Any</Comparison>
+            <Filters type="list">
+              <ValueFilter>
+                <Table>Printer</Table>
+                <TableTitle>Printers (local)</TableTitle>
+                <Column>Name</Column>
+                <Comparison>Contains</Comparison>
+                <Value>EasyCoder</Value>
+              </ValueFilter>
+            </Filters>
+          </RootFilter>
+          <ReportDefinitionTypeName>BasicReportDefinition</ReportDefinitionTypeName>
+          <Columns type="list">
+            <Column>
+              <Column>ComputerId</Column>
+              <Summary></Summary>
+              <Table>Computer</Table>
+              <Title></Title>
+            </Column>
+          </Columns>
+        </ReportDefinition>
+        <IsDrilldown value="true" />
+        <ImportedPath></ImportedPath>
+        <TypeName>DynamicCollection</TypeName>
+        <Created>2018-10-15T20:04:14.0000000+02:00</Created>
+        <Description></Description>
+        <Error></Error>
+        <Id value="1994" />
+        <IsEnabled value="true" />
+        <Modified>2018-10-15T20:04:31.0000000+02:00</Modified>
+        <Name>Imprimantes "EasyCoder"</Name>
+        <ParentId value="1982" />
+        <Path>CHA\Hardware\Imprimantes locales\Imprimantes "EasyCoder"</Path>
+        <Type>DynamicCollection</Type>
+        <Children type="list" />
+      </Collection>
+    </Children>
+  </Collection>
+</AdminArsenal.Export>
