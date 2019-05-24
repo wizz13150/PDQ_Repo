@@ -1,0 +1,40 @@
+Windows Registry Editor Version 5.00
+
+; (c) Dimitri Kotlovsky
+;
+;       Win10 version
+
+
+
+
+[HKEY_CLASSES_ROOT\Directory\shell\CMDLocal]
+@="@shell32.dll,-8506"
+"Icon"="imageres.dll,-5323"
+"NoWorkingDirectory"=""
+
+[HKEY_CLASSES_ROOT\Directory\shell\CMDLocal\command]
+@="cmd.exe /s /k pushd \"%V\""
+
+
+
+
+
+[HKEY_CLASSES_ROOT\Directory\Background\shell\CMDLocal]
+@="@shell32.dll,-8506"
+"Icon"="imageres.dll,-5323"
+"NoWorkingDirectory"=""
+
+[HKEY_CLASSES_ROOT\Directory\Background\shell\CMDLocal\command]
+@="cmd.exe /s /k pushd \"%V\""
+
+
+
+
+
+[HKEY_CLASSES_ROOT\Drive\shell\CMDLocal]
+@="@shell32.dll,-8506"
+"Icon"="imageres.dll,-5323"
+"NoWorkingDirectory"=""
+
+[HKEY_CLASSES_ROOT\Drive\shell\CMDLocal\command]
+@="cmd.exe /s /k pushd \"%V\""

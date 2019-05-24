@@ -1,0 +1,43 @@
+Windows Registry Editor Version 5.00
+
+; (c) Dimitri Kotlovsky
+;
+;       Win10 version
+
+
+
+
+[HKEY_CLASSES_ROOT\Directory\shell\CMDAsAdmin]
+@="@shell32.dll,-8506"
+"Icon"="imageres.dll,-5323"
+"HasLUAShield"=""
+"NoWorkingDirectory"=""
+
+[HKEY_CLASSES_ROOT\Directory\shell\CMDAsAdmin\command]
+@="PowerShell -WindowStyle Hidden -Command \"Start-Process cmd.exe -ArgumentList '/s,/k,pushd,%V' -Verb RunAs\""
+
+
+
+
+
+[HKEY_CLASSES_ROOT\Directory\Background\shell\CMDAsAdmin]
+@="@shell32.dll,-8506"
+"Icon"="imageres.dll,-5323"
+"HasLUAShield"=""
+"NoWorkingDirectory"=""
+
+[HKEY_CLASSES_ROOT\Directory\Background\shell\CMDAsAdmin\command]
+@="PowerShell -WindowStyle Hidden -Command \"Start-Process cmd.exe -ArgumentList '/s,/k,pushd,%V' -Verb RunAs\""
+
+
+
+
+
+[HKEY_CLASSES_ROOT\Drive\shell\CMDAsAdmin]
+@="@shell32.dll,-8506"
+"Icon"="imageres.dll,-5323"
+"HasLUAShield"=""
+"NoWorkingDirectory"=""
+
+[HKEY_CLASSES_ROOT\Drive\shell\CMDAsAdmin\command]
+@="PowerShell -WindowStyle Hidden -Command \"Start-Process cmd.exe -ArgumentList '/s,/k,pushd,%V' -Verb RunAs\""

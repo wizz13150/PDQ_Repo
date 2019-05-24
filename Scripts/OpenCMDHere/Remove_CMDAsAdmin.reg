@@ -1,0 +1,12 @@
+Windows Registry Editor Version 5.00
+
+; (c) Dimitri Kotlovsky
+
+
+
+
+[-HKEY_CLASSES_ROOT\Directory\shell\CMDAsAdmin]
+
+[-HKEY_CLASSES_ROOT\Directory\Background\shell\CMDAsAdmin]
+
+[-HKEY_CLASSES_ROOT\Drive\shell\CMDAsAdmin]
