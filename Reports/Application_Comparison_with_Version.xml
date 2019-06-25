@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<AdminArsenal.Export Code="PDQInventory" Name="PDQ Inventory" Version="17.1.0.0" MinimumVersion="3.1">
+  <Report>
+    <ReportDefinition name="Definition">
+      <Sql>-- https://gist.github.com/Colby-PDQ/133fdcc7596d8908d6f43a195b9e02f2
+
+SELECT
+	  Computers.Name AS "Computer Name"
+	, Applications.Name AS "Application Name"
+	, Applications.Version AS "Application Version"
+FROM
+	(
+		SELECT
+			  Applications.ApplicationId
+			, COUNT(Applications.Name || Applications.Version) AS "ApplicationCount"
+		FROM
+			Applications
+		INNER JOIN
+			Computers USING (ComputerId)
+		WHERE
+			&lt;ComputerFilter&gt;
+		GROUP BY
+			Applications.Name || Applications.Version
+	) ApplicationCounts
+INNER JOIN
+	Applications USING (ApplicationId)
+INNER JOIN
+	Computers USING (ComputerId)
+WHERE
+		&lt;ComputerFilter&gt;
+	AND
+		ApplicationCounts.ApplicationCount = 1
+ORDER BY
+	Applications.Name COLLATE NOCASE</Sql>
+      <ReportDefinitionTypeName>SqlReportDefinition</ReportDefinitionTypeName>
+    </ReportDefinition>
+    <Created>2018-10-24T20:44:55.0000000+02:00</Created>
+    <Description>Select 2 computers, then run this report. It will show you if an application only exists on one of them, or if each of them has a different version.</Description>
+    <IsNew value="false" />
+    <Modified>2019-06-08T22:02:14.0000000+02:00</Modified>
+    <Name>Application Comparison with Version</Name>
+    <Path>Reports\Application Comparison with Version</Path>
+    <ReportFolderId value="1" />
+    <TypeName>SqlReport</TypeName>
+    <ReportType>SqlReport</ReportType>
+  </Report>
+</AdminArsenal.Export>
