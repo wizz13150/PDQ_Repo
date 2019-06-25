@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<AdminArsenal.Export Code="PDQInventory" Name="PDQ Inventory" Version="12.2.0.0" MinimumVersion="3.1">
+  <Report>
+    <ReportDefinition name="Definition">
+      <Columns type="list">
+        <Column>
+          <Column>Name</Column>
+          <Summary></Summary>
+          <Table>Computer</Table>
+          <Title></Title>
+        </Column>
+        <Column>
+          <Column>InstanceId</Column>
+          <Summary>Count</Summary>
+          <Table>Display</Table>
+          <Title>Number of Monitors</Title>
+        </Column>
+      </Columns>
+      <RootFilter name="Filter">
+        <Comparison>All</Comparison>
+        <Filters type="list" />
+      </RootFilter>
+      <ReportDefinitionTypeName>BasicReportDefinition</ReportDefinitionTypeName>
+    </ReportDefinition>
+    <Description></Description>
+    <Name>Number of Monitors</Name>
+    <ReportFolderId value="1" />
+    <ReportType>BasicReport</ReportType>
+  </Report>
+</AdminArsenal.Export>
