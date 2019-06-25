@@ -1,0 +1,2889 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<AdminArsenal.Export Code="PDQInventory" Name="PDQ Inventory" Version="17.1.0.0" MinimumVersion="15.0">
+  <List type="list">
+    <CustomTool>
+      <CredentialsId value="null" />
+      <ScanAfter>DoNotScan</ScanAfter>
+      <ScanProfileId value="null" />
+      <SuccessCodesText>0</SuccessCodesText>
+      <Timeout>01:00:00</Timeout>
+      <WakeOnLan value="false" />
+      <CustomToolType>Local</CustomToolType>
+      <CommandLine>"C:\Program Files\uvnc bvba\UltraVNC\vncviewer.exe" $(Computer:TARGETHOSTNAME) /autoscaling /password PWD</CommandLine>
+      <DefaultIconKey></DefaultIconKey>
+      <LibraryToolId value="null" />
+      <Modified value="null" />
+      <ShellOpenMode>NoShell</ShellOpenMode>
+      <Mode>Command</Mode>
+      <Description></Description>
+      <IconKey>Stock0030</IconKey>
+      <KeyGesture></KeyGesture>
+      <Title>TightVNC        Auto</Title>
+      <TypeName>CustomTool</TypeName>
+    </CustomTool>
+    <CustomTool>
+      <CredentialsId value="null" />
+      <ScanAfter>DoNotScan</ScanAfter>
+      <ScanProfileId value="null" />
+      <SuccessCodesText>0</SuccessCodesText>
+      <Timeout>00:03:00</Timeout>
+      <WakeOnLan value="false" />
+      <CustomToolType>Local</CustomToolType>
+      <CommandLine>"C:\Program Files\SolarWinds\DameWare Mini Remote Control x64\DWRCC.exe" -h -m:$(Computer:TARGET) -md: -a:1 -c -x</CommandLine>
+      <DefaultIconKey></DefaultIconKey>
+      <LibraryToolId value="null" />
+      <Modified value="null" />
+      <ShellOpenMode>NoShell</ShellOpenMode>
+      <Mode>Command</Mode>
+      <Description></Description>
+      <IconKey>Stock0030</IconKey>
+      <KeyGesture></KeyGesture>
+      <Title>DameWare RC Auto</Title>
+      <TypeName>CustomTool</TypeName>
+    </CustomTool>
+    <CustomTool>
+      <CredentialsId value="null" />
+      <ScanAfter>DoNotScan</ScanAfter>
+      <ScanProfileId value="null" />
+      <SuccessCodesText>0</SuccessCodesText>
+      <Timeout>00:03:00</Timeout>
+      <WakeOnLan value="false" />
+      <CustomToolType>Local</CustomToolType>
+      <CommandLine>@Echo off
+Echo Start pinging $(Computer:TARGET) at IP address $(Computer:TARGETIPADDRESS)
+
+ping /t $(Computer:TARGETHOSTNAME)</CommandLine>
+      <DefaultIconKey>Icon-CommandStep</DefaultIconKey>
+      <LibraryToolId value="null" />
+      <Modified value="null" />
+      <ShellOpenMode>CloseShell</ShellOpenMode>
+      <Mode>Command</Mode>
+      <Description>Sends a persistent Ping to target machine. This will open a CMD window. To stop the ping either press CTRL+C or simply close the CMD window. This utility is great to use when a computer has been rebooted and you want to know the moment it comes back online.</Description>
+      <IconKey>Stock0020</IconKey>
+      <KeyGesture></KeyGesture>
+      <Title>Ping (Persistent)</Title>
+      <TypeName>CustomTool</TypeName>
+    </CustomTool>
+    <CustomTool>
+      <CredentialsId value="null" />
+      <ScanAfter>DoNotScan</ScanAfter>
+      <ScanProfileId value="null" />
+      <SuccessCodesText>0</SuccessCodesText>
+      <Timeout>00:03:00</Timeout>
+      <WakeOnLan value="false" />
+      <CustomToolType>Local</CustomToolType>
+      <CommandLine>explorer.exe "\\$(Computer:TARGETHOSTNAME)\C$"</CommandLine>
+      <DefaultIconKey></DefaultIconKey>
+      <LibraryToolId value="null" />
+      <Modified value="null" />
+      <ShellOpenMode>NoShell</ShellOpenMode>
+      <Mode>Command</Mode>
+      <Description>Attempts to connect via Windows Explorer (explorer.exe) to the target computer’s Windows directory. By default the %WINDIR% directory is shared as ADMIN$.</Description>
+      <IconKey>Stock0895</IconKey>
+      <KeyGesture></KeyGesture>
+      <Title>Ouvrir \\C$</Title>
+      <TypeName>CustomTool</TypeName>
+    </CustomTool>
+    <CustomTool>
+      <CredentialsId value="null" />
+      <ScanAfter>DoNotScan</ScanAfter>
+      <ScanProfileId value="null" />
+      <SuccessCodesText>0</SuccessCodesText>
+      <Timeout>00:03:00</Timeout>
+      <WakeOnLan value="false" />
+      <CustomToolType>Local</CustomToolType>
+      <CommandLine>explorer.exe "\\$(Computer:TARGETHOSTNAME)\D$"</CommandLine>
+      <DefaultIconKey></DefaultIconKey>
+      <LibraryToolId value="null" />
+      <Modified value="null" />
+      <ShellOpenMode>NoShell</ShellOpenMode>
+      <Mode>Command</Mode>
+      <Description>Attempts to connect via Windows Explorer (explorer.exe) to the target computer’s Windows directory. By default the %WINDIR% directory is shared as ADMIN$.</Description>
+      <IconKey>Stock0895</IconKey>
+      <KeyGesture></KeyGesture>
+      <Title>Ouvrir \\D$</Title>
+      <TypeName>CustomTool</TypeName>
+    </CustomTool>
+    <CustomTool>
+      <CredentialsId value="null" />
+      <ScanAfter>DoNotScan</ScanAfter>
+      <ScanProfileId value="null" />
+      <SuccessCodesText>0</SuccessCodesText>
+      <Timeout>00:03:00</Timeout>
+      <WakeOnLan value="false" />
+      <CustomToolType>Local</CustomToolType>
+      <CommandLine>#Recuperation Username distant :
+$ComputerInfos = Get-WmiObject -Class Win32_ComputerSystem -Computername $(Computer:TARGET)
+[String] ${stUserDomain},[String] ${stUserAccount} = $ComputerInfos.Username.split("\")
+
+#On ouvre l'explorateur sur le dossier utilisateur ciblé
+cmd.exe /c explorer.exe \\filer.adcha.local\users$\${stUserAccount}</CommandLine>
+      <DefaultIconKey></DefaultIconKey>
+      <LibraryToolId value="null" />
+      <Modified value="null" />
+      <ShellOpenMode>NoShell</ShellOpenMode>
+      <Mode>PowerShell</Mode>
+      <Description></Description>
+      <IconKey>Stock0895</IconKey>
+      <KeyGesture></KeyGesture>
+      <Title>Ouvrir \\Filer\Users$\%username%</Title>
+      <TypeName>CustomTool</TypeName>
+    </CustomTool>
+    <CustomTool>
+      <CredentialsId value="null" />
+      <ScanAfter>DoNotScan</ScanAfter>
+      <ScanProfileId value="null" />
+      <SuccessCodesText>0</SuccessCodesText>
+      <Timeout>00:03:00</Timeout>
+      <WakeOnLan value="false" />
+      <CustomToolType>Local</CustomToolType>
+      <CommandLine>icacls "C:\Users\Public\Desktop" /grant "Tout le Monde":(f) /T</CommandLine>
+      <DefaultIconKey></DefaultIconKey>
+      <LibraryToolId value="null" />
+      <Modified value="null" />
+      <ShellOpenMode>ToolWindowCaptureOutput</ShellOpenMode>
+      <Mode>Command</Mode>
+      <Description></Description>
+      <IconKey>Stock0895</IconKey>
+      <KeyGesture></KeyGesture>
+      <Title>Autorisation Accès Bureau Public</Title>
+      <TypeName>CustomTool</TypeName>
+    </CustomTool>
+    <SeparatorComputerTool>
+      <Description></Description>
+      <IconKey></IconKey>
+      <KeyGesture></KeyGesture>
+      <Title>Separator</Title>
+      <TypeName>SeparatorComputerTool</TypeName>
+    </SeparatorComputerTool>
+    <PDQDeployTool>
+      <Description>Directly integrates with PDQ Deploy and opens the Select PDQ Deploy Package window which allows you to deploy a package to one or more computers or collections.</Description>
+      <IconKey>Icon-PDQDeploy</IconKey>
+      <KeyGesture></KeyGesture>
+      <Title>PDQ Deploy</Title>
+      <TypeName>PDQDeployTool</TypeName>
+    </PDQDeployTool>
+    <CustomTool>
+      <CredentialsId value="null" />
+      <ScanAfter>ScanAfter</ScanAfter>
+      <ScanProfileId value="13" />
+      <SuccessCodesText>0</SuccessCodesText>
+      <Timeout>00:03:00</Timeout>
+      <WakeOnLan value="false" />
+      <CustomToolType>Local</CustomToolType>
+      <CommandLine>$description = Read-Host 'Entrez la description voulue ' 
+Set-ADComputer $(Computer:TARGET) -replace:@{"description"="$($description)"}
+Invoke-Command -ScriptBlock {pdqinventory ScanComputers -Computers "$(Computer:TARGET)" -ScanProfile "AD Infos"}</CommandLine>
+      <DefaultIconKey></DefaultIconKey>
+      <LibraryToolId value="null" />
+      <Modified value="null" />
+      <ShellOpenMode>LeaveShellOpen</ShellOpenMode>
+      <Mode>PowerShell</Mode>
+      <Description></Description>
+      <IconKey>Stock0120</IconKey>
+      <KeyGesture>Ctrl+Alt+D</KeyGesture>
+      <Title>Changement Description AD</Title>
+      <TypeName>CustomTool</TypeName>
+    </CustomTool>
+    <CustomTool>
+      <CredentialsId value="null" />
+      <ScanAfter>DoNotScan</ScanAfter>
+      <ScanProfileId value="null" />
+      <SuccessCodesText>0</SuccessCodesText>
+      <Timeout>00:03:00</Timeout>
+      <WakeOnLan value="false" />
+      <CustomToolType>Local</CustomToolType>
+      <CommandLine>#===================
+#Script pour ajouter un poste à un groupe AD
+#===================
+
+
+#On cherche les groupes AD et on affiche un menu de sélection:
+$Groupes = Get-ADGroup -Filter "name -like 'G_ordinateurs*'"                    
+$Menu = @{}
+for ($Valeur=1;$Valeur -le $Groupes.count; $Valeur++) 
+{Write-Host "$Valeur= $($Groupes[$Valeur-1].name)" 
+$Menu.Add($Valeur,($Groupes[$Valeur-1].name))}
+[int]$Choix = Read-Host 'Choisir le Groupe AD: '
+
+#On enregistre la sélection du menu
+$Selection = $Menu.Item($Choix)
+
+#On recré les Distinguished Names:
+#Identity:
+$ADUserInfo = Get-ADComputer "$(Computer:TARGET)" -Properties *
+$DistingName = $ADUserInfo.DistinguishedName
+$Identity = $DistingName
+#MemberOf:
+$GroupName = 'G_ordinateurs*'
+$DistingName2 = $ADGroupInfo.DistinguishedName
+#2nd menu pour correspondance DistinguishedName avec Name du menu d'avant:
+$Menu2 = @{}
+$ADGroupInfo = Get-ADGroup -Filter "name -like 'G_ordinateurs*'"              
+for ($Valeur2=1;$Valeur2 -le $ADGroupInfo.count; $Valeur2++)
+{Write-Host "$Valeur2= $($ADGroupInfo[$Valeur2-1].distinguishedname)" 
+$Menu2.Add($Valeur2,($ADGroupInfo[$Valeur2-1].distinguishedname))}
+$Choix2 = $Menu2.Item($Choix)
+
+
+#On ajoute le poste au groupe choisi:
+Add-ADPrincipalGroupMembership -Identity:"$Identity" -MemberOf:"$Choix2" -Verbose
+
+Write-Host ""
+Write-Host "Le poste "$(Computer:TARGET)" a ete ajoute au Groupe AD '$Selection', OK!" -ForegroundColor Green
+Write-Host ""
+
+Invoke-Command -ScriptBlock {pdqinventory ScanComputers -Computers "$(Computer:TARGET)" -ScanProfile "AD Infos"}</CommandLine>
+      <DefaultIconKey></DefaultIconKey>
+      <LibraryToolId value="null" />
+      <Modified value="null" />
+      <ShellOpenMode>LeaveShellOpen</ShellOpenMode>
+      <Mode>PowerShell</Mode>
+      <Description></Description>
+      <IconKey>Stock0120</IconKey>
+      <KeyGesture></KeyGesture>
+      <Title>Ajout Groupe AD</Title>
+      <TypeName>CustomTool</TypeName>
+    </CustomTool>
+    <CustomTool>
+      <CredentialsId value="null" />
+      <ScanAfter>DoNotScan</ScanAfter>
+      <ScanProfileId value="null" />
+      <SuccessCodesText>0</SuccessCodesText>
+      <Timeout>00:03:00</Timeout>
+      <WakeOnLan value="false" />
+      <CustomToolType>Local</CustomToolType>
+      <CommandLine>##################################################
+#
+# Check AD user and see if anything seems off
+#
+# Change the $GroupListAlert if you want it to
+# warn you, and the $Domains if you have split
+# admin / student domains
+# 
+##################################################
+
+$Good = "Green"
+$Bad = "Red"
+$OtherName = "Magenta"
+$Iffy = "Yellow"
+$GroupListAlert = ("SPECIAL GROUP TO WARN ABOUT - ou=company, ou=.com etc")
+
+# Ask for a login name and try to pull information, loop if we error when trying
+Do
+{
+
+    $Domain = "DC1.domain.local" #Read-Host "[a]dmin or [s]tudent (a)"
+    #If ($Domain -eq "s")
+    #{
+    #    $Domain = "DC1.domain.local"
+    #}
+    #Else
+    #{
+    #    $Domain = "DC2.domain.local"
+    #}
+
+    $ComputerInfos = Get-WmiObject -Class Win32_ComputerSystem -Computername $(Computer:TARGET)
+    [String] ${stUserDomain},[String] ${stUserAccount} = $ComputerInfos.Username.split("\")
+    $LoginName = [String] ${stUserAccount}
+    #$LoginName =  $env:USERNAME 
+    #$LoginName = $LoginName.Trim()
+    #$LoginName = $LoginName.Replace(" ", ".") 
+    $ADUserInfo = Get-ADUser $LoginName -Properties * -Server $Domain
+
+} While (!$?)
+$Response = "y"
+
+$Today = Get-Date
+
+
+# Show basic stuff
+#Check le Nom de l'utilisateur :
+Write-Host "Nom Utilisateur:       " -NoNewline
+Write-Host $ADUserInfo.DisplayName -ForegroundColor Cyan
+
+#_________________________
+#Check le nom de login, nom utiliser pour la connexion à l'ordinateur :
+Write-Host "Nom de Login:          " -NoNewline
+Write-Host $ADUserInfo.SAMAccountName -ForegroundColor Cyan
+
+#_________________________
+#Check si l'utilisateur peut changer le mot de passe ou pas :
+Write-Host "CannotChangePassword: " $ADUserInfo.CannotChangePassword
+
+#_________________________
+#Check la date de création du compte utilisateur :
+Write-Host "Créé le:               "  -NoNewline
+Write-Host $ADUserInfo.Created -ForegroundColor Cyan
+
+#_________________________
+#Check la dernière modicication du compte AD :
+Write-Host "Modifié le:           " $ADUserInfo.Modified
+
+#_________________________
+#Check si un emplacement physique est indiqué ou pas :
+If ($ADUserInfo.Office -eq $null)
+{
+    $Colour = $Good
+Write-Host "Bureau:                -NC-"
+}
+Else
+{
+Write-Host "Bureau:               "  -NoNewline
+Write-Host $ADUserInfo.Office -ForegroundColor Cyan
+}
+
+#_________________________
+#Check si une adresse Mail est renseigner ou pas :
+If ($ADUserInfo.Mail -eq $null)
+{
+    $Colour = $Good
+Write-Host "Mail:                  -NC-" -ForegroundColor $Bad
+}
+Else
+{
+Write-Host "Mail:                  "  -NoNewline
+Write-Host $ADUserInfo.Mail -ForegroundColor Cyan
+}
+
+#_________________________
+#Check si un numéro de téléphone est renseigné ou pas :
+If ($ADUserInfo.OfficePhone -eq $null)
+{
+    $Colour = $Good
+Write-Host "Téléphone:             " -NoNewline
+Write-Host "-NC-" -ForegroundColor $Bad
+}
+Else
+{
+Write-Host "Téléphone:             "  -NoNewline
+Write-Host $ADUserInfo.OfficePhone -ForegroundColor Cyan
+}
+
+#_________________________
+#Check si le poste au sein du CHA est renseigné ou pas :
+If ($ADUserInfo.Title)
+{
+    $Colour = "Blue"
+Write-Host "Poste occupé:          " -NoNewline
+Write-Host $ADUserInfo.Title -ForegroundColor $Colour
+}
+Else
+{ 
+Write-Host "Poste occupé:          " -NoNewline
+Write-Host "-NC-"
+}
+
+#_________________________
+#Check le nombre d'authentification via l'AD :
+Write-Host "Long Count:           " $ADUserInfo.logonCount
+
+#_________________________
+#Check si l'utilisateur a un chemin de profil :
+If ($ADUserInfo.ProfilePath)
+{
+    $Colour = $Good
+Write-Host "Chemin Profil:         " -NoNewline
+Write-Host $ADUserInfo.ProfilePath -ForegroundColor $Colour
+}
+Else
+{
+    $Colour = $Bad
+Write-Host "Chemin Profil:         " -NoNewline
+Write-Host "Pas de ProfilePath! Pas bon!" -ForegroundColor $Colour
+ }
+
+#_________________________
+#Check si l'utilisateur à un autre nom (Nom de jeune fille)
+If ($ADUserInfo.OtherName)
+{
+    $Colour = $OtherName
+Write-Host "Autre Nom:             " -NoNewline
+Write-Host $ADUserInfo.OtherName -ForegroundColor $Colour
+}
+Else
+{
+    $Colour = $Bad
+Write-Host "Autre Nom:             -NC-" -NoNewline
+Write-Host $ADUserInfo.OtherName -ForegroundColor $Colour
+}
+
+#_________________________
+# Check if the account is enabled, color response
+If ($ADUserInfo.Enabled)
+{
+    $Colour = $Good
+}
+Else
+{
+    $Colour = $Bad
+}
+Write-Host "Compte Activé ?    :   " -NoNewline
+Write-Host $ADUserInfo.Enabled -ForegroundColor $Colour 
+
+#_________________________
+# Check if account is locked out and color accordingly
+If ($ADUserInfo.LockedOut)
+{
+    $Colour = $Bad
+}
+Else
+{
+    $Colour = $Good
+}
+Write-Host "Compte verrouillé ?:   " -NoNewline
+Write-Host $ADUserInfo.LockedOut -ForegroundColor $Colour
+
+#_________________________
+# If the account is expired (also check for null as that is &lt; today)
+If ($ADUserInfo.AccountExpirationDate -lt $Today -and $ADUserInfo.AccountExpirationDate -ne $null)
+{
+    $Colour = $Good
+Write-Host "Compte  expire le  :   " -NoNewline
+Write-Host $ADUserInfo.AccountExpirationDate -ForegroundColor $Colour
+   
+}
+Else
+{
+    $Colour = $Bad
+Write-Host "Compte  expire le  :   " -NoNewline
+Write-Host $ADUserInfo.AccountExpirationDate -ForegroundColor $Colour
+}
+
+#_________________________
+#Check si le compte expire ou jamais :
+If ($ADUserInfo.accountExpires -eq "0")
+{
+    $Colour = $Good
+Write-Host "Compte  expire:        " -NoNewline
+Write-Host "False" -ForegroundColor $Colour
+}
+Else
+{
+    $Colour = $Bad
+Write-Host "Compte  expire:        " -NoNewline
+Write-Host "True" -ForegroundColor $Colour
+
+}
+
+#_________________________
+# Have they logged in in the last 7 days
+If ($ADUserInfo.LastLogonDate.AddDays(7) -lt $Today)
+{
+    $Colour = $Iffy
+}
+Else
+{
+    $Colour = $Good
+}
+Write-Host "Dernier Logon:         " -NoNewline
+Write-Host $ADUserInfo.LastLogonDate -ForegroundColor $Colour
+
+#_________________________
+# Check PasswordLastSet isn't null (to prevent errors)
+If ($ADUserInfo.PasswordLastSet -eq $Null)
+{
+    $Colour = $Iffy
+    Write-Host "MDP paramétré le:       " -NoNewline
+    Write-Host "NULL" -ForegroundColor $Colour
+}
+Else
+{
+    # If they set their password over 90 days ago, OR in the last day
+    If ($ADUserInfo.PasswordLastSet.AddDays(90) -lt $Today -or $ADUserInfo.PasswordLastSet.AddDays(1) -gt $Today)
+    {
+        $Colour = $Iffy
+    }
+    Else
+    {
+        $Colour = $Good
+    }
+    Write-Host "MDP paramétré le:      " -NoNewline
+    Write-Host $ADUserInfo.PasswordLastSet -ForegroundColor $Colour
+
+    # Is their password expired (based on GPO of 90 days)
+    If ($ADUserInfo.PasswordLastSet.AddDays(90) -lt $Today)
+    {
+        $Colour = $Bad
+    }
+    Else
+    {
+        $Colour = $Good
+    }
+    Write-Host "MDP expire le:         " -NoNewline
+    Write-Host $ADUserInfo.PasswordLastSet.AddDays(90) -ForegroundColor $Colour
+}
+
+#_________________________
+# Ckeck si le mot de passe n'expire jamais ou pas :
+If ($ADUserInfo.PasswordNeverExpires)
+{
+    $Colour = $Good
+}
+Else
+{
+    $Colour = $Bad
+}
+Write-Host "MDP n'expire jamais?:  " -NoNewline
+Write-Host $ADUserInfo.PasswordNeverExpires -ForegroundColor $Colour
+Write-Host "User dans l'OU:        " -NoNewline
+Write-Host $ADUserInfo.CanonicalName -ForegroundColor Cyan
+Write-Host "Membre des Groupes:         "
+
+# Check the groups they are in
+ForEach ($GroupList in $ADUserInfo.MemberOf)
+{
+    # If it is Deny Logins, colour it!
+    If ($GroupListAlert -contains $GroupList)
+    {
+        Write-Host "                  " $GroupList -ForegroundColor $Bad
+    }
+    Else
+    {
+        Write-Host "                  " $GroupList
+    }
+}
+
+
+    $MSUser.Licenses.ServiceStatus | FT -AutoSize
+
+    # And tidy up and close the session down
+    \\sccm2012\e$\SCCM_Repository\Software\Scripts\CheckADUser\Disconnect.ps1</CommandLine>
+      <DefaultIconKey></DefaultIconKey>
+      <LibraryToolId value="null" />
+      <Modified value="null" />
+      <ShellOpenMode>ToolWindowCaptureOutput</ShellOpenMode>
+      <Mode>PowerShell</Mode>
+      <Description></Description>
+      <IconKey>Stock0510</IconKey>
+      <KeyGesture></KeyGesture>
+      <Title>Get AD User Infos</Title>
+      <TypeName>CustomTool</TypeName>
+    </CustomTool>
+    <CustomTool>
+      <CredentialsId value="null" />
+      <ScanAfter>DoNotScan</ScanAfter>
+      <ScanProfileId value="null" />
+      <SuccessCodesText>0</SuccessCodesText>
+      <Timeout>00:03:00</Timeout>
+      <WakeOnLan value="false" />
+      <CustomToolType>Local</CustomToolType>
+      <CommandLine>#Recuperation Username distant :
+$ComputerInfos = Get-WmiObject -Class Win32_ComputerSystem -Computername $(Computer:TARGET)
+[String] ${stUserDomain},[String] ${stUserAccount} = $ComputerInfos.Username.split("\")
+
+#On cherche les groupes AD :
+$ADUserInfo = Get-ADUser ${stUserAccount} -Properties *
+Write-Host "L'utilisateur '${stUserAccount}' est membre des groupes :" -ForegroundColor Cyan
+$ADUserInfo.MemberOf</CommandLine>
+      <DefaultIconKey></DefaultIconKey>
+      <LibraryToolId value="null" />
+      <Modified value="null" />
+      <ShellOpenMode>ToolWindowCaptureOutput</ShellOpenMode>
+      <Mode>PowerShell</Mode>
+      <Description></Description>
+      <IconKey>Stock0520</IconKey>
+      <KeyGesture></KeyGesture>
+      <Title>Get AD User Groupes</Title>
+      <TypeName>CustomTool</TypeName>
+    </CustomTool>
+    <CustomTool>
+      <CredentialsId value="null" />
+      <ScanAfter>DoNotScan</ScanAfter>
+      <ScanProfileId value="null" />
+      <SuccessCodesText>0</SuccessCodesText>
+      <Timeout>00:00:20</Timeout>
+      <WakeOnLan value="false" />
+      <CustomToolType>Remote</CustomToolType>
+      <CommandLine>Get-WmiObject win32_printer| select Name, Sharename, SystemName</CommandLine>
+      <DefaultIconKey></DefaultIconKey>
+      <LibraryToolId value="null" />
+      <Modified value="null" />
+      <ShellOpenMode>ToolWindowCaptureOutput</ShellOpenMode>
+      <Mode>PowerShell</Mode>
+      <Description></Description>
+      <IconKey>Icon-PowerShell</IconKey>
+      <KeyGesture></KeyGesture>
+      <Title>Get Local Printers</Title>
+      <TypeName>CustomTool</TypeName>
+    </CustomTool>
+    <CustomTool>
+      <CredentialsId value="null" />
+      <ScanAfter>DoNotScan</ScanAfter>
+      <ScanProfileId value="null" />
+      <SuccessCodesText>0</SuccessCodesText>
+      <Timeout>00:03:00</Timeout>
+      <WakeOnLan value="false" />
+      <CustomToolType>Remote</CustomToolType>
+      <CommandLine>@ECHO OFF
+CLS
+setLocal EnableDelayedExpansion
+REM The textfile to store the printers
+SET textFile=C:\printers.txt
+REM Clear the text file and start new
+COPY /Y NUL !textFile! &gt;nul 2&gt;&amp;1
+
+
+REM =================================================================================================================
+REM Recuperation des Imprimantes pour tout utilisateur actuellement connecte.
+REM =================================================================================================================
+ECHO ==============================================================
+REM ECHO Recherche des Utilisateurs qui sont connectes !
+REM ECHO ==============================================================
+REM ECHO.
+FOR /F "tokens=*" %%G IN ('REG QUERY "HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion\ProfileList"') DO (
+    SET line=%%G
+    FOR /F "tokens=3" %%X IN ('REG QUERY "HKLM\!line:~19!" /v "profileImagePath" 2^&gt;nul') DO (
+        SET userPath=%%X
+        SET userPath=!userPath:*C:\Users\=!
+
+        SET isUser=true
+
+        REM Specify users to filter out
+        IF "!userPath!" == "Administrator" SET isUser=false
+        IF "!userPath!" == "defaultuser0" SET isUser=false
+        IF "!userPath!" == "Public" SET isUser=false
+        IF "!isUser!" == "true" (
+            IF EXIST "C:\users\!userPath!\" (
+                REM Make sure the key actually exists
+                REG QUERY "HKU\!line:~76!" &gt;nul 2&gt;&amp;1
+                IF !ERRORLEVEL! EQU 0 (
+                    ECHO Recuperation des Imprimantes pour !userPath!
+                    ECHO !userPath!: &gt;&gt; !textFile!
+                    REM Get all network printers
+                    FOR /F "tokens=*" %%F IN ('REG QUERY "HKU\!line:~76!\Printers\Connections" 2^&gt;nul') DO (
+
+                        REM Format the output to only contain the printer name,portname. Then print it to the text file.
+                        SET newLine=%%F
+                        SET output=!newLine:*Connections\=!
+                        ECHO !output:,=\! &gt;&gt; !textFile!
+                    )
+                    ECHO.&gt;&gt;!textFile!
+                )
+            )
+        )
+    )
+)
+REM ECHO Les utilisateurs connectes sont maintenant traites.
+REM ECHO.
+REM =================================================================================================================
+REM Recherche des Imprimantes réseaux des Utilisateurs déconnectés.
+REM =================================================================================================================
+REM ECHO ==============================================================
+REM ECHO Recherche des Utilisateurs deconnectes.
+REM ECHO ==============================================================
+REM ECHO.
+FOR /F "tokens=*" %%D IN ('DIR C:\Users\ /B') DO (
+    SET line=%%D
+    SET isUser=true
+
+    REM Specify users to filter out
+    IF "!line!" == "Administrator" SET isUser=false
+    IF "!line!" == "defaultuser0" SET isUser=false
+    IF "!line!" == "Public" SET isUser=false
+    IF "!isUser!" == "true" (
+        XCOPY "C:\Users\!line!\NTUSER.DAT" "C:\Users\!line!\NTUSER_TEMP.DAT*" /H /Q &gt;nul 2&gt;&amp;1
+        IF !ERRORLEVEL! EQU 0 (
+            REG LOAD "HKU\TempHive" "C:\Users\!line!\NTUSER_TEMP.DAT" &gt;nul 2&gt;&amp;1
+
+            REM Make sure the key actually exists
+            REG QUERY "HKU\TempHive\Printers\Connections" &gt;nul 2&gt;&amp;1
+            IF !ERRORLEVEL! EQU 0 (
+
+                REM Get all network printers
+                REM ECHORecuperation des Imprimantes pour !userPath!
+                ECHO !line!: &gt;&gt; !textFile!
+                FOR /F "tokens=*" %%F IN ('REG QUERY "HKU\TempHive\Printers\Connections" 2^&gt;nul') DO (
+
+                    REM Format the output to only contain the printer name. Then print it to the text file.
+                    SET newLine=%%F
+                    SET output=!newLine:*Connections\=!
+                    ECHO - !output:,=\! &gt;&gt; !textFile!
+                )
+                ECHO.&gt;&gt;!textFile!
+            )
+
+            REG UNLOAD "HKU\TempHive" &gt;nul 2&gt;&amp;1
+            DEL /Q /A:H "C:\Users\!line!\NTUSER_TEMP.DAT"
+        )
+    )
+)
+
+REM =================================================================================================================
+REM Récupération des imprimantes installées localement.
+REM =================================================================================================================
+ECHO ==============================================================
+ECHO Recherche des imprimantes locales.
+ECHO ==============================================================
+ECHO.
+ECHO Local Printers:&gt;&gt;!textFile!
+FOR /F "tokens=*" %%a in ('WMIC PRINTER GET NAME') do (
+    SET printer=%%a
+    IF NOT "!printer:~0,2!" == "\\" (
+        IF NOT "!printer:~0,4!" == "Name" (
+            ECHO.!printer! &gt;&gt; !textFile!
+        )
+    )
+)
+ENDLOCAL
+TYPE \\%COMPUTERNAME%\C$\printers.txt
+pause</CommandLine>
+      <DefaultIconKey></DefaultIconKey>
+      <LibraryToolId value="null" />
+      <Modified value="null" />
+      <ShellOpenMode>ToolWindowCaptureOutput</ShellOpenMode>
+      <Mode>Command</Mode>
+      <Description></Description>
+      <IconKey>Icon-CommandStep</IconKey>
+      <KeyGesture></KeyGesture>
+      <Title>Get Mapped Printers</Title>
+      <TypeName>CustomTool</TypeName>
+    </CustomTool>
+    <CustomTool>
+      <CredentialsId value="null" />
+      <ScanAfter>DoNotScan</ScanAfter>
+      <ScanProfileId value="null" />
+      <SuccessCodesText>0</SuccessCodesText>
+      <Timeout>00:03:00</Timeout>
+      <WakeOnLan value="false" />
+      <CustomToolType>System</CustomToolType>
+      <CommandLine>@Echo off
+Echo Flush the DNS Resolver Cache on your workstation
+hostname 
+
+ipconfig /flushdns</CommandLine>
+      <DefaultIconKey>Icon-CommandStep</DefaultIconKey>
+      <LibraryToolId value="40" />
+      <Modified>2016-12-22T17:03:47.0000000+01:00</Modified>
+      <ShellOpenMode>LeaveShellOpen</ShellOpenMode>
+      <Mode>Command</Mode>
+      <Description>Use this to flush (empty) the DNS cache on your console machine. This can be necessary when a target’s IP address has changed but your DNS cache still has the old address. This tool is considered a “System Tool”. This means that a computer does not need to be selected to run it.</Description>
+      <IconKey>Icon-CommandStep</IconKey>
+      <KeyGesture></KeyGesture>
+      <Title>Flush DNS Resolver Cache (localhost)</Title>
+      <TypeName>CustomTool</TypeName>
+    </CustomTool>
+    <CustomTool>
+      <CredentialsId value="null" />
+      <ScanAfter>DoNotScan</ScanAfter>
+      <ScanProfileId value="null" />
+      <SuccessCodesText>0</SuccessCodesText>
+      <Timeout>00:03:00</Timeout>
+      <WakeOnLan value="false" />
+      <CustomToolType>Local</CustomToolType>
+      <CommandLine># For a discussion of this setting and its impact, see:
+# http://technet.microsoft.com/en-us/magazine/2007.01.cableguy.aspx
+# The intent is to optimize TCP performance by setting the
+# receive window auto-tuning level to Disabled.
+
+
+
+
+# To disable TCP/IP autotunning, in an elevated CMD shell run:
+
+netsh.exe interface tcp set global autotuninglevel= Disabled
+
+
+
+# To see current TCP global settings and to confirm 
+# that "Receive Window Auto-Tuning Level" is disabled:
+
+netsh.exe interface tcp show global
+
+
+
+# To reset back to the factory default:
+#netsh.exe interface tcp set global autotuninglevel= normal</CommandLine>
+      <DefaultIconKey></DefaultIconKey>
+      <LibraryToolId value="null" />
+      <Modified value="null" />
+      <ShellOpenMode>ToolWindowCaptureOutput</ShellOpenMode>
+      <Mode>PowerShell</Mode>
+      <Description></Description>
+      <IconKey>Icon-PowerShell</IconKey>
+      <KeyGesture></KeyGesture>
+      <Title>TCPI/IP Optimisation</Title>
+      <TypeName>CustomTool</TypeName>
+    </CustomTool>
+    <CustomTool>
+      <CredentialsId value="null" />
+      <ScanAfter>DoNotScan</ScanAfter>
+      <ScanProfileId value="null" />
+      <SuccessCodesText>0</SuccessCodesText>
+      <Timeout>00:03:00</Timeout>
+      <WakeOnLan value="false" />
+      <CustomToolType>Remote</CustomToolType>
+      <CommandLine>Function Set-ScreenResolution { 
+ 
+&lt;# 
+    .Synopsis 
+        Sets the Screen Resolution of the primary monitor 
+    .Description 
+        Uses Pinvoke and ChangeDisplaySettings Win32API to make the change 
+    .Example 
+        Set-ScreenResolution -Width 1024 -Height 768         
+    #&gt; 
+param ( 
+[Parameter(Mandatory=$true, 
+           Position = 0)] 
+[int] 
+$Width, 
+ 
+[Parameter(Mandatory=$true, 
+           Position = 1)] 
+[int] 
+$Height 
+) 
+ 
+$pinvokeCode = @" 
+ 
+using System; 
+using System.Runtime.InteropServices; 
+ 
+namespace Resolution 
+{ 
+ 
+    [StructLayout(LayoutKind.Sequential)] 
+    public struct DEVMODE1 
+    { 
+        [MarshalAs(UnmanagedType.ByValTStr, SizeConst = 32)] 
+        public string dmDeviceName; 
+        public short dmSpecVersion; 
+        public short dmDriverVersion; 
+        public short dmSize; 
+        public short dmDriverExtra; 
+        public int dmFields; 
+ 
+        public short dmOrientation; 
+        public short dmPaperSize; 
+        public short dmPaperLength; 
+        public short dmPaperWidth; 
+ 
+        public short dmScale; 
+        public short dmCopies; 
+        public short dmDefaultSource; 
+        public short dmPrintQuality; 
+        public short dmColor; 
+        public short dmDuplex; 
+        public short dmYResolution; 
+        public short dmTTOption; 
+        public short dmCollate; 
+        [MarshalAs(UnmanagedType.ByValTStr, SizeConst = 32)] 
+        public string dmFormName; 
+        public short dmLogPixels; 
+        public short dmBitsPerPel; 
+        public int dmPelsWidth; 
+        public int dmPelsHeight; 
+ 
+        public int dmDisplayFlags; 
+        public int dmDisplayFrequency; 
+ 
+        public int dmICMMethod; 
+        public int dmICMIntent; 
+        public int dmMediaType; 
+        public int dmDitherType; 
+        public int dmReserved1; 
+        public int dmReserved2; 
+ 
+        public int dmPanningWidth; 
+        public int dmPanningHeight; 
+    }; 
+ 
+ 
+ 
+    class User_32 
+    { 
+        [DllImport("user32.dll")] 
+        public static extern int EnumDisplaySettings(string deviceName, int modeNum, ref DEVMODE1 devMode); 
+        [DllImport("user32.dll")] 
+        public static extern int ChangeDisplaySettings(ref DEVMODE1 devMode, int flags); 
+ 
+        public const int ENUM_CURRENT_SETTINGS = -1; 
+        public const int CDS_UPDATEREGISTRY = 0x01; 
+        public const int CDS_TEST = 0x02; 
+        public const int DISP_CHANGE_SUCCESSFUL = 0; 
+        public const int DISP_CHANGE_RESTART = 1; 
+        public const int DISP_CHANGE_FAILED = -1; 
+    } 
+ 
+ 
+ 
+    public class PrmaryScreenResolution 
+    { 
+        static public string ChangeResolution(int width, int height) 
+        { 
+ 
+            DEVMODE1 dm = GetDevMode1(); 
+ 
+            if (0 != User_32.EnumDisplaySettings(null, User_32.ENUM_CURRENT_SETTINGS, ref dm)) 
+            { 
+ 
+                dm.dmPelsWidth = width; 
+                dm.dmPelsHeight = height; 
+ 
+                int iRet = User_32.ChangeDisplaySettings(ref dm, User_32.CDS_TEST); 
+ 
+                if (iRet == User_32.DISP_CHANGE_FAILED) 
+                { 
+                    return "Unable To Process Your Request. Sorry For This Inconvenience."; 
+                } 
+                else 
+                { 
+                    iRet = User_32.ChangeDisplaySettings(ref dm, User_32.CDS_UPDATEREGISTRY); 
+                    switch (iRet) 
+                    { 
+                        case User_32.DISP_CHANGE_SUCCESSFUL: 
+                            { 
+                                return "Success"; 
+                            } 
+                        case User_32.DISP_CHANGE_RESTART: 
+                            { 
+                                return "You Need To Reboot For The Change To Happen.\n If You Feel Any Problem After Rebooting Your Machine\nThen Try To Change Resolution In Safe Mode."; 
+                            } 
+                        default: 
+                            { 
+                                return "Failed To Change The Resolution"; 
+                            } 
+                    } 
+ 
+                } 
+ 
+ 
+            } 
+            else 
+            { 
+                return "Failed To Change The Resolution."; 
+            } 
+        } 
+ 
+        private static DEVMODE1 GetDevMode1() 
+        { 
+            DEVMODE1 dm = new DEVMODE1(); 
+            dm.dmDeviceName = new String(new char[32]); 
+            dm.dmFormName = new String(new char[32]); 
+            dm.dmSize = (short)Marshal.SizeOf(dm); 
+            return dm; 
+        } 
+    } 
+} 
+ 
+"@ 
+ 
+Add-Type $pinvokeCode -ErrorAction SilentlyContinue 
+[Resolution.PrmaryScreenResolution]::ChangeResolution($width,$height) 
+} 
+Set-ScreenResolution -Width 1440 -Height 900</CommandLine>
+      <DefaultIconKey></DefaultIconKey>
+      <LibraryToolId value="null" />
+      <Modified value="null" />
+      <ShellOpenMode>ToolWindowCaptureOutput</ShellOpenMode>
+      <Mode>PowerShell</Mode>
+      <Description></Description>
+      <IconKey>Stock0010</IconKey>
+      <KeyGesture></KeyGesture>
+      <Title>Résolution 19" 1440*900</Title>
+      <TypeName>CustomTool</TypeName>
+    </CustomTool>
+    <CustomTool>
+      <CredentialsId value="null" />
+      <ScanAfter>DoNotScan</ScanAfter>
+      <ScanProfileId value="null" />
+      <SuccessCodesText>0</SuccessCodesText>
+      <Timeout>00:03:00</Timeout>
+      <WakeOnLan value="false" />
+      <CustomToolType>Remote</CustomToolType>
+      <CommandLine>Function Set-ScreenResolution { 
+ 
+&lt;# 
+    .Synopsis 
+        Sets the Screen Resolution of the primary monitor 
+    .Description 
+        Uses Pinvoke and ChangeDisplaySettings Win32API to make the change 
+    .Example 
+        Set-ScreenResolution -Width 1024 -Height 768         
+    #&gt; 
+param ( 
+[Parameter(Mandatory=$true, 
+           Position = 0)] 
+[int] 
+$Width, 
+ 
+[Parameter(Mandatory=$true, 
+           Position = 1)] 
+[int] 
+$Height 
+) 
+ 
+$pinvokeCode = @" 
+ 
+using System; 
+using System.Runtime.InteropServices; 
+ 
+namespace Resolution 
+{ 
+ 
+    [StructLayout(LayoutKind.Sequential)] 
+    public struct DEVMODE1 
+    { 
+        [MarshalAs(UnmanagedType.ByValTStr, SizeConst = 32)] 
+        public string dmDeviceName; 
+        public short dmSpecVersion; 
+        public short dmDriverVersion; 
+        public short dmSize; 
+        public short dmDriverExtra; 
+        public int dmFields; 
+ 
+        public short dmOrientation; 
+        public short dmPaperSize; 
+        public short dmPaperLength; 
+        public short dmPaperWidth; 
+ 
+        public short dmScale; 
+        public short dmCopies; 
+        public short dmDefaultSource; 
+        public short dmPrintQuality; 
+        public short dmColor; 
+        public short dmDuplex; 
+        public short dmYResolution; 
+        public short dmTTOption; 
+        public short dmCollate; 
+        [MarshalAs(UnmanagedType.ByValTStr, SizeConst = 32)] 
+        public string dmFormName; 
+        public short dmLogPixels; 
+        public short dmBitsPerPel; 
+        public int dmPelsWidth; 
+        public int dmPelsHeight; 
+ 
+        public int dmDisplayFlags; 
+        public int dmDisplayFrequency; 
+ 
+        public int dmICMMethod; 
+        public int dmICMIntent; 
+        public int dmMediaType; 
+        public int dmDitherType; 
+        public int dmReserved1; 
+        public int dmReserved2; 
+ 
+        public int dmPanningWidth; 
+        public int dmPanningHeight; 
+    }; 
+ 
+ 
+ 
+    class User_32 
+    { 
+        [DllImport("user32.dll")] 
+        public static extern int EnumDisplaySettings(string deviceName, int modeNum, ref DEVMODE1 devMode); 
+        [DllImport("user32.dll")] 
+        public static extern int ChangeDisplaySettings(ref DEVMODE1 devMode, int flags); 
+ 
+        public const int ENUM_CURRENT_SETTINGS = -1; 
+        public const int CDS_UPDATEREGISTRY = 0x01; 
+        public const int CDS_TEST = 0x02; 
+        public const int DISP_CHANGE_SUCCESSFUL = 0; 
+        public const int DISP_CHANGE_RESTART = 1; 
+        public const int DISP_CHANGE_FAILED = -1; 
+    } 
+ 
+ 
+ 
+    public class PrmaryScreenResolution 
+    { 
+        static public string ChangeResolution(int width, int height) 
+        { 
+ 
+            DEVMODE1 dm = GetDevMode1(); 
+ 
+            if (0 != User_32.EnumDisplaySettings(null, User_32.ENUM_CURRENT_SETTINGS, ref dm)) 
+            { 
+ 
+                dm.dmPelsWidth = width; 
+                dm.dmPelsHeight = height; 
+ 
+                int iRet = User_32.ChangeDisplaySettings(ref dm, User_32.CDS_TEST); 
+ 
+                if (iRet == User_32.DISP_CHANGE_FAILED) 
+                { 
+                    return "Unable To Process Your Request. Sorry For This Inconvenience."; 
+                } 
+                else 
+                { 
+                    iRet = User_32.ChangeDisplaySettings(ref dm, User_32.CDS_UPDATEREGISTRY); 
+                    switch (iRet) 
+                    { 
+                        case User_32.DISP_CHANGE_SUCCESSFUL: 
+                            { 
+                                return "Success"; 
+                            } 
+                        case User_32.DISP_CHANGE_RESTART: 
+                            { 
+                                return "You Need To Reboot For The Change To Happen.\n If You Feel Any Problem After Rebooting Your Machine\nThen Try To Change Resolution In Safe Mode."; 
+                            } 
+                        default: 
+                            { 
+                                return "Failed To Change The Resolution"; 
+                            } 
+                    } 
+ 
+                } 
+ 
+ 
+            } 
+            else 
+            { 
+                return "Failed To Change The Resolution."; 
+            } 
+        } 
+ 
+        private static DEVMODE1 GetDevMode1() 
+        { 
+            DEVMODE1 dm = new DEVMODE1(); 
+            dm.dmDeviceName = new String(new char[32]); 
+            dm.dmFormName = new String(new char[32]); 
+            dm.dmSize = (short)Marshal.SizeOf(dm); 
+            return dm; 
+        } 
+    } 
+} 
+ 
+"@ 
+ 
+Add-Type $pinvokeCode -ErrorAction SilentlyContinue 
+[Resolution.PrmaryScreenResolution]::ChangeResolution($width,$height) 
+} 
+Set-ScreenResolution -Width 1600 -Height 900</CommandLine>
+      <DefaultIconKey></DefaultIconKey>
+      <LibraryToolId value="null" />
+      <Modified value="null" />
+      <ShellOpenMode>ToolWindowCaptureOutput</ShellOpenMode>
+      <Mode>PowerShell</Mode>
+      <Description></Description>
+      <IconKey>Stock0010</IconKey>
+      <KeyGesture></KeyGesture>
+      <Title>Résolution 24" 1600*900</Title>
+      <TypeName>CustomTool</TypeName>
+    </CustomTool>
+    <CustomTool>
+      <CredentialsId value="null" />
+      <ScanAfter>DoNotScan</ScanAfter>
+      <ScanProfileId value="null" />
+      <SuccessCodesText>0</SuccessCodesText>
+      <Timeout>00:03:00</Timeout>
+      <WakeOnLan value="false" />
+      <CustomToolType>Remote</CustomToolType>
+      <CommandLine>Function Set-ScreenResolution { 
+ 
+&lt;# 
+    .Synopsis 
+        Sets the Screen Resolution of the primary monitor 
+    .Description 
+        Uses Pinvoke and ChangeDisplaySettings Win32API to make the change 
+    .Example 
+        Set-ScreenResolution -Width 1024 -Height 768         
+    #&gt; 
+param ( 
+[Parameter(Mandatory=$true, 
+           Position = 0)] 
+[int] 
+$Width, 
+ 
+[Parameter(Mandatory=$true, 
+           Position = 1)] 
+[int] 
+$Height 
+) 
+ 
+$pinvokeCode = @" 
+ 
+using System; 
+using System.Runtime.InteropServices; 
+ 
+namespace Resolution 
+{ 
+ 
+    [StructLayout(LayoutKind.Sequential)] 
+    public struct DEVMODE1 
+    { 
+        [MarshalAs(UnmanagedType.ByValTStr, SizeConst = 32)] 
+        public string dmDeviceName; 
+        public short dmSpecVersion; 
+        public short dmDriverVersion; 
+        public short dmSize; 
+        public short dmDriverExtra; 
+        public int dmFields; 
+ 
+        public short dmOrientation; 
+        public short dmPaperSize; 
+        public short dmPaperLength; 
+        public short dmPaperWidth; 
+ 
+        public short dmScale; 
+        public short dmCopies; 
+        public short dmDefaultSource; 
+        public short dmPrintQuality; 
+        public short dmColor; 
+        public short dmDuplex; 
+        public short dmYResolution; 
+        public short dmTTOption; 
+        public short dmCollate; 
+        [MarshalAs(UnmanagedType.ByValTStr, SizeConst = 32)] 
+        public string dmFormName; 
+        public short dmLogPixels; 
+        public short dmBitsPerPel; 
+        public int dmPelsWidth; 
+        public int dmPelsHeight; 
+ 
+        public int dmDisplayFlags; 
+        public int dmDisplayFrequency; 
+ 
+        public int dmICMMethod; 
+        public int dmICMIntent; 
+        public int dmMediaType; 
+        public int dmDitherType; 
+        public int dmReserved1; 
+        public int dmReserved2; 
+ 
+        public int dmPanningWidth; 
+        public int dmPanningHeight; 
+    }; 
+ 
+ 
+ 
+    class User_32 
+    { 
+        [DllImport("user32.dll")] 
+        public static extern int EnumDisplaySettings(string deviceName, int modeNum, ref DEVMODE1 devMode); 
+        [DllImport("user32.dll")] 
+        public static extern int ChangeDisplaySettings(ref DEVMODE1 devMode, int flags); 
+ 
+        public const int ENUM_CURRENT_SETTINGS = -1; 
+        public const int CDS_UPDATEREGISTRY = 0x01; 
+        public const int CDS_TEST = 0x02; 
+        public const int DISP_CHANGE_SUCCESSFUL = 0; 
+        public const int DISP_CHANGE_RESTART = 1; 
+        public const int DISP_CHANGE_FAILED = -1; 
+    } 
+ 
+ 
+ 
+    public class PrmaryScreenResolution 
+    { 
+        static public string ChangeResolution(int width, int height) 
+        { 
+ 
+            DEVMODE1 dm = GetDevMode1(); 
+ 
+            if (0 != User_32.EnumDisplaySettings(null, User_32.ENUM_CURRENT_SETTINGS, ref dm)) 
+            { 
+ 
+                dm.dmPelsWidth = width; 
+                dm.dmPelsHeight = height; 
+ 
+                int iRet = User_32.ChangeDisplaySettings(ref dm, User_32.CDS_TEST); 
+ 
+                if (iRet == User_32.DISP_CHANGE_FAILED) 
+                { 
+                    return "Unable To Process Your Request. Sorry For This Inconvenience."; 
+                } 
+                else 
+                { 
+                    iRet = User_32.ChangeDisplaySettings(ref dm, User_32.CDS_UPDATEREGISTRY); 
+                    switch (iRet) 
+                    { 
+                        case User_32.DISP_CHANGE_SUCCESSFUL: 
+                            { 
+                                return "Success"; 
+                            } 
+                        case User_32.DISP_CHANGE_RESTART: 
+                            { 
+                                return "You Need To Reboot For The Change To Happen.\n If You Feel Any Problem After Rebooting Your Machine\nThen Try To Change Resolution In Safe Mode."; 
+                            } 
+                        default: 
+                            { 
+                                return "Failed To Change The Resolution"; 
+                            } 
+                    } 
+ 
+                } 
+ 
+ 
+            } 
+            else 
+            { 
+                return "Failed To Change The Resolution."; 
+            } 
+        } 
+ 
+        private static DEVMODE1 GetDevMode1() 
+        { 
+            DEVMODE1 dm = new DEVMODE1(); 
+            dm.dmDeviceName = new String(new char[32]); 
+            dm.dmFormName = new String(new char[32]); 
+            dm.dmSize = (short)Marshal.SizeOf(dm); 
+            return dm; 
+        } 
+    } 
+} 
+ 
+"@ 
+ 
+Add-Type $pinvokeCode -ErrorAction SilentlyContinue 
+[Resolution.PrmaryScreenResolution]::ChangeResolution($width,$height) 
+} 
+Set-ScreenResolution -Width 1920 -Height 1080</CommandLine>
+      <DefaultIconKey></DefaultIconKey>
+      <LibraryToolId value="null" />
+      <Modified value="null" />
+      <ShellOpenMode>ToolWindowCaptureOutput</ShellOpenMode>
+      <Mode>PowerShell</Mode>
+      <Description></Description>
+      <IconKey>Stock0010</IconKey>
+      <KeyGesture></KeyGesture>
+      <Title>Résolution Full HD 1920*1080</Title>
+      <TypeName>CustomTool</TypeName>
+    </CustomTool>
+    <SeparatorComputerTool>
+      <Description></Description>
+      <IconKey></IconKey>
+      <KeyGesture></KeyGesture>
+      <Title>Separator</Title>
+      <TypeName>SeparatorComputerTool</TypeName>
+    </SeparatorComputerTool>
+    <CustomTool>
+      <CredentialsId value="null" />
+      <ScanAfter>DoNotScan</ScanAfter>
+      <ScanProfileId value="null" />
+      <SuccessCodesText>0</SuccessCodesText>
+      <Timeout>00:03:00</Timeout>
+      <WakeOnLan value="false" />
+      <CustomToolType>Remote</CustomToolType>
+      <CommandLine>$ScriptBlock = {    
+    Get-ComputerRestorePoint -OutVariable RestorePoints
+ 
+    if(-not($RestorePoints)){
+        
+        $env:COMPUTERNAME
+ 
+        Enable-ComputerRestore -Drive C: -Verbose
+    }
+}
+ 
+Invoke-Command -ScriptBlock $ScriptBlock</CommandLine>
+      <DefaultIconKey></DefaultIconKey>
+      <LibraryToolId value="null" />
+      <Modified value="null" />
+      <ShellOpenMode>ToolWindowCaptureOutput</ShellOpenMode>
+      <Mode>PowerShell</Mode>
+      <Description></Description>
+      <IconKey>Icon-PowerShell</IconKey>
+      <KeyGesture></KeyGesture>
+      <Title>Check &amp; Active Points de Restauration</Title>
+      <TypeName>CustomTool</TypeName>
+    </CustomTool>
+    <CustomTool>
+      <CredentialsId value="null" />
+      <ScanAfter>DoNotScan</ScanAfter>
+      <ScanProfileId value="null" />
+      <SuccessCodesText>0</SuccessCodesText>
+      <Timeout>00:03:00</Timeout>
+      <WakeOnLan value="false" />
+      <CustomToolType>Remote</CustomToolType>
+      <CommandLine>$Sum = [math]::Round(
+  (
+    (
+      (
+        Get-ChildItem -Path "\\home.adcha.local\USERS$\$env:username" |
+        ForEach-Object {
+          Write-Host "Analyse du fichier $($_.FullName)" -ForegroundColor Green ;
+          Get-ChildItem -Path $_.FullName -Recurse -File -ErrorAction SilentlyContinue } | Measure-Object -Property Length -Sum).Sum)/1MB 
+  )
+)
+write-Host "Taille totale des données contenus dans le dossier utilisateur de $env:username :" -ForegroundColor Cyan
+Write-Host "$Sum Mb" -ForegroundColor Cyan
+Write-Host "Chemin analysé :" -ForegroundColor Cyan
+Write-Host "\\home.adcha.local\USERS$\$env:username" -ForegroundColor Cyan</CommandLine>
+      <DefaultIconKey></DefaultIconKey>
+      <LibraryToolId value="null" />
+      <Modified value="null" />
+      <ShellOpenMode>ToolWindowCaptureOutput</ShellOpenMode>
+      <Mode>PowerShell</Mode>
+      <Description></Description>
+      <IconKey>Icon-PowerShell</IconKey>
+      <KeyGesture></KeyGesture>
+      <Title>Check Taille du Profil Utilisateur</Title>
+      <TypeName>CustomTool</TypeName>
+    </CustomTool>
+    <SeparatorComputerTool>
+      <Description></Description>
+      <IconKey></IconKey>
+      <KeyGesture></KeyGesture>
+      <Title>Separator</Title>
+      <TypeName>SeparatorComputerTool</TypeName>
+    </SeparatorComputerTool>
+    <CustomTool>
+      <CredentialsId value="null" />
+      <ScanAfter>DoNotScan</ScanAfter>
+      <ScanProfileId value="null" />
+      <SuccessCodesText>0</SuccessCodesText>
+      <Timeout>00:03:00</Timeout>
+      <WakeOnLan value="false" />
+      <CustomToolType>Remote</CustomToolType>
+      <CommandLine>REG ADD "HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Winlogon" /v "AutoAdminLogon" /f /d "1"</CommandLine>
+      <DefaultIconKey></DefaultIconKey>
+      <LibraryToolId value="null" />
+      <Modified value="null" />
+      <ShellOpenMode>NoShell</ShellOpenMode>
+      <Mode>Command</Mode>
+      <Description></Description>
+      <IconKey>Stock0610</IconKey>
+      <KeyGesture></KeyGesture>
+      <Title>Autologon - Activation</Title>
+      <TypeName>CustomTool</TypeName>
+    </CustomTool>
+    <CustomTool>
+      <CredentialsId value="null" />
+      <ScanAfter>DoNotScan</ScanAfter>
+      <ScanProfileId value="null" />
+      <SuccessCodesText>0</SuccessCodesText>
+      <Timeout>00:03:00</Timeout>
+      <WakeOnLan value="false" />
+      <CustomToolType>Remote</CustomToolType>
+      <CommandLine>REG ADD "HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Winlogon" /v "AutoAdminLogon" /f /d "0"</CommandLine>
+      <DefaultIconKey></DefaultIconKey>
+      <LibraryToolId value="null" />
+      <Modified value="null" />
+      <ShellOpenMode>NoShell</ShellOpenMode>
+      <Mode>Command</Mode>
+      <Description></Description>
+      <IconKey>Stock0620</IconKey>
+      <KeyGesture></KeyGesture>
+      <Title>Autologon - Désactivation</Title>
+      <TypeName>CustomTool</TypeName>
+    </CustomTool>
+    <CustomTool>
+      <CredentialsId value="null" />
+      <ScanAfter>DoNotScan</ScanAfter>
+      <ScanProfileId value="null" />
+      <SuccessCodesText>0</SuccessCodesText>
+      <Timeout>00:03:00</Timeout>
+      <WakeOnLan value="false" />
+      <CustomToolType>Remote</CustomToolType>
+      <CommandLine>Reg Import "\\Repository\Software\Scripts\ExplorerSettings\DoNotHideExtensions.reg"</CommandLine>
+      <DefaultIconKey></DefaultIconKey>
+      <LibraryToolId value="null" />
+      <Modified value="null" />
+      <ShellOpenMode>ToolWindowCaptureOutput</ShellOpenMode>
+      <Mode>Command</Mode>
+      <Description></Description>
+      <IconKey>Stock0895</IconKey>
+      <KeyGesture></KeyGesture>
+      <Title>Afficher les Extensions - Activation</Title>
+      <TypeName>CustomTool</TypeName>
+    </CustomTool>
+    <CustomTool>
+      <CredentialsId value="null" />
+      <ScanAfter>DoNotScan</ScanAfter>
+      <ScanProfileId value="null" />
+      <SuccessCodesText>0</SuccessCodesText>
+      <Timeout>00:03:00</Timeout>
+      <WakeOnLan value="false" />
+      <CustomToolType>Remote</CustomToolType>
+      <CommandLine>Reg Import "\\Repository\Software\Scripts\ExplorerSettings\HideExtensions.reg"</CommandLine>
+      <DefaultIconKey></DefaultIconKey>
+      <LibraryToolId value="null" />
+      <Modified value="null" />
+      <ShellOpenMode>ToolWindowCaptureOutput</ShellOpenMode>
+      <Mode>Command</Mode>
+      <Description></Description>
+      <IconKey>Stock0895</IconKey>
+      <KeyGesture></KeyGesture>
+      <Title>Afficher les Extensions - Désactivation</Title>
+      <TypeName>CustomTool</TypeName>
+    </CustomTool>
+    <CustomTool>
+      <CredentialsId value="null" />
+      <ScanAfter>DoNotScan</ScanAfter>
+      <ScanProfileId value="null" />
+      <SuccessCodesText>0</SuccessCodesText>
+      <Timeout>00:03:00</Timeout>
+      <WakeOnLan value="false" />
+      <CustomToolType>Remote</CustomToolType>
+      <CommandLine>@ECHO OFF
+Rem :: Désactivation du mode veille hibernation ::
+Rem :: HAILE TOYBOU : Responsable poste de Travail et Service Desk
+
+
+Powercfg /H OFF
+
+Powercfg -change -monitor-timeout-ac 0
+
+
+Rem :: THE END :::</CommandLine>
+      <DefaultIconKey></DefaultIconKey>
+      <LibraryToolId value="null" />
+      <Modified value="null" />
+      <ShellOpenMode>LeaveShellOpen</ShellOpenMode>
+      <Mode>Command</Mode>
+      <Description></Description>
+      <IconKey>Stock1040</IconKey>
+      <KeyGesture></KeyGesture>
+      <Title>Désactivation Hibernation</Title>
+      <TypeName>CustomTool</TypeName>
+    </CustomTool>
+    <CustomTool>
+      <CredentialsId value="null" />
+      <ScanAfter>DoNotScan</ScanAfter>
+      <ScanProfileId value="null" />
+      <SuccessCodesText>0</SuccessCodesText>
+      <Timeout>00:03:00</Timeout>
+      <WakeOnLan value="false" />
+      <CustomToolType>Remote</CustomToolType>
+      <CommandLine>@echo off
+rem :: =============================Configuration Autologon==============================================================
+rem :: ============================= ::::::::::::==============================================================
+rem :: ============================= Version 1:: =================================================
+
+Reg add "HKEY_CURRENT_USER\Control Panel\Desktop" /v ScreenSaveActive /t REG_SZ /d 0 /f
+
+Powercfg /H OFF
+
+rem :: Reg add "HKEY_CURRENT_USER\Control Panel\Desktop" /v ScreenSaveTimeOut /t REG_SZ /d 0 /f
+
+Reg add "HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Power\PowerSettings\7516b95f-f776-4464-8c53-06167f40cc99\8EC4B3A5-6868-48c2-BE75-4F3044BE88A7" /v Attributes /t REG_DWORD /d 2 /f
+
+Rem :: THE END :::</CommandLine>
+      <DefaultIconKey></DefaultIconKey>
+      <LibraryToolId value="null" />
+      <Modified value="null" />
+      <ShellOpenMode>LeaveShellOpen</ShellOpenMode>
+      <Mode>Command</Mode>
+      <Description></Description>
+      <IconKey>Stock1040</IconKey>
+      <KeyGesture></KeyGesture>
+      <Title>Désactivation Veille</Title>
+      <TypeName>CustomTool</TypeName>
+    </CustomTool>
+    <CustomTool>
+      <CredentialsId value="null" />
+      <ScanAfter>DoNotScan</ScanAfter>
+      <ScanProfileId value="null" />
+      <SuccessCodesText>0</SuccessCodesText>
+      <Timeout>00:03:00</Timeout>
+      <WakeOnLan value="false" />
+      <CustomToolType>Remote</CustomToolType>
+      <CommandLine>Reg Import "\\Repository\Software\Scripts\KillNotResponding\Add_Kill_Not_Responding_Tasks.reg"</CommandLine>
+      <DefaultIconKey></DefaultIconKey>
+      <LibraryToolId value="null" />
+      <Modified value="null" />
+      <ShellOpenMode>ToolWindowCaptureOutput</ShellOpenMode>
+      <Mode>Command</Mode>
+      <Description></Description>
+      <IconKey>Stock3020</IconKey>
+      <KeyGesture></KeyGesture>
+      <Title>Kill not Responding - Activation</Title>
+      <TypeName>CustomTool</TypeName>
+    </CustomTool>
+    <CustomTool>
+      <CredentialsId value="null" />
+      <ScanAfter>DoNotScan</ScanAfter>
+      <ScanProfileId value="null" />
+      <SuccessCodesText>0</SuccessCodesText>
+      <Timeout>00:03:00</Timeout>
+      <WakeOnLan value="false" />
+      <CustomToolType>Remote</CustomToolType>
+      <CommandLine>Reg Import "\\Repository\Software\Scripts\KillNotResponding\Remove_Kill_Not_Responding_Tasks.reg"</CommandLine>
+      <DefaultIconKey></DefaultIconKey>
+      <LibraryToolId value="null" />
+      <Modified value="null" />
+      <ShellOpenMode>ToolWindowCaptureOutput</ShellOpenMode>
+      <Mode>Command</Mode>
+      <Description></Description>
+      <IconKey>Stock3020</IconKey>
+      <KeyGesture></KeyGesture>
+      <Title>Kill not Responding - Désactivation</Title>
+      <TypeName>CustomTool</TypeName>
+    </CustomTool>
+    <CustomTool>
+      <CredentialsId value="null" />
+      <ScanAfter>DoNotScan</ScanAfter>
+      <ScanProfileId value="null" />
+      <SuccessCodesText>0</SuccessCodesText>
+      <Timeout>00:03:00</Timeout>
+      <WakeOnLan value="false" />
+      <CustomToolType>Remote</CustomToolType>
+      <CommandLine>$kbObj = New-Object -ComObject WScript.Shell 
+$nlStatus = [console]::NumberLock 
+If ($nlStatus -eq $false) 
+ {$kbObj.SendKeys('{NUMLOCK}')} 
+Else  
+ {exit}</CommandLine>
+      <DefaultIconKey></DefaultIconKey>
+      <LibraryToolId value="null" />
+      <Modified value="null" />
+      <ShellOpenMode>ToolWindowCaptureOutput</ShellOpenMode>
+      <Mode>PowerShell</Mode>
+      <Description></Description>
+      <IconKey>Stock4020</IconKey>
+      <KeyGesture></KeyGesture>
+      <Title>NumLock - Activation Auto</Title>
+      <TypeName>CustomTool</TypeName>
+    </CustomTool>
+    <CustomTool>
+      <CredentialsId value="null" />
+      <ScanAfter>DoNotScan</ScanAfter>
+      <ScanProfileId value="null" />
+      <SuccessCodesText>0</SuccessCodesText>
+      <Timeout>00:03:00</Timeout>
+      <WakeOnLan value="false" />
+      <CustomToolType>Remote</CustomToolType>
+      <CommandLine>Reg import "\\Repository\Software\Scripts\OpenCMDHere\Win7\Add_CMDAsAdmin_win7.reg"</CommandLine>
+      <DefaultIconKey></DefaultIconKey>
+      <LibraryToolId value="null" />
+      <Modified value="null" />
+      <ShellOpenMode>ToolWindowCaptureOutput</ShellOpenMode>
+      <Mode>Command</Mode>
+      <Description></Description>
+      <IconKey>Stock0895</IconKey>
+      <KeyGesture></KeyGesture>
+      <Title>Open CMD Here as Admin Win7 -Activation</Title>
+      <TypeName>CustomTool</TypeName>
+    </CustomTool>
+    <CustomTool>
+      <CredentialsId value="null" />
+      <ScanAfter>DoNotScan</ScanAfter>
+      <ScanProfileId value="null" />
+      <SuccessCodesText>0</SuccessCodesText>
+      <Timeout>00:03:00</Timeout>
+      <WakeOnLan value="false" />
+      <CustomToolType>Remote</CustomToolType>
+      <CommandLine>Reg import "\\Repository\Software\Scripts\OpenCMDHere\Win10\Add_CMDAsAdmin_win10.reg"</CommandLine>
+      <DefaultIconKey></DefaultIconKey>
+      <LibraryToolId value="null" />
+      <Modified value="null" />
+      <ShellOpenMode>ToolWindowCaptureOutput</ShellOpenMode>
+      <Mode>Command</Mode>
+      <Description></Description>
+      <IconKey>Stock0895</IconKey>
+      <KeyGesture></KeyGesture>
+      <Title>Open CMD Here as Admin Win10 -Activation</Title>
+      <TypeName>CustomTool</TypeName>
+    </CustomTool>
+    <CustomTool>
+      <CredentialsId value="null" />
+      <ScanAfter>DoNotScan</ScanAfter>
+      <ScanProfileId value="null" />
+      <SuccessCodesText>0</SuccessCodesText>
+      <Timeout>00:03:00</Timeout>
+      <WakeOnLan value="false" />
+      <CustomToolType>Remote</CustomToolType>
+      <CommandLine>Reg import "\\Repository\Software\Scripts\OpenCMDHere\Remove_CMDAsAdmin.reg"</CommandLine>
+      <DefaultIconKey></DefaultIconKey>
+      <LibraryToolId value="null" />
+      <Modified value="null" />
+      <ShellOpenMode>ToolWindowCaptureOutput</ShellOpenMode>
+      <Mode>Command</Mode>
+      <Description></Description>
+      <IconKey>Stock0895</IconKey>
+      <KeyGesture></KeyGesture>
+      <Title>Open CMD Here as Admin -Désactivation</Title>
+      <TypeName>CustomTool</TypeName>
+    </CustomTool>
+    <CustomTool>
+      <CredentialsId value="null" />
+      <ScanAfter>DoNotScan</ScanAfter>
+      <ScanProfileId value="null" />
+      <SuccessCodesText>0</SuccessCodesText>
+      <Timeout>00:03:00</Timeout>
+      <WakeOnLan value="false" />
+      <CustomToolType>Remote</CustomToolType>
+      <CommandLine>Reg Import "\\Repository\Software\Scripts\ExplorerSettings\PowershellOnContextMenu.reg"</CommandLine>
+      <DefaultIconKey></DefaultIconKey>
+      <LibraryToolId value="null" />
+      <Modified value="null" />
+      <ShellOpenMode>ToolWindowCaptureOutput</ShellOpenMode>
+      <Mode>Command</Mode>
+      <Description></Description>
+      <IconKey>Stock0895</IconKey>
+      <KeyGesture></KeyGesture>
+      <Title>Open Powershell Here - Activation</Title>
+      <TypeName>CustomTool</TypeName>
+    </CustomTool>
+    <CustomTool>
+      <CredentialsId value="null" />
+      <ScanAfter>DoNotScan</ScanAfter>
+      <ScanProfileId value="null" />
+      <SuccessCodesText>0</SuccessCodesText>
+      <Timeout>00:03:00</Timeout>
+      <WakeOnLan value="false" />
+      <CustomToolType>Remote</CustomToolType>
+      <CommandLine>Set-Service -Name Mpssvc -StartupType Automatic
+start-service -name MpsSvc
+netsh advfirewall set allprofiles state off
+# netsh advfirewall firewall set rule group="File and Printer Sharing" new enable=Yes</CommandLine>
+      <DefaultIconKey></DefaultIconKey>
+      <LibraryToolId value="null" />
+      <Modified value="null" />
+      <ShellOpenMode>ToolWindowCaptureOutput</ShellOpenMode>
+      <Mode>PowerShell</Mode>
+      <Description></Description>
+      <IconKey>Icon-PowerShell</IconKey>
+      <KeyGesture></KeyGesture>
+      <Title>Pare-Feu - Activation</Title>
+      <TypeName>CustomTool</TypeName>
+    </CustomTool>
+    <CustomTool>
+      <CredentialsId value="null" />
+      <ScanAfter>DoNotScan</ScanAfter>
+      <ScanProfileId value="null" />
+      <SuccessCodesText>0</SuccessCodesText>
+      <Timeout>00:03:00</Timeout>
+      <WakeOnLan value="false" />
+      <CustomToolType>Remote</CustomToolType>
+      <CommandLine>Stop-service -name mpssvc
+Set-Service -Name Mpssvc -StartupType Disabled</CommandLine>
+      <DefaultIconKey></DefaultIconKey>
+      <LibraryToolId value="null" />
+      <Modified value="null" />
+      <ShellOpenMode>ToolWindowCaptureOutput</ShellOpenMode>
+      <Mode>PowerShell</Mode>
+      <Description></Description>
+      <IconKey>Icon-PowerShell</IconKey>
+      <KeyGesture></KeyGesture>
+      <Title>Pare-Feu - Désactivation</Title>
+      <TypeName>CustomTool</TypeName>
+    </CustomTool>
+    <CustomTool>
+      <CredentialsId value="null" />
+      <ScanAfter>DoNotScan</ScanAfter>
+      <ScanProfileId value="null" />
+      <SuccessCodesText>0</SuccessCodesText>
+      <Timeout>00:03:00</Timeout>
+      <WakeOnLan value="false" />
+      <CustomToolType>Remote</CustomToolType>
+      <CommandLine>bcdedit /set {default} recoveryenabled No 
+bcdedit /set {default} bootstatuspolicy ignoreallfailures</CommandLine>
+      <DefaultIconKey></DefaultIconKey>
+      <LibraryToolId value="null" />
+      <Modified value="null" />
+      <ShellOpenMode>NoShell</ShellOpenMode>
+      <Mode>Command</Mode>
+      <Description></Description>
+      <IconKey>Stock0220</IconKey>
+      <KeyGesture></KeyGesture>
+      <Title>StartUp Repair - Désactivation</Title>
+      <TypeName>CustomTool</TypeName>
+    </CustomTool>
+    <SeparatorComputerTool>
+      <Description></Description>
+      <IconKey></IconKey>
+      <KeyGesture></KeyGesture>
+      <Title>Separator</Title>
+      <TypeName>SeparatorComputerTool</TypeName>
+    </SeparatorComputerTool>
+    <CustomTool>
+      <CredentialsId value="null" />
+      <ScanAfter>DoNotScan</ScanAfter>
+      <ScanProfileId value="null" />
+      <SuccessCodesText>0</SuccessCodesText>
+      <Timeout>00:03:00</Timeout>
+      <WakeOnLan value="false" />
+      <CustomToolType>Local</CustomToolType>
+      <CommandLine>Write-Output "Examine System log for all TCP/IP messages on $(Computer:TARGET)"
+
+Get-WinEvent -ComputerName $(Computer:TARGET) -LogName System -ErrorAction SilentlyContinue | 
+ where {$_.ProviderName -match "Tcpip" } | 
+ Format-List -property TimeCreated, LogName, ProviderName, LevelDisplayName, ID, Message</CommandLine>
+      <DefaultIconKey>Icon-PowerShell</DefaultIconKey>
+      <LibraryToolId value="57" />
+      <Modified>2016-12-22T17:02:01.0000000+01:00</Modified>
+      <ShellOpenMode>LeaveShellOpen</ShellOpenMode>
+      <Mode>PowerShell</Mode>
+      <Description>Display all TCP/IP messages from System Event Log.</Description>
+      <IconKey>Icon-PowerShell</IconKey>
+      <KeyGesture></KeyGesture>
+      <Title>Get TCP/IP all</Title>
+      <TypeName>CustomTool</TypeName>
+    </CustomTool>
+    <CustomTool>
+      <CredentialsId value="null" />
+      <ScanAfter>DoNotScan</ScanAfter>
+      <ScanProfileId value="null" />
+      <SuccessCodesText>0</SuccessCodesText>
+      <Timeout>00:03:00</Timeout>
+      <WakeOnLan value="false" />
+      <CustomToolType>Remote</CustomToolType>
+      <CommandLine>netsh wlan add profile \\Repository$\Software\Scripts\WiFi\WiFi.xml
+netsh wlan connect name="WIFI-SSID"</CommandLine>
+      <DefaultIconKey></DefaultIconKey>
+      <LibraryToolId value="null" />
+      <Modified value="null" />
+      <ShellOpenMode>ToolWindowCaptureOutput</ShellOpenMode>
+      <Mode>PowerShell</Mode>
+      <Description></Description>
+      <IconKey>Stock0050</IconKey>
+      <KeyGesture></KeyGesture>
+      <Title>Wi-Fi SSID - Connexion</Title>
+      <TypeName>CustomTool</TypeName>
+    </CustomTool>
+    <CustomTool>
+      <CredentialsId value="null" />
+      <ScanAfter>DoNotScan</ScanAfter>
+      <ScanProfileId value="null" />
+      <SuccessCodesText>0</SuccessCodesText>
+      <Timeout>00:03:00</Timeout>
+      <WakeOnLan value="false" />
+      <CustomToolType>Remote</CustomToolType>
+      <CommandLine>Rem netsh interface set interface name="Wi-Fi" admin=DISABLED
+netsh interface set interface name="Connexion réseau sans fil" admin=Disabled</CommandLine>
+      <DefaultIconKey></DefaultIconKey>
+      <LibraryToolId value="null" />
+      <Modified value="null" />
+      <ShellOpenMode>ToolWindowCaptureOutput</ShellOpenMode>
+      <Mode>PowerShell</Mode>
+      <Description></Description>
+      <IconKey>Stock0050</IconKey>
+      <KeyGesture></KeyGesture>
+      <Title>Wi-Fi SSID - Déconnexion</Title>
+      <TypeName>CustomTool</TypeName>
+    </CustomTool>
+    <CustomTool>
+      <CredentialsId value="null" />
+      <ScanAfter>DoNotScan</ScanAfter>
+      <ScanProfileId value="null" />
+      <SuccessCodesText>0</SuccessCodesText>
+      <Timeout>00:03:00</Timeout>
+      <WakeOnLan value="false" />
+      <CustomToolType>Remote</CustomToolType>
+      <CommandLine>Set-Service -Name Wlansvc -StartupType Automatic
+Start-service -name Wlansvc</CommandLine>
+      <DefaultIconKey></DefaultIconKey>
+      <LibraryToolId value="null" />
+      <Modified value="null" />
+      <ShellOpenMode>ToolWindowCaptureOutput</ShellOpenMode>
+      <Mode>PowerShell</Mode>
+      <Description></Description>
+      <IconKey>Stock0050</IconKey>
+      <KeyGesture></KeyGesture>
+      <Title>WLan - Activation</Title>
+      <TypeName>CustomTool</TypeName>
+    </CustomTool>
+    <CustomTool>
+      <CredentialsId value="null" />
+      <ScanAfter>DoNotScan</ScanAfter>
+      <ScanProfileId value="null" />
+      <SuccessCodesText>0</SuccessCodesText>
+      <Timeout>00:03:00</Timeout>
+      <WakeOnLan value="false" />
+      <CustomToolType>Remote</CustomToolType>
+      <CommandLine>Stop-service -name Wlansvc
+Set-Service -Name Wlansvc -StartupType Disabled</CommandLine>
+      <DefaultIconKey></DefaultIconKey>
+      <LibraryToolId value="null" />
+      <Modified value="null" />
+      <ShellOpenMode>ToolWindowCaptureOutput</ShellOpenMode>
+      <Mode>PowerShell</Mode>
+      <Description></Description>
+      <IconKey>Stock0050</IconKey>
+      <KeyGesture></KeyGesture>
+      <Title>WLan - Désactivation</Title>
+      <TypeName>CustomTool</TypeName>
+    </CustomTool>
+    <SeparatorComputerTool>
+      <Description></Description>
+      <IconKey></IconKey>
+      <KeyGesture></KeyGesture>
+      <Title>Separator</Title>
+      <TypeName>SeparatorComputerTool</TypeName>
+    </SeparatorComputerTool>
+    <CustomTool>
+      <CredentialsId value="null" />
+      <ScanAfter>DoNotScan</ScanAfter>
+      <ScanProfileId value="null" />
+      <SuccessCodesText>0</SuccessCodesText>
+      <Timeout>00:03:00</Timeout>
+      <WakeOnLan value="false" />
+      <CustomToolType>Local</CustomToolType>
+      <CommandLine>:: This empties all recycle bins on Windows 7 and up
+rmdir /s /q %SystemDrive%\$Recycle.Bin 2&gt;NUL
+
+:: This empties all recycle bins on Windows XP and Server 2003
+rmdir /s /q %SystemDrive%\RECYCLER 2&gt;NUL
+
+:: Return exit code to calling application
+exit /B 0</CommandLine>
+      <DefaultIconKey></DefaultIconKey>
+      <LibraryToolId value="null" />
+      <Modified value="null" />
+      <ShellOpenMode>ToolWindowCaptureOutput</ShellOpenMode>
+      <Mode>Command</Mode>
+      <Description></Description>
+      <IconKey>Icon-CommandStep</IconKey>
+      <KeyGesture></KeyGesture>
+      <Title>Clean Corbeille</Title>
+      <TypeName>CustomTool</TypeName>
+    </CustomTool>
+    <CustomTool>
+      <CredentialsId value="null" />
+      <ScanAfter>DoNotScan</ScanAfter>
+      <ScanProfileId value="null" />
+      <SuccessCodesText>0</SuccessCodesText>
+      <Timeout>00:03:00</Timeout>
+      <WakeOnLan value="false" />
+      <CustomToolType>Remote</CustomToolType>
+      <CommandLine>:: Purpose:       Temp file cleanup
+:: Requirements:  Admin access helps but is not required
+:: Author:        reddit.com/user/vocatus ( vocatus.gate at gmail ) // PGP key: 0x07d1490f82a211a2
+:: Version:       3.7.1 ! Fix syntax bug that was preventing CBS log cleanup. Thanks to github:jonasjovaisas
+::                3.7.0 * Improve logging significantly. Wrap all references to %LOGPATH% and %LOGFILE% in quotes (to protect against paths or file names with spaces or special characters), and add logging to many commands that were previously dumping to NUL. Thanks to github:kezxo for the suggestion
+::                3.6.0 + Add additional cleaning procedures to Vista+ block from tron edition of TempFileCleanup. Thanks to github:bknickelbine
+::                3.5.9 + Add removal of "%WINDIR%\System32\tourstart.exe" on Windows XP. Thanks to /u/Perma_dude
+::                3.5.8 ! Move IE ClearMyTracksByProcess to Vista and up section (does not run on XP/2003)
+::                3.5.7 * Add /u/neonicacid's suggestion to purge leftover NVIDIA driver installation files
+::                3.5.6 * Merge nemchik's pull request to delete .blf and.regtrans-ms files (ported from Tron project)
+::                      * Merge nemchik's pull request to purge Flash and Java temp locations (ported from Tron project)
+::                3.5.5 + Add purging of additional old Windows version locations (left in place from Upgrade installations)
+::                3.5.4 + Add purging of queued Windows Error Reporting reports. Thanks to /u/neonicacid
+::                &lt;-- outdated changelog comments removed --&gt;
+::                1.0.0   Initial write
+SETLOCAL
+
+
+:::::::::::::::
+:: VARIABLES :: -------------- These are the defaults. Change them if you so desire. --------- ::
+:::::::::::::::
+:: Set your paths here. Don't use trailing slashes (\) in directory paths
+set LOGPATH=%SystemDrive%\Logs
+set LOGFILE=%COMPUTERNAME%_TempFileCleanup.log
+:: Max log file size allowed in bytes before rotation and archive. 1048576 bytes is one megabyte
+set LOG_MAX_SIZE=2097152
+
+
+
+
+:: --------------------------- Don't edit anything below this line --------------------------- ::
+
+
+
+
+:::::::::::::::::::::
+:: PREP AND CHECKS ::
+:::::::::::::::::::::
+@echo off
+%SystemDrive% &amp;&amp; cls
+set SCRIPT_VERSION=3.7.1
+set SCRIPT_UPDATED=2017-12-18
+:: Get the date into ISO 8601 standard format (yyyy-mm-dd) so we can use it
+FOR /f %%a in ('WMIC OS GET LocalDateTime ^| find "."') DO set DTS=%%a
+set CUR_DATE=%DTS:~0,4%-%DTS:~4,2%-%DTS:~6,2%
+
+title [TempFileCleanup v%SCRIPT_VERSION%]
+
+
+:::::::::::::::::::::::
+:: LOG FILE HANDLING ::
+:::::::::::::::::::::::
+:: Make the logfile if it doesn't exist
+if not exist %LOGPATH% mkdir %LOGPATH%
+if not exist %LOGPATH%\%LOGFILE% echo. &gt; %LOGPATH%\%LOGFILE%
+
+:: Check log size. If it's less than our max, then jump to the cleanup section
+for %%R in (%LOGPATH%\%LOGFILE%) do IF %%~zR LSS %LOG_MAX_SIZE% goto os_version_detection
+
+:: If the log was too big, go ahead and rotate it.
+pushd %LOGPATH%
+del %LOGFILE%.ancient 2&gt;NUL
+rename %LOGFILE%.oldest %LOGFILE%.ancient 2&gt;NUL
+rename %LOGFILE%.older %LOGFILE%.oldest 2&gt;NUL
+rename %LOGFILE%.old %LOGFILE%.older 2&gt;NUL
+rename %LOGFILE% %LOGFILE%.old 2&gt;NUL
+popd
+
+
+
+::::::::::::::::::::::::::
+:: OS VERSION DETECTION ::
+::::::::::::::::::::::::::
+:os_version_detection
+:: Detect the version of Windows we're on. This determines a few things later in the script
+set WIN_VER=undetected
+for /f "tokens=3*" %%i IN ('reg query "HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion" /v ProductName ^| Find "ProductName"') DO set WIN_VER=%%i %%j
+
+
+
+::::::::::::::::::::::::::
+:: USER CLEANUP SECTION :: -- Most stuff in here doesn't require Admin rights
+::::::::::::::::::::::::::
+:: Create the log header for this job
+echo --------------------------------------------------------------------------------------------&gt;&gt; %LOGPATH%\%LOGFILE%
+echo  %CUR_DATE% %TIME%  TempFileCleanup v%SCRIPT_VERSION%, executing as %USERDOMAIN%\%USERNAME%&gt;&gt; %LOGPATH%\%LOGFILE%
+echo --------------------------------------------------------------------------------------------&gt;&gt; %LOGPATH%\%LOGFILE%
+echo.
+echo  Starting temp file cleanup
+echo  --------------------------
+echo.
+echo   Cleaning USER temp files...
+
+
+::::::::::::::::::::::
+:: Version-agnostic :: (these jobs run regardless of OS version)
+::::::::::::::::::::::
+:: Create log line
+echo. &gt;&gt; "%LOGPATH%\%LOGFILE%" %% echo  ! Cleaning USER temp files...&gt;&gt; "%LOGPATH%\%LOGFILE%" %% echo.&gt;&gt; "%LOGPATH%\%LOGFILE%"
+
+:: User temp files, history, and random My Documents stuff
+del /F /S /Q "%TEMP%" &gt;&gt; "%LOGPATH%\%LOGFILE%" 2&gt;NUL
+
+:: Previous Windows versions cleanup. These are left behind after upgrading an installation from XP/Vista/7/8 to a higher version. Thanks to /u/bodkov and others
+if exist %SystemDrive%\Windows.old\ (
+ takeown /F %SystemDrive%\Windows.old\* /R /A /D Y&gt;&gt; "%LOGPATH%\%LOGFILE%"
+ echo y| cacls %SystemDrive%\Windows.old\*.* /C /T /grant administrators:F&gt;&gt; "%LOGPATH%\%LOGFILE%"
+ rmdir /S /Q %SystemDrive%\Windows.old\&gt;&gt; "%LOGPATH%\%LOGFILE%"
+ )
+if exist %SystemDrive%\$Windows.~BT\ (
+ takeown /F %SystemDrive%\$Windows.~BT\* /R /A&gt;&gt; "%LOGPATH%\%LOGFILE%"
+ icacls %SystemDrive%\$Windows.~BT\*.* /T /grant administrators:F&gt;&gt; "%LOGPATH%\%LOGFILE%"
+ rmdir /S /Q %SystemDrive%\$Windows.~BT\&gt;&gt; "%LOGPATH%\%LOGFILE%"
+ )
+if exist %SystemDrive%\$Windows.~WS (
+ takeown /F %SystemDrive%\$Windows.~WS\* /R /A&gt;&gt; "%LOGPATH%\%LOGFILE%"
+ icacls %SystemDrive%\$Windows.~WS\*.* /T /grant administrators:F&gt;&gt; "%LOGPATH%\%LOGFILE%"
+ rmdir /S /Q %SystemDrive%\$Windows.~WS\&gt;&gt; "%LOGPATH%\%LOGFILE%"
+ )
+
+
+::::::::::::::::::::::
+:: Version-specific :: (these jobs run depending on OS version)
+::::::::::::::::::::::
+:: First block handles XP/2k3, second block handles Vista and up
+:: Read 9 characters into the WIN_VER variable. Only versions of Windows older than Vista had "Microsoft" as the first part of their title,
+:: so if we don't find "Microsoft" in the first 9 characters we can safely assume we're not on XP/2k3.
+if /i "%WIN_VER:~0,9%"=="Microsoft" (
+ for /D %%x in ("%SystemDrive%\Documents and Settings\*") do (
+  del /F /Q "%%x\Local Settings\Temp\*" &gt;&gt; "%LOGPATH%\%LOGFILE%" 2&gt;NUL
+  del /F /Q "%%x\Recent\*" &gt;&gt; "%LOGPATH%\%LOGFILE%" 2&gt;NUL
+  del /F /Q "%%x\Local Settings\Temporary Internet Files\*" &gt;&gt; "%LOGPATH%\%LOGFILE%" 2&gt;NUL
+  del /F /Q "%%x\Local Settings\Application Data\ApplicationHistory\*" &gt;&gt; "%LOGPATH%\%LOGFILE%" 2&gt;NUL
+  del /F /Q "%%x\My Documents\*.tmp" &gt;&gt; "%LOGPATH%\%LOGFILE%" 2&gt;NUL
+  del /F /Q "%%x\Application Data\Sun\Java\*" &gt;&gt; "%LOGPATH%\%LOGFILE%" 2&gt;NUL
+  del /F /Q "%%x\Application Data\Adobe\Flash Player\*" &gt;&gt; "%LOGPATH%\%LOGFILE%" 2&gt;NUL
+  del /F /Q "%%x\Application Data\Macromedia\Flash Player\*" &gt;&gt; "%LOGPATH%\%LOGFILE%" 2&gt;NUL
+ )
+) else (
+ for /D %%x in ("%SystemDrive%\Users\*") do (
+  del /F /S /Q "%%x\*.blf" &gt;&gt; "%LOGPATH%\%LOGFILE%" 2&gt;NUL
+  del /F /S /Q "%%x\*.regtrans-ms" &gt;&gt; "%LOGPATH%\%LOGFILE%" 2&gt;NUL
+  del /F /S /Q "%%x\AppData\LocalLow\Sun\Java\*" &gt;&gt; "%LOGPATH%\%LOGFILE%" 2&gt;NUL
+  del /F /S /Q "%%x\AppData\Local\Google\Chrome\User Data\Default\Cache\*" &gt;&gt; "%LOGPATH%\%LOGFILE%" 2&gt;NUL
+  del /F /S /Q "%%x\AppData\Local\Google\Chrome\User Data\Default\JumpListIconsOld\*" &gt;&gt; "%LOGPATH%\%LOGFILE%" 2&gt;NUL
+  del /F /S /Q "%%x\AppData\Local\Google\Chrome\User Data\Default\JumpListIcons\*" &gt;&gt; "%LOGPATH%\%LOGFILE%" 2&gt;NUL
+  del /F /S /Q "%%x\AppData\Local\Google\Chrome\User Data\Default\Local Storage\http*.*" &gt;&gt; "%LOGPATH%\%LOGFILE%" 2&gt;NUL
+  del /F /S /Q "%%x\AppData\Local\Google\Chrome\User Data\Default\Media Cache\*" &gt;&gt; "%LOGPATH%\%LOGFILE%" 2&gt;NUL
+  del /F /S /Q "%%x\AppData\Local\Microsoft\Internet Explorer\Recovery\*" &gt;&gt; "%LOGPATH%\%LOGFILE%" 2&gt;NUL
+  del /F /S /Q "%%x\AppData\Local\Microsoft\Terminal Server Client\Cache\*" &gt;&gt; "%LOGPATH%\%LOGFILE%" 2&gt;NUL
+  del /F /S /Q "%%x\AppData\Local\Microsoft\Windows\Caches\*" &gt;&gt; "%LOGPATH%\%LOGFILE%" 2&gt;NUL
+  del /F /S /Q "%%x\AppData\Local\Microsoft\Windows\Explorer\*" &gt;&gt; "%LOGPATH%\%LOGFILE%" 2&gt;NUL
+  del /F /S /Q "%%x\AppData\Local\Microsoft\Windows\History\low\*" /AH 2&gt;NUL
+  del /F /S /Q "%%x\AppData\Local\Microsoft\Windows\INetCache\*" &gt;&gt; "%LOGPATH%\%LOGFILE%" 2&gt;NUL
+  del /F /S /Q "%%x\AppData\Local\Microsoft\Windows\Temporary Internet Files\*" &gt;&gt; "%LOGPATH%\%LOGFILE%" 2&gt;NUL
+  del /F /S /Q "%%x\AppData\Local\Microsoft\Windows\WebCache\*" &gt;&gt; "%LOGPATH%\%LOGFILE%" 2&gt;NUL
+  del /F /S /Q "%%x\AppData\Local\Temp\*" &gt;&gt; "%LOGPATH%\%LOGFILE%" 2&gt;NUL
+  del /F /S /Q "%%x\AppData\Roaming\Adobe\Flash Player\*" &gt;&gt; "%LOGPATH%\%LOGFILE%" 2&gt;NUL
+  del /F /S /Q "%%x\AppData\Roaming\Macromedia\Flash Player\*" &gt;&gt; "%LOGPATH%\%LOGFILE%" 2&gt;NUL
+  del /F /S /Q "%%x\AppData\Roaming\Microsoft\Windows\Recent\*" &gt;&gt; "%LOGPATH%\%LOGFILE%" 2&gt;NUL
+  del /F /S /Q "%%x\Recent\*" &gt;&gt; "%LOGPATH%\%LOGFILE%" 2&gt;NUL
+  del /F /Q "%%x\Documents\*.tmp" &gt;&gt; "%LOGPATH%\%LOGFILE%" 2&gt;NUL
+  :: Internet Explorer cleanup
+  rundll32.exe inetcpl.cpl,ClearMyTracksByProcess 4351
+ )
+)
+
+
+echo. &amp;&amp; echo   Done. &amp;&amp; echo.
+echo. &gt;&gt; "%LOGPATH%\%LOGFILE%" &amp;&amp; echo   Done.&gt;&gt; "%LOGPATH%\%LOGFILE%" &amp;&amp; echo. &gt;&gt;%LOGPATH%\%LOGFILE%
+
+
+
+::::::::::::::::::::::::::::
+:: SYSTEM CLEANUP SECTION :: -- Most stuff here requires Admin rights
+::::::::::::::::::::::::::::
+echo.
+echo   Cleaning SYSTEM temp files...
+echo   Cleaning SYSTEM temp files... &gt;&gt; "%LOGPATH%\%LOGFILE%" &amp;&amp; echo.&gt;&gt; %LOGPATH%\%LOGFILE%
+
+
+::::::::::::::::::::::
+:: Version-agnostic :: (these jobs run regardless of OS version)
+::::::::::::::::::::::
+:: JOB: System temp files
+del /F /S /Q "%WINDIR%\TEMP\*" &gt;&gt; "%LOGPATH%\%LOGFILE%" 2&gt;NUL
+
+:: JOB: Root drive garbage (usually C drive)
+rmdir /S /Q %SystemDrive%\Temp &gt;&gt; "%LOGPATH%\%LOGFILE%" 2&gt;NUL
+for %%i in (bat,txt,log,jpg,jpeg,tmp,bak,backup,exe) do (
+   del /F /Q "%SystemDrive%\*.%%i"&gt;&gt; "%LOGPATH%\%LOGFILE%" 2&gt;NUL
+  )
+
+:: JOB: Remove files left over from installing Nvidia/ATI/AMD/Dell/Intel/HP drivers
+for %%i in (NVIDIA,ATI,AMD,Dell,Intel,HP) do (
+   rmdir /S /Q "%SystemDrive%\%%i" &gt;&gt; "%LOGPATH%\%LOGFILE%" 2&gt;NUL
+  )
+
+:: JOB: Clear additional unneeded files from NVIDIA driver installs
+if exist "%ProgramFiles%\Nvidia Corporation\Installer2" rmdir /s /q "%ProgramFiles%\Nvidia Corporation\Installer2"
+if exist "%ALLUSERSPROFILE%\NVIDIA Corporation\NetService" del /f /q "%ALLUSERSPROFILE%\NVIDIA Corporation\NetService\*.exe"
+
+:: JOB: Remove the Microsoft Office installation cache. Usually around ~1.5 GB
+if exist %SystemDrive%\MSOCache rmdir /S /Q %SystemDrive%\MSOCache &gt;&gt; "%LOGPATH%\%LOGFILE%"
+
+:: JOB: Remove the Microsoft Windows installation cache. Can be up to 1.0 GB
+if exist %SystemDrive%\i386 rmdir /S /Q %SystemDrive%\i386 &gt;&gt; "%LOGPATH%\%LOGFILE%"
+
+:: JOB: Empty all recycle bins on Windows 5.1 (XP/2k3) and 6.x (Vista and up) systems
+if exist %SystemDrive%\RECYCLER rmdir /s /q %SystemDrive%\RECYCLER
+if exist %SystemDrive%\$Recycle.Bin rmdir /s /q %SystemDrive%\$Recycle.Bin
+
+:: JOB: Clear queued and archived Windows Error Reporting (WER) reports
+echo. &gt;&gt; "%LOGPATH%\%LOGFILE%"
+if exist "%USERPROFILE%\AppData\Local\Microsoft\Windows\WER\ReportArchive" rmdir /s /q "%USERPROFILE%\AppData\Local\Microsoft\Windows\WER\ReportArchive"
+if exist "%USERPROFILE%\AppData\Local\Microsoft\Windows\WER\ReportQueue" rmdir /s /q "%USERPROFILE%\AppData\Local\Microsoft\Windows\WER\ReportQueue"
+if exist "%ALLUSERSPROFILE%\Microsoft\Windows\WER\ReportArchive" rmdir /s /q "%ALLUSERSPROFILE%\Microsoft\Windows\WER\ReportArchive"
+if exist "%ALLUSERSPROFILE%\Microsoft\Windows\WER\ReportQueue" rmdir /s /q "%ALLUSERSPROFILE%\Microsoft\Windows\WER\ReportQueue"
+
+:: JOB: Windows update logs &amp; built-in backgrounds (space waste)
+del /F /Q %WINDIR%\*.log &gt;&gt; "%LOGPATH%\%LOGFILE%" 2&gt;NUL
+del /F /Q %WINDIR%\*.txt &gt;&gt; "%LOGPATH%\%LOGFILE%" 2&gt;NUL
+del /F /Q %WINDIR%\*.bmp &gt;&gt; "%LOGPATH%\%LOGFILE%" 2&gt;NUL
+del /F /Q %WINDIR%\*.tmp &gt;&gt; "%LOGPATH%\%LOGFILE%" 2&gt;NUL
+del /F /Q %WINDIR%\Web\Wallpaper\*.* &gt;&gt; "%LOGPATH%\%LOGFILE%" 2&gt;NUL
+rmdir /S /Q %WINDIR%\Web\Wallpaper\Dell &gt;&gt; "%LOGPATH%\%LOGFILE%" 2&gt;NUL
+
+:: JOB: Flash cookies (both locations)
+rmdir /S /Q "%APPDATA%\Macromedia\Flash Player\#SharedObjects" &gt;&gt; "%LOGPATH%\%LOGFILE%" 2&gt;NUL
+rmdir /S /Q "%APPDATA%\Macromedia\Flash Player\macromedia.com\support\flashplayer\sys" &gt;&gt; "%LOGPATH%\%LOGFILE%" 2&gt;NUL
+
+::::::::::::::::::::::
+:: Version-specific :: (these jobs run depending on OS version)
+::::::::::::::::::::::
+:: JOB: Windows XP/2k3: "guided tour" annoyance
+if /i "%WIN_VER:~0,9%"=="Microsoft" (
+ del /f /q %WINDIR%\system32\dllcache\tourstrt.exe 2&gt;NUL
+ del /f /q %WINDIR%\system32\dllcache\tourW.exe 2&gt;NUL
+ del /f /q "%WINDIR%\System32\tourstart.exe"
+ rmdir /S /Q %WINDIR%\Help\Tours 2&gt;NUL
+ )
+
+:: JOB: Disable Windows Tour bubble popup (Windows XP only; new user accounts only)
+if /i "%WIN_VER:~0,9%"=="Microsoft" reg add "HKEY_LOCAL_MACHINE\Software\Microsoft\Windows\CurrentVersion\Applets\Tour" /v RunCount /t REG_DWORD /d 00000000 /f
+
+:: JOB: Windows Server: remove built-in media files (all Server versions)
+echo %WIN_VER%  | findstr /i /%SystemDrive%"server" &gt;NUL
+if %ERRORLEVEL%==0 (
+ echo.
+ echo  ! Server operating system detected.
+ echo    Removing built-in media files ^(.wav, .midi, etc^)...
+ echo.
+ echo. &gt;&gt; "%LOGPATH%\%LOGFILE%" &amp;&amp; echo  ! Server operating system detected. Removing built-in media files ^(.wave, .midi, etc^)...&gt;&gt; "%LOGPATH%\%LOGFILE%" &amp;&amp; echo. &gt;&gt; "%LOGPATH%\%LOGFILE%"
+
+ :: 2. Take ownership of the files so we can actually delete them. By default even Administrators have Read-only rights.
+ echo    Taking ownership of %WINDIR%\Media in order to delete files... &amp;&amp; echo.
+ echo    Taking ownership of %WINDIR%\Media in order to delete files... &gt;&gt; "%LOGPATH%\%LOGFILE%" &amp;&amp; echo.&gt;&gt; "%LOGPATH%\%LOGFILE%"
+ if exist %WINDIR%\Media takeown /f %WINDIR%\Media /r /d y &gt;&gt; "%LOGPATH%\%LOGFILE%" 2&gt;NUL &amp;&amp; echo.&gt;&gt; "%LOGPATH%\%LOGFILE%"
+ if exist %WINDIR%\Media icacls %WINDIR%\Media /grant administrators:F /t &gt;&gt; "%LOGPATH%\%LOGFILE%" &amp;&amp; echo.&gt;&gt; "%LOGPATH%\%LOGFILE%"
+
+ :: 3. Do the cleanup
+ rmdir /S /Q %WINDIR%\Media&gt;&gt; "%LOGPATH%\%LOGFILE%" 2&gt;NUL
+
+ echo    Done.
+ echo.
+ echo    Done.&gt;&gt; "%LOGPATH%\%LOGFILE%"
+ echo.&gt;&gt; "%LOGPATH%\%LOGFILE%"
+ )
+
+:: JOB: Windows CBS logs
+::      these only exist on Vista and up, so we look for "Microsoft", and assuming we don't find it, clear out the folder
+echo %WIN_VER% | findstr /v /i /c:"Microsoft" &gt;NUL &amp;&amp; del /F /Q %WINDIR%\Logs\CBS\* 2&gt;NUL
+
+:: JOB: Windows XP/2003: Cleanup hotfix uninstallers. They use a lot of space so removing them is beneficial.
+:: Really we should use a tool that deletes their corresponding registry entries, but oh well.
+
+::  0. Check Windows version.
+::    We simply look for "Microsoft" in the version name, because only versions prior to Vista had the word "Microsoft" as part of their version name
+::    Everything after XP/2k3 drops the "Microsoft" prefix
+echo %WIN_VER%  | findstr /i /%SystemDrive%"Microsoft" &gt;NUL
+if %ERRORLEVEL%==0 (
+ :: 1. If we made it here we're doing the cleanup. Notify user and log it.
+ echo.
+ echo  ! Windows XP/2003 detected.
+ echo    Removing hotfix uninstallers...
+ echo.
+ echo. &gt;&gt; "%LOGPATH%\%LOGFILE%" &amp;&amp; echo  ! Windows XP/2003 detected. Removing hotfix uninstallers...&gt;&gt; %LOGPATH%\%LOGFILE%
+
+ :: 2. Build the list of hotfix folders. They always have "$" signs around their name, e.g. "$NtUninstall092330$" or "$hf_mg$"
+ pushd %WINDIR%
+ dir /A:D /B $*$ &gt; %TEMP%\hotfix_nuke_list.txt 2&gt;NUL
+
+ :: 3. Do the hotfix clean up
+ for /f %%i in (%TEMP%\hotfix_nuke_list.txt) do (
+  echo Deleting %%i...
+  echo Deleted folder %%i&gt;&gt; "%LOGPATH%\%LOGFILE%"
+  rmdir /S /Q %%i &gt;&gt; "%LOGPATH%\%LOGFILE%" 2&gt;NUL
+  )
+
+ :: 4. Log that we are done with hotfix cleanup and leave the Windows directory
+ echo    Done. &gt;&gt; "%LOGPATH%\%LOGFILE%" &amp;&amp; echo.&gt;&gt; %LOGPATH%\%LOGFILE%
+ echo    Done.
+ del %TEMP%\hotfix_nuke_list.txt&gt;&gt; %LOGPATH%\%LOGFILE%
+ echo.
+ popd
+)
+
+echo   Done. &amp;&amp; echo.
+echo   Done.&gt;&gt; "%LOGPATH%\%LOGFILE%" &amp;&amp; echo. &gt;&gt;%LOGPATH%\%LOGFILE%
+
+::::::::::::::::::::::::::
+:: Cleanup and complete ::
+::::::::::::::::::::::::::
+:complete
+@echo off
+echo --------------------------------------------------------------------------------------------&gt;&gt; %LOGPATH%\%LOGFILE%
+echo  %CUR_DATE% %TIME%  TempFileCleanup v%SCRIPT_VERSION%, finished. Executed as %USERDOMAIN%\%USERNAME%&gt;&gt; %LOGPATH%\%LOGFILE%&gt;&gt; %LOGPATH%\%LOGFILE%
+echo --------------------------------------------------------------------------------------------&gt;&gt; %LOGPATH%\%LOGFILE%
+echo.
+echo  Cleanup complete.
+echo.
+echo  Log saved at: %LOGPATH%\%LOGFILE%
+echo.
+ENDLOCAL</CommandLine>
+      <DefaultIconKey></DefaultIconKey>
+      <LibraryToolId value="null" />
+      <Modified value="null" />
+      <ShellOpenMode>ToolWindowCaptureOutput</ShellOpenMode>
+      <Mode>Command</Mode>
+      <Description></Description>
+      <IconKey>Icon-CommandStep</IconKey>
+      <KeyGesture></KeyGesture>
+      <Title>Clean Temp Files</Title>
+      <TypeName>CustomTool</TypeName>
+    </CustomTool>
+    <CustomTool>
+      <CredentialsId value="null" />
+      <ScanAfter>DoNotScan</ScanAfter>
+      <ScanProfileId value="null" />
+      <SuccessCodesText>0</SuccessCodesText>
+      <Timeout>00:03:00</Timeout>
+      <WakeOnLan value="false" />
+      <CustomToolType>Local</CustomToolType>
+      <CommandLine>&lt;#
+.SYNOPSIS
+    Clean old spooled documents.
+.DESCRIPTION
+    This script will delete old spooled documents that are stuck in queue.
+    By default time is 2 hours old, but you could adjust it via $Date variable.
+.NOTES
+    Version:            1.0
+    Author:             Daniel Allen
+    Last Modified Date: 16.08.2016
+.EXAMPLE
+    ./Clean-Spooler.ps1
+#&gt;
+
+$Date = (Get-Date).AddHours(-2)
+
+Stop-Service spooler
+Sleep 5
+Get-ChildItem -Path "C:\Windows\System32\spool\PRINTERS" | Where-Object { $_.LastWriteTime -lt $Date } | Remove-Item -Verbose
+Start-Service spooler</CommandLine>
+      <DefaultIconKey></DefaultIconKey>
+      <LibraryToolId value="null" />
+      <Modified value="null" />
+      <ShellOpenMode>ToolWindowCaptureOutput</ShellOpenMode>
+      <Mode>Command</Mode>
+      <Description></Description>
+      <IconKey>Icon-CommandStep</IconKey>
+      <KeyGesture></KeyGesture>
+      <Title>Clean Spooler</Title>
+      <TypeName>CustomTool</TypeName>
+    </CustomTool>
+    <SeparatorComputerTool>
+      <Description></Description>
+      <IconKey></IconKey>
+      <KeyGesture></KeyGesture>
+      <Title>Separator</Title>
+      <TypeName>SeparatorComputerTool</TypeName>
+    </SeparatorComputerTool>
+    <RemoteCommandTool>
+      <Description>Allows the ability to run remote commands on one or more computers or collections. The tools will accept Windows System Environment variables (for example, %PROGRAMFILES%, %WINDIR%, %SYSTEMDRIVE%, etc.)</Description>
+      <IconKey>Icon-RemoteCommand</IconKey>
+      <KeyGesture>Ctrl+Alt+C</KeyGesture>
+      <Title>Run Command</Title>
+      <TypeName>RemoteCommandTool</TypeName>
+    </RemoteCommandTool>
+    <CustomTool>
+      <CredentialsId value="null" />
+      <ScanAfter>DoNotScan</ScanAfter>
+      <ScanProfileId value="null" />
+      <SuccessCodesText>0</SuccessCodesText>
+      <Timeout>00:03:00</Timeout>
+      <WakeOnLan value="false" />
+      <CustomToolType>Remote</CustomToolType>
+      <CommandLine>CScript.exe "\\Repository\Software\Scripts\LogOffCurrentUser\LogOff.vbs"</CommandLine>
+      <DefaultIconKey></DefaultIconKey>
+      <LibraryToolId value="null" />
+      <Modified value="null" />
+      <ShellOpenMode>LeaveShellOpen</ShellOpenMode>
+      <Mode>Command</Mode>
+      <Description></Description>
+      <IconKey>Icon-CommandStep</IconKey>
+      <KeyGesture></KeyGesture>
+      <Title>LogOff</Title>
+      <TypeName>CustomTool</TypeName>
+    </CustomTool>
+    <RebootTool>
+      <Description>Opens the Reboot/Shutdown window to use on the selected computer(s) or collection(s). Security Policy "Force Shutdown from the remote system" must be granted to Administrators.</Description>
+      <IconKey>Icon-Reboot</IconKey>
+      <KeyGesture>Ctrl+Alt+B</KeyGesture>
+      <Title>Reboot/Shutdown</Title>
+      <TypeName>RebootTool</TypeName>
+    </RebootTool>
+    <WakeTool>
+      <Description>Immediately initiates a Wake-on-LAN on all selected computer(s) or collection(s). Enterprise mode is required for distributed Wake-on-LAN.</Description>
+      <IconKey>Icon-Wake</IconKey>
+      <KeyGesture>Ctrl+Alt+W</KeyGesture>
+      <Title>Wake</Title>
+      <TypeName>WakeTool</TypeName>
+    </WakeTool>
+    <VncTool>
+      <Description>Opens a remote VNC connection on a single computer. A VNC product must be installed on both the console and the target machine.</Description>
+      <IconKey>Icon-VNC</IconKey>
+      <KeyGesture>Ctrl+Alt+V</KeyGesture>
+      <Title>VNC</Title>
+      <TypeName>VncTool</TypeName>
+    </VncTool>
+    <RemoteDesktopTool>
+      <Description>Initiates a Remote Desktop with a login prompt based on either saved credentials or the existing credentials of the admin logged into the console.</Description>
+      <IconKey>Icon-RemoteDesktop</IconKey>
+      <KeyGesture>Ctrl+Alt+R</KeyGesture>
+      <Title>Remote Desktop</Title>
+      <TypeName>RemoteDesktopTool</TypeName>
+    </RemoteDesktopTool>
+    <RemoteAssistTool>
+      <Description>Initiates a remote assistance session on a single computer. Remote Assistance must be enabled on the target computer (sysdm.cpl &gt; Remote tab or from GPO).</Description>
+      <IconKey>Icon-RemoteAssist</IconKey>
+      <KeyGesture>Ctrl+Alt+A</KeyGesture>
+      <Title>Remote Assist</Title>
+      <TypeName>RemoteAssistTool</TypeName>
+    </RemoteAssistTool>
+    <EventViewerTool>
+      <Description>Connects to the remote computer's Event Viewer in order to view the logged information locally through the console's interface.</Description>
+      <IconKey>Icon-EventViewer</IconKey>
+      <KeyGesture>Ctrl+Alt+E</KeyGesture>
+      <Title>Event Viewer</Title>
+      <TypeName>EventViewerTool</TypeName>
+    </EventViewerTool>
+    <ManageTool>
+      <Description>Manage the remote computer via the Microsoft Management Console (MMC). This locally loads the compmgmt.msc snap-in.</Description>
+      <IconKey>Icon-Manage</IconKey>
+      <KeyGesture>Ctrl+Alt+M</KeyGesture>
+      <Title>Manage with MMC</Title>
+      <TypeName>ManageTool</TypeName>
+    </ManageTool>
+    <CustomTool>
+      <CredentialsId value="null" />
+      <ScanAfter>DoNotScan</ScanAfter>
+      <ScanProfileId value="null" />
+      <SuccessCodesText>0</SuccessCodesText>
+      <Timeout>00:03:00</Timeout>
+      <WakeOnLan value="false" />
+      <CustomToolType>Local</CustomToolType>
+      <CommandLine>%SYSTEMROOT%\system32\mmc.exe services.msc /computer:$(Computer:TARGETHOSTNAME)</CommandLine>
+      <DefaultIconKey>Stock0830</DefaultIconKey>
+      <LibraryToolId value="47" />
+      <Modified>2016-12-22T17:03:21.0000000+01:00</Modified>
+      <ShellOpenMode>NoShell</ShellOpenMode>
+      <Mode>Command</Mode>
+      <Description>Uses Services.msc to view/manage target’s Windows Services.</Description>
+      <IconKey>Stock0830</IconKey>
+      <KeyGesture>Ctrl+Shift+S</KeyGesture>
+      <Title>Manage Services</Title>
+      <TypeName>CustomTool</TypeName>
+    </CustomTool>
+    <CustomTool>
+      <CredentialsId value="null" />
+      <ScanAfter>DoNotScan</ScanAfter>
+      <ScanProfileId value="null" />
+      <SuccessCodesText>0</SuccessCodesText>
+      <Timeout>00:03:00</Timeout>
+      <WakeOnLan value="false" />
+      <CustomToolType>Local</CustomToolType>
+      <CommandLine>%SYSTEMROOT%\system32\mmc.exe lusrmgr.msc /computer=$(Computer:TARGETHOSTNAME)</CommandLine>
+      <DefaultIconKey>Stock0520</DefaultIconKey>
+      <LibraryToolId value="130" />
+      <Modified>2017-02-06T19:21:18.0000000+01:00</Modified>
+      <ShellOpenMode>NoShell</ShellOpenMode>
+      <Mode>Command</Mode>
+      <Description>Manage local user accounts and local groups on target computer.</Description>
+      <IconKey>Stock0520</IconKey>
+      <KeyGesture></KeyGesture>
+      <Title>Local Users and Groups Manager</Title>
+      <TypeName>CustomTool</TypeName>
+    </CustomTool>
+    <CustomTool>
+      <CredentialsId value="null" />
+      <ScanAfter>ScanAfter</ScanAfter>
+      <ScanProfileId value="3" />
+      <SuccessCodesText>0</SuccessCodesText>
+      <Timeout>00:03:00</Timeout>
+      <WakeOnLan value="false" />
+      <CustomToolType>Remote</CustomToolType>
+      <CommandLine>net user Administrateur /active:yes</CommandLine>
+      <DefaultIconKey></DefaultIconKey>
+      <LibraryToolId value="null" />
+      <Modified value="null" />
+      <ShellOpenMode>ToolWindowCaptureOutput</ShellOpenMode>
+      <Mode>Command</Mode>
+      <Description></Description>
+      <IconKey>Icon-CommandStep</IconKey>
+      <KeyGesture></KeyGesture>
+      <Title>Activation Administrateur</Title>
+      <TypeName>CustomTool</TypeName>
+    </CustomTool>
+    <SeparatorComputerTool>
+      <Description></Description>
+      <IconKey></IconKey>
+      <KeyGesture></KeyGesture>
+      <Title>Separator (1)</Title>
+      <TypeName>SeparatorComputerTool</TypeName>
+    </SeparatorComputerTool>
+    <CustomTool>
+      <CredentialsId value="null" />
+      <ScanAfter>DoNotScan</ScanAfter>
+      <ScanProfileId value="null" />
+      <SuccessCodesText>0</SuccessCodesText>
+      <Timeout>00:03:00</Timeout>
+      <WakeOnLan value="false" />
+      <CustomToolType>Remote</CustomToolType>
+      <CommandLine>c:
+cd c:\windows\system32
+cscript.exe slmgr.vbs /skms kms.domain.local
+cscript.exe slmgr.vbs /upk
+cscript.exe slmgr.vbs /ipk xxxxx-xxxxx-xxxxx-xxxxx-xxxxx
+cscript.exe slmgr.vbs /ato</CommandLine>
+      <DefaultIconKey></DefaultIconKey>
+      <LibraryToolId value="null" />
+      <Modified value="null" />
+      <ShellOpenMode>ToolWindowCaptureOutput</ShellOpenMode>
+      <Mode>Command</Mode>
+      <Description></Description>
+      <IconKey>Stock0610</IconKey>
+      <KeyGesture></KeyGesture>
+      <Title>Activation Windows 7 Entreprise</Title>
+      <TypeName>CustomTool</TypeName>
+    </CustomTool>
+    <SeparatorComputerTool>
+      <Description></Description>
+      <IconKey></IconKey>
+      <KeyGesture></KeyGesture>
+      <Title>Separator</Title>
+      <TypeName>SeparatorComputerTool</TypeName>
+    </SeparatorComputerTool>
+    <CustomTool>
+      <CredentialsId value="null" />
+      <ScanAfter>DoNotScan</ScanAfter>
+      <ScanProfileId value="null" />
+      <SuccessCodesText>0</SuccessCodesText>
+      <Timeout>00:03:00</Timeout>
+      <WakeOnLan value="false" />
+      <CustomToolType>Local</CustomToolType>
+      <CommandLine>Write-Output "Get crash history for $(Computer:TARGET)"
+
+Get-WinEvent -ComputerName $(Computer:TARGET) -LogName System -ErrorAction SilentlyContinue |
+ where {$_.Message -match "crash" }  | 
+ Format-List -property TimeCreated, LogName, ProviderName, LevelDisplayName, ID, Message</CommandLine>
+      <DefaultIconKey>Icon-PowerShell</DefaultIconKey>
+      <LibraryToolId value="60" />
+      <Modified>2016-12-22T18:23:12.0000000+01:00</Modified>
+      <ShellOpenMode>LeaveShellOpen</ShellOpenMode>
+      <Mode>PowerShell</Mode>
+      <Description>Display all events in target’s System Event Log that contain the word “crash”.</Description>
+      <IconKey>Icon-PowerShell</IconKey>
+      <KeyGesture></KeyGesture>
+      <Title>Get Crash History</Title>
+      <TypeName>CustomTool</TypeName>
+    </CustomTool>
+    <CustomTool>
+      <CredentialsId value="null" />
+      <ScanAfter>DoNotScan</ScanAfter>
+      <ScanProfileId value="null" />
+      <SuccessCodesText>0</SuccessCodesText>
+      <Timeout>00:03:00</Timeout>
+      <WakeOnLan value="false" />
+      <CustomToolType>Local</CustomToolType>
+      <CommandLine>Write-Output "Examine Application log for Errors on $(Computer:TARGET)"
+
+Get-WinEvent -ComputerName $(Computer:TARGET) -LogName Application -MaxEvents 300 -ErrorAction SilentlyContinue |
+ Where { 
+   $_.LevelDisplayName -eq "Error" -or
+   $_.LevelDisplayName -eq "Critical"} |
+ Format-List -property TimeCreated, LogName, ProviderName, LevelDisplayName, ID,
+                       @{Label="Message"; Expression={($_.message).substring(0,210) }}</CommandLine>
+      <DefaultIconKey>Icon-PowerShell</DefaultIconKey>
+      <LibraryToolId value="62" />
+      <Modified>2016-12-22T16:59:26.0000000+01:00</Modified>
+      <ShellOpenMode>LeaveShellOpen</ShellOpenMode>
+      <Mode>PowerShell</Mode>
+      <Description>Display all events in the target’s Application Event Log that have an event level of Error or Critical.</Description>
+      <IconKey>Icon-PowerShell</IconKey>
+      <KeyGesture></KeyGesture>
+      <Title>Get Application errors</Title>
+      <TypeName>CustomTool</TypeName>
+    </CustomTool>
+    <CustomTool>
+      <CredentialsId value="null" />
+      <ScanAfter>DoNotScan</ScanAfter>
+      <ScanProfileId value="null" />
+      <SuccessCodesText>0</SuccessCodesText>
+      <Timeout>00:03:00</Timeout>
+      <WakeOnLan value="false" />
+      <CustomToolType>Local</CustomToolType>
+      <CommandLine>Write-Output "Get logon history for $(Computer:TARGET)"
+
+Get-WinEvent  -ComputerName $(Computer:TARGET) `
+ -LogName 'Microsoft-Windows-TerminalServices-LocalSessionManager/Operational' `
+ -MaxEvents 300 -ErrorAction SilentlyContinue |  
+ 
+   Where {$_.Message -match "Session log"} | 
+
+Format-List -property TimeCreated, LogName, ProviderName, LevelDisplayName, ID, Message</CommandLine>
+      <DefaultIconKey>Icon-PowerShell</DefaultIconKey>
+      <LibraryToolId value="58" />
+      <Modified>2016-12-22T17:02:50.0000000+01:00</Modified>
+      <ShellOpenMode>LeaveShellOpen</ShellOpenMode>
+      <Mode>PowerShell</Mode>
+      <Description>Shows Logon events on target machine.</Description>
+      <IconKey>Icon-PowerShell</IconKey>
+      <KeyGesture></KeyGesture>
+      <Title>Get Logon History</Title>
+      <TypeName>CustomTool</TypeName>
+    </CustomTool>
+    <CustomTool>
+      <CredentialsId value="null" />
+      <ScanAfter>DoNotScan</ScanAfter>
+      <ScanProfileId value="null" />
+      <SuccessCodesText>0</SuccessCodesText>
+      <Timeout>00:03:00</Timeout>
+      <WakeOnLan value="false" />
+      <CustomToolType>Local</CustomToolType>
+      <CommandLine>Write-Output "Examine System log for name changes on $(Computer:TARGET)"
+
+Get-WinEvent -ComputerName $(Computer:TARGET) -LogName System -ErrorAction SilentlyContinue | 
+ where {$_.ID -eq 6011} | 
+ Format-List -property TimeCreated, LogName, ProviderName, LevelDisplayName, ID, Message</CommandLine>
+      <DefaultIconKey>Icon-PowerShell</DefaultIconKey>
+      <LibraryToolId value="55" />
+      <Modified>2016-12-22T17:01:55.0000000+01:00</Modified>
+      <ShellOpenMode>LeaveShellOpen</ShellOpenMode>
+      <Mode>PowerShell</Mode>
+      <Description>Displays all events showing a computer name change.</Description>
+      <IconKey>Icon-PowerShell</IconKey>
+      <KeyGesture></KeyGesture>
+      <Title>Get Rename History</Title>
+      <TypeName>CustomTool</TypeName>
+    </CustomTool>
+    <CustomTool>
+      <CredentialsId value="null" />
+      <ScanAfter>DoNotScan</ScanAfter>
+      <ScanProfileId value="null" />
+      <SuccessCodesText>0</SuccessCodesText>
+      <Timeout>00:03:00</Timeout>
+      <WakeOnLan value="false" />
+      <CustomToolType>Local</CustomToolType>
+      <CommandLine>Write-Output "Examine logs for restarts $(Computer:TARGET)"
+
+Get-WinEvent -ComputerName $(Computer:TARGET) -LogName System -MaxEvents 3000 -ErrorAction SilentlyContinue |  
+ Where { 
+   $_.Message -match "Shutdown Type" -or  
+   $_.Message -match "crash" } |
+ Format-List -property TimeCreated, LogName, ProviderName, LevelDisplayName, ID, Message</CommandLine>
+      <DefaultIconKey>Icon-PowerShell</DefaultIconKey>
+      <LibraryToolId value="61" />
+      <Modified>2016-12-22T17:02:56.0000000+01:00</Modified>
+      <ShellOpenMode>LeaveShellOpen</ShellOpenMode>
+      <Mode>PowerShell</Mode>
+      <Description>Shows all events in System log that contain “Shutdown Type” or “crash”.</Description>
+      <IconKey>Icon-PowerShell</IconKey>
+      <KeyGesture></KeyGesture>
+      <Title>Get Restart History</Title>
+      <TypeName>CustomTool</TypeName>
+    </CustomTool>
+    <CustomTool>
+      <CredentialsId value="null" />
+      <ScanAfter>DoNotScan</ScanAfter>
+      <ScanProfileId value="null" />
+      <SuccessCodesText>0</SuccessCodesText>
+      <Timeout>00:03:00</Timeout>
+      <WakeOnLan value="false" />
+      <CustomToolType>Local</CustomToolType>
+      <CommandLine>Write-Output "Get sleep history for $(Computer:TARGET)"
+
+Get-WinEvent  -ComputerName $(Computer:TARGET) -LogName system -MaxEvents 3000 -ErrorAction SilentlyContinue |
+ Where {$_.ProviderName -match "Microsoft-Windows-Power-Troubleshooter"} | 
+ Format-List -property TimeCreated, LogName, ProviderName, LevelDisplayName, ID, Message</CommandLine>
+      <DefaultIconKey>Icon-PowerShell</DefaultIconKey>
+      <LibraryToolId value="59" />
+      <Modified>2016-12-22T18:23:23.0000000+01:00</Modified>
+      <ShellOpenMode>LeaveShellOpen</ShellOpenMode>
+      <Mode>PowerShell</Mode>
+      <Description>Gets history showing when target computer went to sleep.</Description>
+      <IconKey>Icon-PowerShell</IconKey>
+      <KeyGesture></KeyGesture>
+      <Title>Get Sleep History</Title>
+      <TypeName>CustomTool</TypeName>
+    </CustomTool>
+    <CustomTool>
+      <CredentialsId value="null" />
+      <ScanAfter>DoNotScan</ScanAfter>
+      <ScanProfileId value="null" />
+      <SuccessCodesText>0</SuccessCodesText>
+      <Timeout>00:03:00</Timeout>
+      <WakeOnLan value="false" />
+      <CustomToolType>Local</CustomToolType>
+      <CommandLine>Write-Output "Examine System log for Errors on $(Computer:TARGET)"
+
+Get-WinEvent -ComputerName $(Computer:TARGET) -LogName System -MaxEvents 3000 -ErrorAction SilentlyContinue |
+ Where { 
+   $_.LevelDisplayName -eq "Error" -or
+   $_.LevelDisplayName -eq "Critical"} |
+ Format-List -property TimeCreated, LogName, ProviderName, LevelDisplayName, ID, Message</CommandLine>
+      <DefaultIconKey>Icon-PowerShell</DefaultIconKey>
+      <LibraryToolId value="63" />
+      <Modified>2016-12-22T17:01:43.0000000+01:00</Modified>
+      <ShellOpenMode>LeaveShellOpen</ShellOpenMode>
+      <Mode>PowerShell</Mode>
+      <Description>Display all events in the target’s System Event Log that have an event level of Error or Critical.</Description>
+      <IconKey>Icon-PowerShell</IconKey>
+      <KeyGesture></KeyGesture>
+      <Title>Get System errors</Title>
+      <TypeName>CustomTool</TypeName>
+    </CustomTool>
+    <CustomTool>
+      <CredentialsId value="null" />
+      <ScanAfter>DoNotScan</ScanAfter>
+      <ScanProfileId value="null" />
+      <SuccessCodesText>0</SuccessCodesText>
+      <Timeout>00:03:00</Timeout>
+      <WakeOnLan value="false" />
+      <CustomToolType>Local</CustomToolType>
+      <CommandLine>Write-Output "Network congestion on $(Computer:TARGET)"
+
+Get-WinEvent -ComputerName $(Computer:TARGET) -LogName System -ErrorAction SilentlyContinue | 
+ where {$_.ProviderName -match "Tcpip" -and $_.ID -eq 4230} | 
+ Format-List -property TimeCreated, LogName, ProviderName, LevelDisplayName, ID, Message</CommandLine>
+      <DefaultIconKey>Icon-PowerShell</DefaultIconKey>
+      <LibraryToolId value="56" />
+      <Modified>2016-12-22T17:02:15.0000000+01:00</Modified>
+      <ShellOpenMode>LeaveShellOpen</ShellOpenMode>
+      <Mode>PowerShell</Mode>
+      <Description>Displays all events in System Event Log with TCP/IP provider and ID 4230.</Description>
+      <IconKey>Icon-PowerShell</IconKey>
+      <KeyGesture></KeyGesture>
+      <Title>Get TCP/IP Congestion</Title>
+      <TypeName>CustomTool</TypeName>
+    </CustomTool>
+    <CustomTool>
+      <CredentialsId value="null" />
+      <ScanAfter>DoNotScan</ScanAfter>
+      <ScanProfileId value="null" />
+      <SuccessCodesText>0</SuccessCodesText>
+      <Timeout>00:03:00</Timeout>
+      <WakeOnLan value="false" />
+      <CustomToolType>Local</CustomToolType>
+      <CommandLine>start http://$(Computer:TARGETIPADDRESS)</CommandLine>
+      <DefaultIconKey>Icon-CommandStep</DefaultIconKey>
+      <LibraryToolId value="49" />
+      <Modified>2016-12-22T18:23:39.0000000+01:00</Modified>
+      <ShellOpenMode>CloseShell</ShellOpenMode>
+      <Mode>Command</Mode>
+      <Description>If the target device has a webserver (such as a printer or IP Phone) this tool will attempt to start the default browser and connect to the IP address.</Description>
+      <IconKey>Icon-CommandStep</IconKey>
+      <KeyGesture></KeyGesture>
+      <Title>Connect to IP via HTTP</Title>
+      <TypeName>CustomTool</TypeName>
+    </CustomTool>
+    <CustomTool>
+      <CredentialsId value="null" />
+      <ScanAfter>DoNotScan</ScanAfter>
+      <ScanProfileId value="null" />
+      <SuccessCodesText>0</SuccessCodesText>
+      <Timeout>00:03:00</Timeout>
+      <WakeOnLan value="false" />
+      <CustomToolType>Local</CustomToolType>
+      <CommandLine>@Echo off
+Echo Search your Address Resolution Protocol (ARP) cache for $(Computer:TARGET)
+Echo $(Computer:TARGET)'s IP address is $(Computer:TARGETIPADDRESS)
+
+arp -a $(Computer:TARGETIPADDRESS)</CommandLine>
+      <DefaultIconKey>Icon-CommandStep</DefaultIconKey>
+      <LibraryToolId value="50" />
+      <Modified>2016-12-22T17:03:12.0000000+01:00</Modified>
+      <ShellOpenMode>LeaveShellOpen</ShellOpenMode>
+      <Mode>Command</Mode>
+      <Description>Uses a cmd shell to run `arp.exe -a` against target IP address.</Description>
+      <IconKey>Icon-CommandStep</IconKey>
+      <KeyGesture></KeyGesture>
+      <Title>Get MAC</Title>
+      <TypeName>CustomTool</TypeName>
+    </CustomTool>
+    <CustomTool>
+      <CredentialsId value="null" />
+      <ScanAfter>DoNotScan</ScanAfter>
+      <ScanProfileId value="null" />
+      <SuccessCodesText></SuccessCodesText>
+      <Timeout>00:03:00</Timeout>
+      <WakeOnLan value="false" />
+      <CustomToolType>Local</CustomToolType>
+      <CommandLine>explorer.exe "\\$(Computer:TARGETHOSTNAME)\ADMIN$"</CommandLine>
+      <DefaultIconKey></DefaultIconKey>
+      <LibraryToolId value="1" />
+      <Modified value="null" />
+      <ShellOpenMode>NoShell</ShellOpenMode>
+      <Mode>Command</Mode>
+      <Description>Attempts to connect via Windows Explorer (explorer.exe) to the target computer’s Windows directory. By default the %WINDIR% directory is shared as ADMIN$.</Description>
+      <IconKey>Icon-CommandStep</IconKey>
+      <KeyGesture>Ctrl+Alt+O</KeyGesture>
+      <Title>Open ADMIN$ Share</Title>
+      <TypeName>CustomTool</TypeName>
+    </CustomTool>
+    <CustomTool>
+      <CredentialsId value="null" />
+      <ScanAfter>DoNotScan</ScanAfter>
+      <ScanProfileId value="null" />
+      <SuccessCodesText>0</SuccessCodesText>
+      <Timeout>00:03:00</Timeout>
+      <WakeOnLan value="false" />
+      <CustomToolType>Remote</CustomToolType>
+      <CommandLine>(New-Object -ComObject WScript.Network).AddWindowsPrinterConnection("\\printserver\SHARP MX-M264N PCL6 - Cardiologie Secretariat")</CommandLine>
+      <DefaultIconKey></DefaultIconKey>
+      <LibraryToolId value="null" />
+      <Modified value="null" />
+      <ShellOpenMode>ToolWindowCaptureOutput</ShellOpenMode>
+      <Mode>PowerShell</Mode>
+      <Description></Description>
+      <IconKey>Stock0800</IconKey>
+      <KeyGesture></KeyGesture>
+      <Title>Exemple Ajout Imprimante Réseau</Title>
+      <TypeName>CustomTool</TypeName>
+    </CustomTool>
+    <CustomTool>
+      <CredentialsId value="null" />
+      <ScanAfter>DoNotScan</ScanAfter>
+      <ScanProfileId value="null" />
+      <SuccessCodesText>0</SuccessCodesText>
+      <Timeout>00:03:00</Timeout>
+      <WakeOnLan value="false" />
+      <CustomToolType>Remote</CustomToolType>
+      <CommandLine>#To dismiss a process you can use the process ID or the process name. The -processname switch allows the use of wildcards. Here's how to stop the calculator:
+
+Stop-Process -processname calc*</CommandLine>
+      <DefaultIconKey></DefaultIconKey>
+      <LibraryToolId value="null" />
+      <Modified value="null" />
+      <ShellOpenMode>ToolWindowCaptureOutput</ShellOpenMode>
+      <Mode>PowerShell</Mode>
+      <Description></Description>
+      <IconKey>Icon-PowerShell</IconKey>
+      <KeyGesture></KeyGesture>
+      <Title>Exemple Arrêt Processus distant</Title>
+      <TypeName>CustomTool</TypeName>
+    </CustomTool>
+    <CustomTool>
+      <CredentialsId value="null" />
+      <ScanAfter>DoNotScan</ScanAfter>
+      <ScanProfileId value="null" />
+      <SuccessCodesText>0</SuccessCodesText>
+      <Timeout>00:03:00</Timeout>
+      <WakeOnLan value="false" />
+      <CustomToolType>Remote</CustomToolType>
+      <CommandLine>(New-Object -ComObject WScript.Network).RemovePrinterConnection("\\printerserver\hplaser3")</CommandLine>
+      <DefaultIconKey></DefaultIconKey>
+      <LibraryToolId value="null" />
+      <Modified value="null" />
+      <ShellOpenMode>ToolWindowCaptureOutput</ShellOpenMode>
+      <Mode>PowerShell</Mode>
+      <Description></Description>
+      <IconKey>Icon-PowerShell</IconKey>
+      <KeyGesture></KeyGesture>
+      <Title>Exemple Suppr Imprimante Réseau</Title>
+      <TypeName>CustomTool</TypeName>
+    </CustomTool>
+    <CustomTool>
+      <CredentialsId value="null" />
+      <ScanAfter>DoNotScan</ScanAfter>
+      <ScanProfileId value="null" />
+      <SuccessCodesText>0</SuccessCodesText>
+      <Timeout>00:03:00</Timeout>
+      <WakeOnLan value="false" />
+      <CustomToolType>Remote</CustomToolType>
+      <CommandLine>#Do Shit here
+
+$Count = (gci c:\users| where {$_.PsIscontainer}).count
+Write-Host "$Count"
+
+
+
+
+
+#Back to PDQ
+$computer = $env:Computername
+
+$customfieldname = "Nb Dossiers Users Local"
+$Customfieldtype = "String"    # Boolean, String, Integer, Date, or DateTime
+
+$computerlist = @("ComputerName,$customfieldname")
+
+$computer | ForEach-Object {
+
+$computerlist += "$_,$Count"
+
+}
+
+
+$tempfile = New-TemporaryFile
+$computerlist | out-file $tempfile
+
+pdqinventory createcustomfield -name $customfieldname -type $customfieldtype
+pdqinventory importcustomfields -filename $tempfile -computercolumn "ComputerName" -customfields "$Customfieldname=$customfieldname" -allowoverwrite</CommandLine>
+      <DefaultIconKey></DefaultIconKey>
+      <LibraryToolId value="null" />
+      <Modified value="null" />
+      <ShellOpenMode>ToolWindowCaptureOutput</ShellOpenMode>
+      <Mode>PowerShell</Mode>
+      <Description></Description>
+      <IconKey>Icon-PowerShell</IconKey>
+      <KeyGesture></KeyGesture>
+      <Title>Exemple Retour Output vers PDQ</Title>
+      <TypeName>CustomTool</TypeName>
+    </CustomTool>
+    <CustomTool>
+      <CredentialsId value="null" />
+      <ScanAfter>DoNotScan</ScanAfter>
+      <ScanProfileId value="null" />
+      <SuccessCodesText>0</SuccessCodesText>
+      <Timeout>00:03:00</Timeout>
+      <WakeOnLan value="false" />
+      <CustomToolType>Local</CustomToolType>
+      <CommandLine>#Recuperation Username distant :
+$ComputerInfos = Get-WmiObject -Class Win32_ComputerSystem -Computername $(Computer:TARGET)
+[String] ${stUserDomain},[String] ${stUserAccount} = $ComputerInfos.Username.split("\")</CommandLine>
+      <DefaultIconKey></DefaultIconKey>
+      <LibraryToolId value="null" />
+      <Modified value="null" />
+      <ShellOpenMode>ToolWindowCaptureOutput</ShellOpenMode>
+      <Mode>PowerShell</Mode>
+      <Description></Description>
+      <IconKey>Icon-PowerShell</IconKey>
+      <KeyGesture></KeyGesture>
+      <Title>Exemple Récupération TargetUser</Title>
+      <TypeName>CustomTool</TypeName>
+    </CustomTool>
+  </List>
+</AdminArsenal.Export> 
