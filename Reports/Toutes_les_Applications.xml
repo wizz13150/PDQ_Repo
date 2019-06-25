@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<AdminArsenal.Export Code="PDQInventory" Name="PDQ Inventory" Version="17.1.0.0" MinimumVersion="3.1">
+  <Report>
+    <ReportDefinition name="Definition">
+      <Sql>Select
+    Applications.Name 'Applications',
+    Applications.Version 'Versions',
+    count(Computers.Name) 'Number',
+    group_concat(Computers.Name, ', ') 'Computer Names'
+from Computers inner join Applications on Computers.ComputerID=Applications.ComputerID
+group by Applications.Name
+order by Applications.Name</Sql>
+      <ReportDefinitionTypeName>SqlReportDefinition</ReportDefinitionTypeName>
+    </ReportDefinition>
+    <Created>2019-06-01T20:46:23.0000000+02:00</Created>
+    <Description>Une liste de toutes les applications</Description>
+    <IsNew value="false" />
+    <Modified>2019-06-01T20:47:40.0000000+02:00</Modified>
+    <Name>Toutes les Applications</Name>
+    <Path>Reports\Toutes les Applications</Path>
+    <ReportFolderId value="1" />
+    <TypeName>SqlReport</TypeName>
+    <ReportType>SqlReport</ReportType>
+  </Report>
+</AdminArsenal.Export>

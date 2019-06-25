@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<AdminArsenal.Export Code="PDQInventory" Name="PDQ Inventory" Version="17.1.0.0" MinimumVersion="3.1">
+  <Report>
+    <ReportDefinition name="Definition">
+      <RootFilter name="Filter">
+        <Comparison>All</Comparison>
+        <Filters type="list">
+          <ValueFilter>
+            <Table>Registry</Table>
+            <Column>PathName</Column>
+            <Comparison>Contains</Comparison>
+            <Value>SOFTWARE\Microsoft\Windows NT\CurrentVersion\ProfileList\</Value>
+          </ValueFilter>
+        </Filters>
+      </RootFilter>
+      <ReportDefinitionTypeName>BasicReportDefinition</ReportDefinitionTypeName>
+      <Columns type="list">
+        <Column>
+          <Column>Name</Column>
+          <Summary></Summary>
+          <Table>Computer</Table>
+          <Title>Nom du Poste</Title>
+        </Column>
+        <Column>
+          <Column>PathName</Column>
+          <Summary>Count</Summary>
+          <Table>Registry</Table>
+          <Title>Chemin du Registre</Title>
+        </Column>
+      </Columns>
+    </ReportDefinition>
+    <Created>2018-10-09T12:49:29.0000000+02:00</Created>
+    <Description></Description>
+    <IsNew value="false" />
+    <Modified>2018-10-09T13:13:39.0000000+02:00</Modified>
+    <Name>ProfileList.bak</Name>
+    <Path>Reports\ProfileList.bak</Path>
+    <ReportFolderId value="1" />
+    <TypeName>BasicReport</TypeName>
+    <ReportType>BasicReport</ReportType>
+  </Report>
+</AdminArsenal.Export>
