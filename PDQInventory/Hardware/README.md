@@ -8,8 +8,7 @@ Show computers with disabled Local Administrator/Administrateur.
 Show computers with mobile devices.
 
 "Cartes graphiques Nvidia.xml"
-Show Nvidia Graphic Card. Models are for my personal situation, see bellow:
-![alt text](https://github.com/wizz13150/PDQ_Repo/blob/master/PDQInventory/Hardware/NVidia.png)
+Show Nvidia Graphic Card. Models are for my personal situation, see bellow**:
 
 "Comptes Invité Actif.xml"
 Show computers with enabled Local Guest Account.
@@ -21,3 +20,5 @@ Show computers with enabled Local Guest Account.
 
 
 ````
+** :
+![alt text](https://github.com/wizz13150/PDQ_Repo/blob/master/PDQInventory/Hardware/NVidia.png)
