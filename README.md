@@ -15,6 +15,32 @@ I hope this will serve others.
 Can be usefull for Free Version users ):
 ````
 
+The PDQ Inventory's Tools Section :
+https://github.com/wizz13150/PDQ_Repo/tree/master/PDQ%20Inventory%20Tools
+
+Screenshots:
+![alt text](https://github.com/wizz13150/PDQ_Repo/blob/master/PDQ%20Inventory%20Tools/Tools1.png)
+![alt text](https://github.com/wizz13150/PDQ_Repo/blob/master/PDQ%20Inventory%20Tools/Tools2.png)
+
+
+The PDQ Inventory's Reports section :
+https://github.com/wizz13150/PDQ_Repo/tree/master/Reports
+
+
+The PDQ Deploy's Uninstalls section :
+https://github.com/wizz13150/PDQ_Repo/tree/master/Uninstalls
+
+
+The PDQ Deploy's Packages that I can share :
+https://github.com/wizz13150/PDQ_Repo/tree/master/Scripts
+````
+For all "Check*" packages (except CheckSound, surprise inside), it export an html (or csv) report, you need to open the report.. Most of checks come from http://www.nirsoft.net .
+I usually put this Package on a Directory in PDQ with the report's path in title.
+I just select this second package, Ctrl+C, Windows+R and Ctrl+V, to open it, see Screenshot below.
+I just need to automatically open the report once generated. I have not yet figured out how to do that.
+Screenshot Copy Report's Path
+````
+
 Here is a post on Reddit, don't hesitate to give me a feedback/improvement/ideas :
 https://www.reddit.com/r/sysadmin/comments/cc8le4/github_repo_for_pdq_users/
 
