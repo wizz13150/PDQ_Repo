@@ -10,7 +10,7 @@ Show computers with mobile devices.
 ````
 ````
 "Cartes graphiques Nvidia.xml"
-Show Nvidia Graphic Card. 
+Show Nvidia Graphic Cards. 
 Models are for my personal situation, see below :
 ````
 ![alt text](https://github.com/wizz13150/PDQ_Repo/blob/master/PDQInventory/Hardware/NVidia.png)
@@ -20,7 +20,8 @@ Show computers with enabled Local Guest Account.
 ````
 ````
 "Faille Intel SA-00086.xml"
-Show computers with this Intel's vulnerability.
+Show computers with this Intel's vulnerability. Linked to a Report & a Scan Profile (Coming soon below).
+
 ````
 ````
 "Imprimantes USB.xml"
