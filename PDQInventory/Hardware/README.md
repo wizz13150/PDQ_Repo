@@ -47,7 +47,7 @@ Show computers with SmardCard Reader.
 ````
 ````
 "Pare-feu Non Disabled.xml"
-Show computers with enabled Firewall
+Show computers with enabled Firewall.
 ````
 ````
 "Poste Fixes en Wi-Fi.xml"
