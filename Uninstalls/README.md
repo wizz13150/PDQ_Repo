@@ -1,3 +1,4 @@
-Uninstalls section.
+Uninstalls Section.
+Readme.md in each directory.
 
-About universal uninstalls.
+About universal Uninstalls.
