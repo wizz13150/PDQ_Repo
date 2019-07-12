@@ -20,5 +20,11 @@ For Installers packages and Others Utilities for PDQ Deploy, see the awesome "PD
 https://www.reddit.com/u/vocatus/
 
 And Thanks to AdminArsenal for these amazing software !
-Get a quote:
+
+Try PDQ Deploy & Inventory :
+https://www.pdq.com/download/
+
+Get a quote :
 https://sales.pdq.com/
+
+
