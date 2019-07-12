@@ -31,10 +31,11 @@ The PDQ Deploy's Uninstalls section :
 https://github.com/wizz13150/PDQ_Repo/tree/master/Uninstalls
 
 
-The PDQ Deploy's Packages that I can share :
+The PDQ Deploy's Scripts/Packages that I can share :
 https://github.com/wizz13150/PDQ_Repo/tree/master/Scripts
 ````
-For all "Check*" packages (except CheckSound, surprise inside), it export an html (or csv) report, you need to open the report.. Most of checks come from http://www.nirsoft.net .
+For all "Check*" packages (except CheckSound, surprise inside), it export an html (or csv) report, 
+you need to open the report.. Most of checks come from http://www.nirsoft.net .
 I usually put this Package on a Directory in PDQ with the report's path in title.
 I just select this second package, Ctrl+C, Windows+R and Ctrl+V, to open it, see Screenshot below.
 I just need to automatically open the report once generated. I have not yet figured out how to do that.
