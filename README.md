@@ -12,7 +12,9 @@ Sorry if you want to add everything at once, will see later.
 Some parts have been translated into French.
 
 I hope this will serve others.
-Can be usefull for Free Version users ):
+For others Installations Packages.. Most of the time, this concerns dedicated applications, 
+or requires the Enterprise version to manipulate...Hard to share this.
+Can still be usefull for Free Version users ):
 ````
 
 The PDQ Inventory's Tools Section :
