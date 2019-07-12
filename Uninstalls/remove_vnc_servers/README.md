@@ -1,4 +1,4 @@
-A Package to Remove VNC, every version
+A Package to remove every version of VNC
 
 
 Original script by Gregory Strike:
