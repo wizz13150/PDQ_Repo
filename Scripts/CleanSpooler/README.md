@@ -1,5 +1,6 @@
 A Package to Clean Spooler.
 
+<#
 .SYNOPSIS
     Clean old spooled documents.
 .DESCRIPTION
@@ -11,7 +12,7 @@ A Package to Clean Spooler.
     Last Modified Date: 16.08.2016
 .EXAMPLE
     ./Clean-Spooler.ps1
-
+#>
 
 It should look like this :
 
