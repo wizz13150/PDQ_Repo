@@ -4,7 +4,7 @@ In this one, I use package's parameters as variable for "Autologon.cmd".
 Indeed, you use "%1" & "%2" and just set the value in package.
 
 ````
-%1 will be the username,
+%1 will be the username
 %2 will be the password
 ````
 
