@@ -4,4 +4,5 @@ You just import .xml file into the PDQ Deploy console & files into your PDQ Repo
 
 I'll make a Readme for each.
 
-For others Installations Packages.. Most of the time, this concerns dedicated applications, or requires the Enterprise version to manipulate...
+For others Installations Packages.. Most of the time, this concerns dedicated applications, or requires the Enterprise version to manipulate...Hard to share this.
+
