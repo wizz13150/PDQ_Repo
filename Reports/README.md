@@ -12,5 +12,5 @@ Print .bak keys count from registry for each computer (Path : HKLM:Software\Micr
 Print monitors count for each computer. Need improvements.
 
  - Toutes_les_Applications.xml
- List all applications & versions. Different from 'Applications' default report.
+ List all applications & versions, and show computer names for each. Different from 'Applications' default report !
 
