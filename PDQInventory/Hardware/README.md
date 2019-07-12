@@ -21,6 +21,6 @@ Show computers with enabled Local Guest Account.
 
 ````
 
-** 
+** NVidia :
 
 ![alt text](https://github.com/wizz13150/PDQ_Repo/blob/master/PDQInventory/Hardware/NVidia.png)
