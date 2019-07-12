@@ -1,6 +1,6 @@
 Here is the Tools Section. One of the most interesting part.
 ````
-I need to explain some Tools. I'll write everything here, but it's a big part ahah (12/07/2019)
+I need to explain some Tools like 'Change AD Description' (computer) or 'Kill not responding (Right-click on Desktop only). I'll write everything here, but it's a big part ahah (12/07/2019)
 ````
 ````
 You just import this .xml file into the PDQ Inventory console to access this list of tools.
