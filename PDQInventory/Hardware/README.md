@@ -10,7 +10,7 @@ Show computers with mobile devices.
 ````
 ````
 "Cartes graphiques Nvidia.xml"
-Show Nvidia Graphic Cards. 
+Show computers with Nvidia Graphic Cards. 
 Models are for my personal situation, see below :
 ````
 ![alt text](https://github.com/wizz13150/PDQ_Repo/blob/master/PDQInventory/Hardware/NVidia.png)
@@ -25,7 +25,7 @@ Show computers with this Intel's vulnerability. Linked to a Report & a Scan Prof
 ````
 ````
 "Imprimantes USB.xml"
-Show computers with an USB Printer connected. 
+Show computers with an USB Printer connected/installed. 
 Models are for my personal situation, see below :
 ````
 ![alt text](https://github.com/wizz13150/PDQ_Repo/blob/master/PDQInventory/Hardware/USBPrinters.png)
