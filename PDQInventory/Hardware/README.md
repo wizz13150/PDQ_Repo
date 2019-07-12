@@ -1,5 +1,7 @@
 Some Collections for PDQ Inventory related to Hardware components.
 
+Descriptions Here :
+
 ````
 "Admin Local Désactivé.xml"
 Show computers with disabled Local Administrator/Administrateur.
