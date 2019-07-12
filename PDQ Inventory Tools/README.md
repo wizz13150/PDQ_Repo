@@ -6,7 +6,7 @@ them manually), or 'Kill not responding' (Process not responding, a right-click 
 Desktop only). I'll write everything here, but it's a big part ahah (12/07/2019).
 ````
 ````
-You just import this .xml file into the PDQ Inventory console to access this list of tools.
+You just need to import this .xml file into the PDQ Inventory console to access this list of tools.
 You need to adapt/translate some parts. 
 When imported in PDQ, you can modify and test each Tool in shell mode (Powershell or CMD).
 You choose to capture output or not, leave shell open or not.
