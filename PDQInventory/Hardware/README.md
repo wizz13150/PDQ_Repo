@@ -3,24 +3,46 @@ Some Collections for PDQ Inventory related to Hardware components.
 ````
 "Admin Local Désactivé.xml"
 Show computers with disabled Local Administrator/Administrateur.
-
+````
+````
 "Appareils mobiles connectés.xml"
 Show computers with mobile devices.
-
+````
+````
 "Cartes graphiques Nvidia.xml"
-Show Nvidia Graphic Card. Models are for my personal situation, see bellow**:
-
+Show Nvidia Graphic Card. Models are for my personal situation, see bellow :
+````
+![alt text](https://github.com/wizz13150/PDQ_Repo/blob/master/PDQInventory/Hardware/NVidia.png)
+````
 "Comptes Invité Actif.xml"
 Show computers with enabled Local Guest Account.
+````
+````
+"Faille Intel SA-00086.xml"
+Show computers with this Intel's vulnerability.
+````
+````
+"Imprimantes USB.xml"
+Show computers with an USB Printer connected. Models are for my personal situation, see bellow :
+````
+![alt text](https://github.com/wizz13150/PDQ_Repo/blob/master/PDQInventory/Hardware/USBPrinters.png)
+````
+"Imprimantes locales.xml"
+Show computers with a Local Printer installed (not network/mapped). Models are for my personal situation, see bellow :
+````
+![alt text](https://github.com/wizz13150/PDQ_Repo/blob/master/PDQInventory/Hardware/LocalPrinters.png)
+````
 
+````
+````
 
+````
+````
 
-
-
+````
+````
 
 
 ````
 
-** NVidia :
 
-![alt text](https://github.com/wizz13150/PDQ_Repo/blob/master/PDQInventory/Hardware/NVidia.png)
