@@ -13,13 +13,17 @@ Some parts have been translated into French.
 I hope this will serve others.
 Can be usefull for Free Version users ):
 
+
 Here is a post on Reddit, don't hesitate to give me a feedback/improvement/ideas :
 https://www.reddit.com/r/sysadmin/comments/cc8le4/github_repo_for_pdq_users/
 
 For Installers packages and Others Utilities for PDQ Deploy, see the awesome "PDQ Packs" from u/vocatus :
 https://www.reddit.com/u/vocatus/
 
+
 And Thanks to AdminArsenal for these amazing software !
+
+
 
 Try PDQ Deploy & Inventory :
 https://www.pdq.com/download/
