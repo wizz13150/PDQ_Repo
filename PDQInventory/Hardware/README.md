@@ -32,7 +32,7 @@ Show computers with a Local Printer installed (not network/mapped). Models are f
 ````
 ![alt text](https://github.com/wizz13150/PDQ_Repo/blob/master/PDQInventory/Hardware/LocalPrinters.png)
 ````
-
+......Will see tomorrow, lol 
 ````
 ````
 
