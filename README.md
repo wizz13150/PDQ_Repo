@@ -1,4 +1,6 @@
 # PDQ_Repo
+![alt text](https://www.pdq.com/wp-content/uploads/2017/10/header-light.png)
+
 Repository about PDQ Deploy/Inventory Tools, Utilities, Scripts ...
 To Check, Repair, Change ...
 This Repo is the root of PDQ Deploy's Repository.
