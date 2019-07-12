@@ -1,5 +1,5 @@
 PDQ_Repo
-![alt text](https://www.pdq.com/wp-content/uploads/2017/10/header-light.png) 
+![alt text](https://www.pdq.com/wp-content/uploads/2017/10/header-light.png)  (Not Official)
 
 Repository about PDQ Deploy/Inventory Tools, Utilities, Scripts ...
 To Check, Repair, Change ...
