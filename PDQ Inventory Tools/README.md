@@ -1,9 +1,9 @@
 Here is the Tools Section. One of the most interesting part.
 ````
 I need to explain some Tools like 'Change AD Description' (Computer's Description), 
-or 'Allow Public Desktop's access' (Here, users can't touch desktops items so I allow 
-them manually), or 'Kill not responding' (Process, Right-click on Desktop only). I'll write 
-everything here, but it's a big part ahah (12/07/2019).
+or 'Allow Public Desktop's access' (Here, users can't touch desktop items so I allow 
+them manually), or 'Kill not responding' (Process not responding, a right-click on 
+Desktop only). I'll write everything here, but it's a big part ahah (12/07/2019).
 ````
 ````
 You just import this .xml file into the PDQ Inventory console to access this list of tools.
