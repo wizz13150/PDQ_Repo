@@ -18,3 +18,7 @@ https://www.reddit.com/r/sysadmin/comments/cc8le4/github_repo_for_pdq_users/
 
 For Installers packages and Others Utilities for PDQ Deploy, see the awesome "PDQ Packs" from u/vocatus :
 https://www.reddit.com/u/vocatus/
+
+And Thanks to AdminArsenal for these amazing software !
+Get a quote:
+https://sales.pdq.com/
