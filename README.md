@@ -18,7 +18,7 @@ Can be usefull for Free Version users ):
 The PDQ Inventory's Tools Section :
 https://github.com/wizz13150/PDQ_Repo/tree/master/PDQ%20Inventory%20Tools
 
-Screenshots:
+(French) Screenshots:
 ![alt text](https://github.com/wizz13150/PDQ_Repo/blob/master/PDQ%20Inventory%20Tools/Tools1.png)
 ![alt text](https://github.com/wizz13150/PDQ_Repo/blob/master/PDQ%20Inventory%20Tools/Tools2.png)
 
