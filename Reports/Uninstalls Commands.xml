@@ -1,0 +1,59 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<AdminArsenal.Export Code="PDQInventory" Name="PDQ Inventory" Version="17.1.0.0" MinimumVersion="3.1">
+  <Report>
+    <ReportDefinition name="Definition">
+      <RootFilter name="Filter">
+        <Comparison>All</Comparison>
+        <Filters type="list">
+          <ValueFilter>
+            <Table>Computer</Table>
+            <Column>AllowScan</Column>
+            <Comparison>IsTrue</Comparison>
+          </ValueFilter>
+        </Filters>
+      </RootFilter>
+      <ReportDefinitionTypeName>BasicReportDefinition</ReportDefinitionTypeName>
+      <Columns type="list">
+        <Column>
+          <Column>Name</Column>
+          <Summary></Summary>
+          <Table>Application</Table>
+          <Title></Title>
+        </Column>
+        <Column>
+          <Column>Version</Column>
+          <Summary></Summary>
+          <Table>Application</Table>
+          <Title></Title>
+        </Column>
+        <Column>
+          <Column>Publisher</Column>
+          <Summary></Summary>
+          <Table>Application</Table>
+          <Title></Title>
+        </Column>
+        <Column>
+          <Column>Name</Column>
+          <Summary>Count</Summary>
+          <Table>Computer</Table>
+          <Title>Computers Count</Title>
+        </Column>
+        <Column>
+          <Column>Uninstall</Column>
+          <Summary></Summary>
+          <Table>Application</Table>
+          <Title></Title>
+        </Column>
+      </Columns>
+    </ReportDefinition>
+    <Created>2019-07-15T10:54:58.0000000+02:00</Created>
+    <Description>Uninstalls Commands for Applications on Scan Allowed Workstations</Description>
+    <IsNew value="false" />
+    <Modified>2019-07-15T11:01:24.0000000+02:00</Modified>
+    <Name>Uninstalls Commands</Name>
+    <Path>Reports\Uninstalls Commands</Path>
+    <ReportFolderId value="1" />
+    <TypeName>BasicReport</TypeName>
+    <ReportType>BasicReport</ReportType>
+  </Report>
+</AdminArsenal.Export>
