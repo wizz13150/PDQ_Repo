@@ -26,8 +26,8 @@ $BackupFolder = $ProfileSelection.Name + $Date
 $UserProfile = Get-ChildItem -Path "C:\users"-Recurse $ProfileSelection.FullName
 $UserProfileSize = $UserProfile | Measure-Object -Property Length -Sum
 
-New-Item -Path \\sccm2012\e$\SCCM_Repository\Software\Scripts\BackupUsersProfiles\$env:computername.$Date -ItemType Directory -Force #| Out-Null
-New-Item -Path \\sccm2012\e$\SCCM_Repository\Software\Scripts\BackupUsersProfiles\$env:computername.$Date\$BackupFolder -ItemType Directory -Force
+New-Item -Path \\Repository\Software\Scripts\BackupUsersProfiles\$env:computername.$Date -ItemType Directory -Force #| Out-Null
+New-Item -Path \\Repository\Software\Scripts\BackupUsersProfiles\$env:computername.$Date\$BackupFolder -ItemType Directory -Force
 
 $UserProfilePath = $ProfileSelection.FullName
 $UserProfileFolder = $ProfileSelection.Name
@@ -36,6 +36,6 @@ Write-Host "`nDébut de la Sauvegarde des profils utilisateurs locaux" -foregrou
 
 Sleep 5
 
-Robocopy $UserProfileFolder "C:\users\" "\\sccm2012\e$\SCCM_Repository\Software\Scripts\BackupUsersProfiles\$env:computername.$Date\$BackupFolder\" /XJ /MIR /MT:16 /r:0 /A-:SH
+Robocopy $UserProfileFolder "C:\users\" "\\Repository\Software\Scripts\BackupUsersProfiles\$env:computername.$Date\$BackupFolder\" /XJ /MIR /MT:16 /r:0 /A-:SH
 
 Write-Host "`nFin de la Sauvegarde des profils utilisateurs locaux !" -foregroundcolor cyan
