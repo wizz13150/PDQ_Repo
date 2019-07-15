@@ -14,4 +14,7 @@ Print monitors count for each computer. Need improvements to exclude virtuals di
 
  - Toutes_les_Applications.xml
 List all applications & versions, and show computer names for each. Different from 'Applications' default report !
+
+ - Uninstalls Commands.xml
+List all Uninstalls Commands for Applications on Scan Allowed Workstations & Computers count for each version.
 ````
