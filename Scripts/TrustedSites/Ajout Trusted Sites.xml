@@ -1,0 +1,113 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<AdminArsenal.Export Code="PDQDeploy" Name="PDQ Deploy" Version="17.2.0.0" MinimumVersion="15.0">
+  <Package>
+    <CurrentLibraryPackageVersionId value="null" />
+    <PackageDefinition name="Definition">
+      <Conditions type="list">
+        <PackageStepCondition>
+          <Architecture>Both</Architecture>
+          <Version>All</Version>
+          <TypeName>OperatingSystem</TypeName>
+        </PackageStepCondition>
+        <PackageStepCondition>
+          <IsUserLoggedOn>AlwaysRun</IsUserLoggedOn>
+          <TypeName>LoggedOnUser</TypeName>
+        </PackageStepCondition>
+        <PackageStepCondition>
+          <ConditionMode>None</ConditionMode>
+          <InventoryCollectionId value="null" />
+          <InventoryCollectionName></InventoryCollectionName>
+          <TypeName>Collection</TypeName>
+        </PackageStepCondition>
+      </Conditions>
+      <CopyMode>Default</CopyMode>
+      <DelayedApprovalTimeSpan>7.00:00:00</DelayedApprovalTimeSpan>
+      <DownloadApprovalMode>Manual</DownloadApprovalMode>
+      <InventoryScanProfileId value="null" />
+      <IsDownloadApprovalModeInherited value="true" />
+      <ScanAfterDeployment value="null" />
+      <Steps type="list">
+        <InstallStep>
+          <CustomCommandLine></CustomCommandLine>
+          <FileName>$(Repository)\Scripts\TrustedSites\AddingTrustedSites.ps1</FileName>
+          <Files></Files>
+          <IncludeDirectory value="false" />
+          <LeaveInstallFile value="false" />
+          <MsiOperation>Install</MsiOperation>
+          <MsiQuiet value="true" />
+          <MsiRestart>Never</MsiRestart>
+          <Parameters>-TrustedSites "contoso1.com","contoso2.com" -HTTP</Parameters>
+          <SuccessCodes>0,1641,3010,2359302</SuccessCodes>
+          <RunAs value="null" />
+          <Conditions type="list">
+            <PackageStepCondition>
+              <Architecture>Both</Architecture>
+              <Version>All</Version>
+              <TypeName>OperatingSystem</TypeName>
+            </PackageStepCondition>
+            <PackageStepCondition>
+              <IsUserLoggedOn>AlwaysRun</IsUserLoggedOn>
+              <TypeName>LoggedOnUser</TypeName>
+            </PackageStepCondition>
+            <PackageStepCondition>
+              <ConditionMode>None</ConditionMode>
+              <InventoryCollectionId value="null" />
+              <InventoryCollectionName></InventoryCollectionName>
+              <TypeName>Collection</TypeName>
+            </PackageStepCondition>
+          </Conditions>
+          <ErrorMode>StopDeploymentFail</ErrorMode>
+          <Title>Add Trusted Sites</Title>
+          <TypeName>Install</TypeName>
+          <IsEnabled value="true" />
+          <IsPostStep value="false" />
+          <IsPreStep value="false" />
+        </InstallStep>
+      </Steps>
+      <Timeout value="60" />
+      <UseCustomTimeout value="false" />
+      <RunAs value="null" />
+    </PackageDefinition>
+    <Description>.SYNOPSIS
+        The PowerShell script which can be used to add trusted sites in Internet Explorer.
+    .DESCRIPTION
+        The PowerShell script which can be used to add trusted sites in Internet Explorer.
+    .PARAMETER  TrustedSites
+		Spcifies the trusted site in Internet Explorer.
+    .PARAMETER  HTTP
+		Once you use the HTTP switch parameter, the domain will be use the http:// prefix.
+    .PARAMETER  PrimaryDomain
+		Spcifies the primary domain in Internet Explorer.
+    .PARAMETER  SubDomain
+		Spcifies the sub domain in Internet Explorer.
+    .EXAMPLE
+        C:\PS&gt; C:\AddingTrustedSites.ps1 -TrustedSites "contoso1.com","contoso2.com" -HTTP
+
+		Successfully added 'contoso1.com' and 'contoso2.com' domain to trusted sites in Internet Explorer.
+
+        This command will add 'contoso1.com' and 'contoso2.com' domain to trusted sites in Internet Explorer respectively.
+    .EXAMPLE
+        C:\PS&gt; C:\AddingTrustedSites.ps1  -PrimaryDomain "contoso.com" -SubDomain "test.domain"
+
+		Successfully added 'test.domain.contoso.com' domain to trusted sites in Internet Explorer.
+
+        This command will add 'test.domain.contoso.com' domain to trusted sites in Internet Explorer.
+
+
+Source :
+https://gallery.technet.microsoft.com/scriptcenter/How-to-batch-add-URLs-to-c8207c23</Description>
+    <NewLibraryPackageVersionId value="null" />
+    <OriginalId value="null" />
+    <Version></Version>
+    <IsAutoDownload value="false" />
+    <FolderId value="246" />
+    <LibraryPackageVersionId value="null" />
+    <Name>Ajout Trusted Sites</Name>
+    <Path>CHA Softwares\Scripts\Utilities\Ajout Trusted Sites</Path>
+    <PackageDisplaySettings name="DisplaySettings">
+      <DisplayType>Normal</DisplayType>
+      <IconKey>Icon-Package</IconKey>
+      <SortOrder value="5" />
+    </PackageDisplaySettings>
+  </Package>
+</AdminArsenal.Export>
