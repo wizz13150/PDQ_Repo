@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<AdminArsenal.Export Code="PDQInventory" Name="PDQ Inventory" Version="17.1.0.0" MinimumVersion="15.0">
+  <CustomTool>
+    <CredentialsId value="null" />
+    <ScanAfter>DoNotScan</ScanAfter>
+    <ScanProfileId value="null" />
+    <SuccessCodesText></SuccessCodesText>
+    <Timeout>00:03:00</Timeout>
+    <WakeOnLan value="false" />
+    <CustomToolType>Local</CustomToolType>
+    <CommandLine>icacls "C:\Users\Public\Desktop" /grant "Tout le Monde":(f) /T</CommandLine>
+    <DefaultIconKey></DefaultIconKey>
+    <LibraryToolId value="null" />
+    <Modified value="null" />
+    <ShellOpenMode>ToolWindowCaptureOutput</ShellOpenMode>
+    <Mode>Command</Mode>
+    <Description></Description>
+    <IconKey>Stock0895</IconKey>
+    <KeyGesture></KeyGesture>
+    <Title>Autorisation Accès Bureau Public</Title>
+    <TypeName>CustomTool</TypeName>
+  </CustomTool>
+</AdminArsenal.Export>
