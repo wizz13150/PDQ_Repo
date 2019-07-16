@@ -1,4 +1,4 @@
-Batch to get Local & Mapped/Network Printers on a remote computer.
+Batch to get Mapped/Network Printers on a remote computer. List also Local Printers.
 ````
 @ECHO OFF
 CLS
