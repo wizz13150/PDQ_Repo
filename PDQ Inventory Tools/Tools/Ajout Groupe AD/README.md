@@ -2,7 +2,7 @@
 Powershell script to find and shows AD Groups, print a Menu with a number for each group, 
 choose one and then add the selected computer to this AD Group. Way more comfortable than .mcc. Usefull One !
 I'm only looking for groups that are called "G_ordinateurs*", you need to adjust this and translate as well.
-It looks  shitty, but i'm not a Powershell expert at all ahah, and it works. 
+It looks shitty, but i'm not a Powershell expert at all ahah. It works and there is color, so i'm happy with that. 
 I don't think i will improve this by myself.
 I let you suggest me improvments :)
 ````
