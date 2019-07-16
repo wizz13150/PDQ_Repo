@@ -1,4 +1,4 @@
-Powershell script to get 
+Powershell script to get AD Groups, for the logged on User on a remote computer.
 
 ````
 #Recuperation Username distant :
