@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<AdminArsenal.Export Code="PDQInventory" Name="PDQ Inventory" Version="17.1.0.0" MinimumVersion="15.0">
+  <CustomTool>
+    <CredentialsId value="null" />
+    <ScanAfter>DoNotScan</ScanAfter>
+    <ScanProfileId value="null" />
+    <SuccessCodesText></SuccessCodesText>
+    <Timeout>00:03:00</Timeout>
+    <WakeOnLan value="false" />
+    <CustomToolType>Remote</CustomToolType>
+    <CommandLine>$ScriptBlock = {    
+    Get-ComputerRestorePoint -OutVariable RestorePoints
+ 
+    if(-not($RestorePoints)){
+        
+        $env:COMPUTERNAME
+ 
+        Enable-ComputerRestore -Drive C: -Verbose
+    }
+}
+ 
+Invoke-Command -ScriptBlock $ScriptBlock</CommandLine>
+    <DefaultIconKey></DefaultIconKey>
+    <LibraryToolId value="null" />
+    <Modified value="null" />
+    <ShellOpenMode>ToolWindowCaptureOutput</ShellOpenMode>
+    <Mode>PowerShell</Mode>
+    <Description></Description>
+    <IconKey>Icon-PowerShell</IconKey>
+    <KeyGesture></KeyGesture>
+    <Title>Check &amp; Active Points de Restauration</Title>
+    <TypeName>CustomTool</TypeName>
+  </CustomTool>
+</AdminArsenal.Export>
