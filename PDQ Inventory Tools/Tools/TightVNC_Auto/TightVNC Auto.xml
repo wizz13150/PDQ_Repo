@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<AdminArsenal.Export Code="PDQInventory" Name="PDQ Inventory" Version="17.1.0.0" MinimumVersion="15.0">
+  <CustomTool>
+    <CredentialsId value="null" />
+    <ScanAfter>DoNotScan</ScanAfter>
+    <ScanProfileId value="null" />
+    <SuccessCodesText></SuccessCodesText>
+    <Timeout>01:00:00</Timeout>
+    <WakeOnLan value="false" />
+    <CustomToolType>Local</CustomToolType>
+    <CommandLine>"C:\Program Files\uvnc bvba\UltraVNC\vncviewer.exe" $(Computer:TARGETHOSTNAME) /autoscaling /password PASSWORD</CommandLine>
+    <DefaultIconKey></DefaultIconKey>
+    <LibraryToolId value="null" />
+    <Modified value="null" />
+    <ShellOpenMode>NoShell</ShellOpenMode>
+    <Mode>Command</Mode>
+    <Description></Description>
+    <IconKey>Stock0030</IconKey>
+    <KeyGesture></KeyGesture>
+    <Title>TightVNC         Auto</Title>
+    <TypeName>CustomTool</TypeName>
+  </CustomTool>
+</AdminArsenal.Export>
