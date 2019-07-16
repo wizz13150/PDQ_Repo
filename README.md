@@ -5,7 +5,7 @@ PDQ_Repo
 Repository about PDQ Deploy/Inventory Tools, Utilities, Scripts ...
 To Check, Repair, Change ...
 This Repo is the root of PDQ Deploy's Repository.
-These are my daily Tools to manage 2500 Workstations.
+These are my daily Tools to manage 2500 Workstations, under Windows 7.
 
 For the moment, i'll add .xml files and tools/scripts, one after another.
 Sorry if you want to add everything at once, will see later.
