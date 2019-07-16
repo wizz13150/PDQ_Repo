@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<AdminArsenal.Export Code="PDQInventory" Name="PDQ Inventory" Version="17.1.0.0" MinimumVersion="15.0">
+  <CustomTool>
+    <CredentialsId value="null" />
+    <ScanAfter>DoNotScan</ScanAfter>
+    <ScanProfileId value="null" />
+    <SuccessCodesText></SuccessCodesText>
+    <Timeout>00:03:00</Timeout>
+    <WakeOnLan value="false" />
+    <CustomToolType>Local</CustomToolType>
+    <CommandLine>#Recuperation Username distant :
+$ComputerInfos = Get-WmiObject -Class Win32_ComputerSystem -Computername $(Computer:TARGET)
+[String] ${stUserDomain},[String] ${stUserAccount} = $ComputerInfos.Username.split("\")
+
+#On ouvre l'explorateur sur le dossier utilisateur ciblé
+cmd.exe /c explorer.exe \\fileserver\users_directory\${stUserAccount}</CommandLine>
+    <DefaultIconKey></DefaultIconKey>
+    <LibraryToolId value="null" />
+    <Modified value="null" />
+    <ShellOpenMode>NoShell</ShellOpenMode>
+    <Mode>PowerShell</Mode>
+    <Description></Description>
+    <IconKey>Stock0895</IconKey>
+    <KeyGesture></KeyGesture>
+    <Title>Ouvrir Itinerant Profile</Title>
+    <TypeName>CustomTool</TypeName>
+  </CustomTool>
+</AdminArsenal.Export>
