@@ -37,7 +37,7 @@ Do
     #}
     #Else
     #{
-    #    $Domain = "DC2..contonso"
+    #    $Domain = "DC2.contonso"
     #}
 
     $ComputerInfos = Get-WmiObject -Class Win32_ComputerSystem -Computername $(Computer:TARGET)
