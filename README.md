@@ -36,7 +36,7 @@ https://github.com/wizz13150/PDQ_Repo/tree/master/Uninstalls
 The PDQ Deploy's Scripts/Packages that I can share :
 https://github.com/wizz13150/PDQ_Repo/tree/master/Scripts
 ````
-For all "Check*" packages (include CheckSound, but surprise inside), it export an html (or csv) report, 
+For most of "Check*" packages (include CheckSound, but surprise inside), it export an html (or csv) report, 
 you need to open the report.. Most of checks come from http://www.nirsoft.net .
 I usually put this Package on a Directory in PDQ with the report's path in title.
 I just select this second package, Ctrl+C, Windows+R and Ctrl+V, to open it, see Screenshot below.
