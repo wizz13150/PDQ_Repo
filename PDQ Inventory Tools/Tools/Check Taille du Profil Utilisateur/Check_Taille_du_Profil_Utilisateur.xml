@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<AdminArsenal.Export Code="PDQInventory" Name="PDQ Inventory" Version="17.1.0.0" MinimumVersion="15.0">
+  <CustomTool>
+    <CredentialsId value="null" />
+    <ScanAfter>DoNotScan</ScanAfter>
+    <ScanProfileId value="null" />
+    <SuccessCodesText></SuccessCodesText>
+    <Timeout>00:03:00</Timeout>
+    <WakeOnLan value="false" />
+    <CustomToolType>Remote</CustomToolType>
+    <CommandLine>$Sum = [math]::Round(
+  (
+    (
+      (
+        Get-ChildItem -Path "\\home.adcha.local\USERS$\$env:username" |
+        ForEach-Object {
+          Write-Host "Analyse du fichier $($_.FullName)" -ForegroundColor Green ;
+          Get-ChildItem -Path $_.FullName -Recurse -File -ErrorAction SilentlyContinue } | Measure-Object -Property Length -Sum).Sum)/1MB 
+  )
+)
+write-Host "Taille totale des données contenus dans le dossier utilisateur de $env:username :" -ForegroundColor Cyan
+Write-Host "$Sum Mb" -ForegroundColor Cyan
+Write-Host "Chemin analysé :" -ForegroundColor Cyan
+Write-Host "\\home.adcha.local\USERS$\$env:username" -ForegroundColor Cyan</CommandLine>
+    <DefaultIconKey></DefaultIconKey>
+    <LibraryToolId value="null" />
+    <Modified value="null" />
+    <ShellOpenMode>ToolWindowCaptureOutput</ShellOpenMode>
+    <Mode>PowerShell</Mode>
+    <Description></Description>
+    <IconKey>Icon-PowerShell</IconKey>
+    <KeyGesture></KeyGesture>
+    <Title>Check Taille du Profil Utilisateur</Title>
+    <TypeName>CustomTool</TypeName>
+  </CustomTool>
+</AdminArsenal.Export>
