@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<AdminArsenal.Export Code="PDQInventory" Name="PDQ Inventory" Version="17.1.0.0" MinimumVersion="15.0">
+  <CustomTool>
+    <CredentialsId value="null" />
+    <ScanAfter>ScanAfter</ScanAfter>
+    <ScanProfileId value="13" />
+    <SuccessCodesText></SuccessCodesText>
+    <Timeout>00:03:00</Timeout>
+    <WakeOnLan value="false" />
+    <CustomToolType>Local</CustomToolType>
+    <CommandLine>$description = Read-Host 'Entrez la description voulue ' 
+Set-ADComputer $(Computer:TARGET) -replace:@{"description"="$($description)"}
+Invoke-Command -ScriptBlock {pdqinventory ScanComputers -Computers "$(Computer:TARGET)" -ScanProfile "AD Infos"}</CommandLine>
+    <DefaultIconKey></DefaultIconKey>
+    <LibraryToolId value="null" />
+    <Modified value="null" />
+    <ShellOpenMode>LeaveShellOpen</ShellOpenMode>
+    <Mode>PowerShell</Mode>
+    <Description></Description>
+    <IconKey>Stock0120</IconKey>
+    <KeyGesture>Ctrl+Alt+D</KeyGesture>
+    <Title>Changement Description AD</Title>
+    <TypeName>CustomTool</TypeName>
+  </CustomTool>
+</AdminArsenal.Export>
