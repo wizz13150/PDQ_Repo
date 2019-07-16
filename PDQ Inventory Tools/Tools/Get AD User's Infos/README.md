@@ -6,6 +6,7 @@ You need "Connect.ps1" & "Disconnect.ps1"
 -Change the path to "Connect.ps1"
 -Change the path to "Disconnect.ps1"
 -Change DC's FDQN
+-Translate, if needed
 -Run
 ````
 ````
