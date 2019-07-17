@@ -1,4 +1,5 @@
-A PAckage to check if there is drivers, in Devices Manager, with any problem.
+A Package to list of all devices that do not have drivers, in Devices Manager, or any problem.
+Return Devices Names & Compatible IDs, any return code different than 0.
 
 ````
 $Device = Get-WmiObject Win32_PNPEntity | Where-Object{$_.ConfigManagerErrorcode -ne 0}
