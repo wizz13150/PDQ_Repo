@@ -1,0 +1,112 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<AdminArsenal.Export Code="PDQDeploy" Name="PDQ Deploy" Version="17.2.0.0" MinimumVersion="15.0">
+  <Package>
+    <CurrentLibraryPackageVersionId value="null" />
+    <PackageDefinition name="Definition">
+      <Conditions type="list">
+        <PackageStepCondition>
+          <Architecture>Both</Architecture>
+          <Version>All</Version>
+          <TypeName>OperatingSystem</TypeName>
+        </PackageStepCondition>
+        <PackageStepCondition>
+          <IsUserLoggedOn>AlwaysRun</IsUserLoggedOn>
+          <TypeName>LoggedOnUser</TypeName>
+        </PackageStepCondition>
+        <PackageStepCondition>
+          <ConditionMode>None</ConditionMode>
+          <InventoryCollectionId value="null" />
+          <InventoryCollectionName></InventoryCollectionName>
+          <TypeName>Collection</TypeName>
+        </PackageStepCondition>
+      </Conditions>
+      <CopyMode>Default</CopyMode>
+      <DelayedApprovalTimeSpan>7.00:00:00</DelayedApprovalTimeSpan>
+      <DownloadApprovalMode>Manual</DownloadApprovalMode>
+      <InventoryScanProfileId value="null" />
+      <IsDownloadApprovalModeInherited value="true" />
+      <ScanAfterDeployment value="null" />
+      <Steps type="list">
+        <PowerShellStep>
+          <CustomCommandLine></CustomCommandLine>
+          <Files>$(Repository)\Scripts\NetworkPrintersVBS\DeclarePrintDrivers.ps1</Files>
+          <Script>#Liste des Drivers à déclarer:
+$DriverBase = @'
+Xerox GPD PS V5.645.5.0
+Xerox GPD PS V5.645.5.0
+Xerox GPD PCL6 V5.645.5.0
+Xerox GPD PCL6 V5.645.5.0
+Xerox GPD PCL V5.645.5.0
+Xerox GPD PCL V5.645.5.0
+Xerox Global Print Driver V4 PS
+Xerox Global Print Driver V4 PS
+Xerox Global Print Driver V4 PCL6
+Xerox Global Print Driver V4 PCL6
+Xerox Global Print Driver PS
+Xerox Global Print Driver PS
+Xerox Global Print Driver PCL6
+Xerox Global Print Driver PCL6
+Xerox Global Print Driver PCL
+Xerox Global Print Driver PCL
+'@
+
+
+#Installation des Imprimantes sur Windows:
+$DriversSourcePath = "\\NETWORKSHARE\C$\Drivers\Printers\"
+Get-ChildItem -Filter "*.inf" -Path $DriversSourcePath -Recurse | ForEach-Object { PnPutil.exe -i -a $_.FullName }
+
+#Injection des Drivers (x86 and x64) au service Spool:
+foreach ($DriverName in $DriverBase) {
+    Add-PrinterDriver -Name $DriverName -PrinterEnvironment "Windows NT x86"
+    Add-PrinterDriver -Name $DriverName -PrinterEnvironment "Windows x64"
+}</Script>
+          <SuccessCodes>0</SuccessCodes>
+          <RunAs value="null" />
+          <Conditions type="list">
+            <PackageStepCondition>
+              <Architecture>Both</Architecture>
+              <Version>All</Version>
+              <TypeName>OperatingSystem</TypeName>
+            </PackageStepCondition>
+            <PackageStepCondition>
+              <IsUserLoggedOn>AlwaysRun</IsUserLoggedOn>
+              <TypeName>LoggedOnUser</TypeName>
+            </PackageStepCondition>
+            <PackageStepCondition>
+              <ConditionMode>None</ConditionMode>
+              <InventoryCollectionId value="null" />
+              <InventoryCollectionName></InventoryCollectionName>
+              <TypeName>Collection</TypeName>
+            </PackageStepCondition>
+          </Conditions>
+          <ErrorMode>StopDeploymentFail</ErrorMode>
+          <Title>Declare PrintDrivers</Title>
+          <TypeName>PowerShell</TypeName>
+          <IsEnabled value="true" />
+          <IsPostStep value="false" />
+          <IsPreStep value="false" />
+        </PowerShellStep>
+      </Steps>
+      <Timeout value="60" />
+      <UseCustomTimeout value="false" />
+      <RunAs value="null" />
+    </PackageDefinition>
+    <Description>Exemple Déclaration Drivers Imprimantes
+
+source :
+https://github.com/wikijm/PowerShell-AdminScripts/blob/master/Printing/Declare-PrintDrivers.ps1</Description>
+    <NewLibraryPackageVersionId value="null" />
+    <OriginalId value="null" />
+    <Version></Version>
+    <IsAutoDownload value="false" />
+    <FolderId value="263" />
+    <LibraryPackageVersionId value="null" />
+    <Name>Add Printer Drivers</Name>
+    <Path>CHA Softwares\Scripts\A TESTER\Add Printer Drivers</Path>
+    <PackageDisplaySettings name="DisplaySettings">
+      <DisplayType>Normal</DisplayType>
+      <IconKey>Icon-Package</IconKey>
+      <SortOrder value="9" />
+    </PackageDisplaySettings>
+  </Package>
+</AdminArsenal.Export>
