@@ -11,6 +11,9 @@ Select 2 computers, then run this report. It will show you if an application onl
 
  - CurrentUserIsLocalAdmin.xml
  Show computers with current user who is memeber of Local Admins.
+ 
+ - GroupedDisplays-Fancy.xml
+ A couple of PDQ Inventory SQL Reports that group the Display Model and Display Serial Number fields so each computer only has 1 line.
 
  - ProfileList.bak.xml
 Print .bak keys count from registry for each computer (Path : HKLM:Software\Microsoft\Windows NT\CurrentVersion\ProfileList).
