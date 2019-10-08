@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<AdminArsenal.Export Code="PDQInventory" Name="PDQ Inventory" Version="18.1.0.0" MinimumVersion="3.1">
+  <Report>
+    <ReportDefinition name="Definition">
+      <Sql>SELECT
+	  Computers.Name						AS "Computer Name"
+	, Computers.Model						AS "Computer Model"
+	, Computers.Manufacturer						AS "Computer Manufacturer"
+	, Computers.SerialNumber						AS "Computer Serial Number"
+	, Computers.Memory						AS "Computer Memory"
+	, CPUs.ProcessorSummary						AS "CPU Processor"
+	, Computers.OS							AS "Computer O/S"
+	, Computers.OSVersion						AS "Computer O/S Version"
+	, Computers.OSServicePack						AS "Computer SP / Release"
+
+	-- GROUP_CONCAT usage lovingly stolen from this video: https://www.pdq.com/blog/webcast-recap-sql-made-simple-reports-in-inventory/
+	-- The || trick is adapted from: https://stackoverflow.com/a/29766435
+	, GROUP_CONCAT(Displays.Model || ' (' || Displays.SerialNumber || ')', ', ')	AS "Display Models and Serial Numbers"
+FROM
+	Computers
+INNER JOIN
+	CPUs USING (ComputerId)
+INNER JOIN
+	Displays USING (ComputerId)
+WHERE
+	&lt;ComputerFilter&gt;
+GROUP BY
+	Computers.ComputerId
+ORDER BY
+	Computers.Name COLLATE NOCASE</Sql>
+      <ReportDefinitionTypeName>SqlReportDefinition</ReportDefinitionTypeName>
+    </ReportDefinition>
+    <Created>2019-10-08T09:24:38.0000000+02:00</Created>
+    <Description>A couple of PDQ Inventory SQL Reports that group the Display Model and Display Serial Number fields so each computer only has 1 line.</Description>
+    <IsNew value="false" />
+    <Modified>2019-10-08T09:25:47.0000000+02:00</Modified>
+    <Name>Grouped Displays - Fancy</Name>
+    <Path>Reports\Reports\Grouped Displays - Fancy</Path>
+    <ReportFolderId value="2" />
+    <TypeName>SqlReport</TypeName>
+    <ReportType>SqlReport</ReportType>
+  </Report>
+</AdminArsenal.Export>
