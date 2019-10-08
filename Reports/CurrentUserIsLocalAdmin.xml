@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<AdminArsenal.Export Code="PDQInventory" Name="PDQ Inventory" Version="18.1.0.0" MinimumVersion="3.1">
+  <Report>
+    <ReportDefinition name="Definition">
+      <Sql>-- Created by Colby Bouma for: https://old.reddit.com/r/pdq/comments/bty5po/request_wmi_query_check_if_user_is_local/
+
+SELECT
+	  Computers.Name		AS "Computer Name"
+	, Computers.CurrentUser		AS "Current User"
+	, LocalGroupMembers.UserName	AS "Local Group Member Username"
+FROM
+	Computers
+INNER JOIN
+	LocalGroupMembers USING (ComputerId)
+INNER JOIN
+	LocalGroups USING (LocalGroupId)
+WHERE
+		-- Enables filtering by Collection
+		&lt;ComputerFilter&gt;
+	AND
+		-- Find computers whose Current User contains one of the entries from its Local Group Members table
+		-- Source for LIKE trick: https://stackoverflow.com/a/29766435
+		Computers.CurrentUser LIKE '%' || LocalGroupMembers.UserName || '%'
+	AND
+		-- Only look at the Administrators group, using the SID
+		LocalGroups.SID = 'S-1-5-32-544'
+	AND
+		-- Username blacklist
+		LocalGroupMembers.UserName NOT IN (
+			  'Administrator'
+			, 'The.Boss'
+		)
+ORDER BY
+	Computers.Name COLLATE NOCASE</Sql>
+      <ReportDefinitionTypeName>SqlReportDefinition</ReportDefinitionTypeName>
+    </ReportDefinition>
+    <Created>2019-07-11T00:39:17.0000000+02:00</Created>
+    <Description></Description>
+    <IsNew value="false" />
+    <Modified>2019-10-07T12:37:40.0000000+02:00</Modified>
+    <Name>Current User is a local admin</Name>
+    <Path>Reports\Reports\Current User is a local admin</Path>
+    <ReportFolderId value="2" />
+    <TypeName>SqlReport</TypeName>
+    <ReportType>SqlReport</ReportType>
+  </Report>
+</AdminArsenal.Export>
