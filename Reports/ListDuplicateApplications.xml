@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<AdminArsenal.Export Code="PDQInventory" Name="PDQ Inventory" Version="18.1.0.0" MinimumVersion="3.1">
+  <Report>
+    <ReportDefinition name="Definition">
+      <Sql>SELECT
+    Computers.Name as "Computer",
+	group_concat(Applications.Name, ", ") "Applications",
+	Count(Computers.Name) as Count
+FROM Applications
+JOIN Computers on Computers.ComputerId=Applications.ComputerId
+WHERE Applications.Name LIKE "Firefox%"
+GROUP by Computers.Name
+HAVING Count(Computers.Name) &gt; 1</Sql>
+      <ReportDefinitionTypeName>SqlReportDefinition</ReportDefinitionTypeName>
+    </ReportDefinition>
+    <Created>2019-10-08T09:04:19.0000000+02:00</Created>
+    <Description></Description>
+    <IsNew value="false" />
+    <Modified>2019-10-08T09:05:19.0000000+02:00</Modified>
+    <Name>List Duplicate Applications</Name>
+    <Path>Reports\Reports\List Duplicate Applications</Path>
+    <ReportFolderId value="2" />
+    <TypeName>SqlReport</TypeName>
+    <ReportType>SqlReport</ReportType>
+  </Report>
+</AdminArsenal.Export>
