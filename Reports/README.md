@@ -9,6 +9,9 @@ Select 2 computers, then run this report. It will show you if an application onl
  - AppsNewToEnvironment.xml
  PDQ Inventory SQL Report query to list applications new to environment in the last 14 days
 
+ - CurrentUserIsLocalAdmin.xml
+ Show computers with current user who is memeber of Local Admins.
+
  - ProfileList.bak.xml
 Print .bak keys count from registry for each computer (Path : HKLM:Software\Microsoft\Windows NT\CurrentVersion\ProfileList).
 
