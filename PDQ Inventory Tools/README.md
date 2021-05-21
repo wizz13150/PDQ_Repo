@@ -12,16 +12,19 @@ When imported in PDQ, you can modify and test each Tool in shell mode (Powershel
 You choose to capture output or not, leave shell open or not.
 ````
 
+It should look like this, for v2 :
+
+![alt text](https://github.com/wizz13150/PDQ_Repo/blob/master/PDQ%20Inventory%20Tools/Tools1_V2.png)
+
+![alt text](https://github.com/wizz13150/PDQ_Repo/blob/master/PDQ%20Inventory%20Tools/Tools2_V2.png)
+
+
+
+
+
 It should look like this, for v1 :
 
 ![alt text](https://github.com/wizz13150/PDQ_Repo/blob/master/PDQ%20Inventory%20Tools/Tools1.png)
 
 ![alt text](https://github.com/wizz13150/PDQ_Repo/blob/master/PDQ%20Inventory%20Tools/Tools2.png)
 
-
-
-It should look like this, for v2 :
-
-![alt text](https://github.com/wizz13150/PDQ_Repo/blob/master/PDQ%20Inventory%20Tools/Tools1_V2.png)
-
-![alt text](https://github.com/wizz13150/PDQ_Repo/blob/master/PDQ%20Inventory%20Tools/Tools2_V2.png)
