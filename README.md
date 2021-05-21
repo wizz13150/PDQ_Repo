@@ -1,5 +1,4 @@
-PDQ_Repo
-![alt text](https://www.pdq.com/wp-content/uploads/2017/10/header-light.png)  (Not Official)
+PDQ_Repo  (Not Official)
 
 ````
 Repository about PDQ Deploy/Inventory Tools, Utilities, Scripts ...
