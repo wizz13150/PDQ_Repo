@@ -28,7 +28,7 @@ https://github.com/wizz13150/PDQ_Repo/tree/master/PDQ%20Inventory%20Tools
 
 
 
-(French) Screenshots:
+(French) Screenshots for v1 :
 
 ![alt text](https://github.com/wizz13150/PDQ_Repo/blob/master/PDQ%20Inventory%20Tools/Tools1.png)
 ![alt text](https://github.com/wizz13150/PDQ_Repo/blob/master/PDQ%20Inventory%20Tools/Tools2.png)
