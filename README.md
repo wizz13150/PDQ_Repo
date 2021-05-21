@@ -20,7 +20,17 @@ Can still be usefull for Free Version users ):
 The PDQ Inventory's Tools Section :
 https://github.com/wizz13150/PDQ_Repo/tree/master/PDQ%20Inventory%20Tools
 
+
+(French) Screenshots for V2 (From PDQ Inventory v19.0.40):
+
+![alt text](https://github.com/wizz13150/PDQ_Repo/blob/master/PDQ%20Inventory%20Tools/Tools1_V2.png)
+![alt text](https://github.com/wizz13150/PDQ_Repo/blob/master/PDQ%20Inventory%20Tools/Tools2_V2.png)
+
+
+
+
 (French) Screenshots:
+
 ![alt text](https://github.com/wizz13150/PDQ_Repo/blob/master/PDQ%20Inventory%20Tools/Tools1.png)
 ![alt text](https://github.com/wizz13150/PDQ_Repo/blob/master/PDQ%20Inventory%20Tools/Tools2.png)
 
